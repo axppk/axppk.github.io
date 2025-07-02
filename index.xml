@@ -6,8 +6,80 @@
         <description>Recent content on KKPT的个人博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>KKPT</copyright>
-        <lastBuildDate>Wed, 02 Jul 2025 09:51:12 +0800</lastBuildDate><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>博客改造记录</title>
+        <link>https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Wed, 02 Jul 2025 16:35:37 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;h2 id=&#34;更换字体&#34;&gt;更换字体
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;下载字体文件，如 &lt;a class=&#34;link&#34; href=&#34;https://github.com/max32002/maruko-gothic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MarukoGothicCJKjp-Regular.ttf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;解压至对应的字体目录路径( &lt;code&gt;assets/font&lt;/code&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font.png&#34;
+	width=&#34;1125&#34;
+	height=&#34;665&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font_hu_8c7ec979cd1e4e33.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font_hu_e7a7718ff6bbbd13.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;字体目录&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按 &lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt; 路径创建配置文件并拷贝以下代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font2.png&#34;
+	width=&#34;1159&#34;
+	height=&#34;573&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font2_hu_f21bbd0cc04bfb75.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/font2_hu_97ec168cad992bd2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;字体配置文件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;style&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  @font-face {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    font-family: &amp;#39;字体名&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    src: url({{ (resources.Get &amp;#34;font/字体文件名（带后缀）&amp;#34;).Permalink }}) format(&amp;#39;truetype&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  :root {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --base-font-family: &amp;#39;字体名&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --code-font-family: &amp;#39;字体名&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/style&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>首次尝试部署Hugo到Github</title>
         <link>https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/</link>
         <pubDate>Wed, 02 Jul 2025 09:51:12 +0800</pubDate>
@@ -621,6 +693,44 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;一键部署脚本（将以上命令写入脚本（.bat）文件，双击运行即可&amp;mdash;适用于 windows 系统）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set /p postname=&amp;#34;输入文章名称（不需要加.md）: &amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new &amp;#34;post/%postname%/index.md&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 成功创建：content\post\%postname%\index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;一键创建文章脚本（将以上命令写入脚本（.bat）文件，双击运行即可&amp;mdash;适用于 windows 系统）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;一键启动本地服务器脚本（将以上命令写入脚本（.bat）文件，双击运行即可&amp;mdash;适用于 windows 系统）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;报错处理&#34;&gt;报错处理
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git8.png&#34;
