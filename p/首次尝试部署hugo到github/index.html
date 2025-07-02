@@ -279,11 +279,19 @@
         <li><a href="#安装-git">安装 Git</a>
           <ol>
             <li><a href="#配置-git">配置 Git</a></li>
+            <li><a href="#补充-git-自动部署需要">补充 Git （自动部署需要）</a></li>
           </ol>
         </li>
-        <li><a href="#创建-github-仓库">创建 Github 仓库</a></li>
+        <li><a href="#创建-github-仓库重点">创建 Github 仓库（重点）</a>
+          <ol>
+            <li><a href="#获取-token-自动部署需要">获取 token （自动部署需要）</a></li>
+          </ol>
+        </li>
+        <li><a href="#部署网站">部署网站</a></li>
       </ol>
     </li>
+    <li><a href="#扩展">扩展</a></li>
+    <li><a href="#报错处理">报错处理</a></li>
   </ol>
 </nav>
         </div>
@@ -344,7 +352,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 6 分钟
                 </time>
             </div>
         
@@ -363,13 +371,13 @@
 </h2><p>首先介绍用到的工具：</p>
 <blockquote>
 <p>Hugo：一个静态网站生成器，内置大量好看的主题，可以将 Markdown 文件转换为 HTML 文件，应该是开源项目，使用 go 语言编写（Google 开发的语言&ndash;大概）。
-简而言之，这是一个框架，可以快速搭建个人博客。
-下载地址：https://github.com/gohugoio/hugo/releases</p>
+<br>简而言之，这是一个框架，可以快速搭建个人博客。
+<br>下载地址：https://github.com/gohugoio/hugo/releases</p>
 <p>Github：一个代码托管平台，可以托管代码，提供版本控制，可以与 Hugo 配合使用。
-简而言之，这是一个开源的远程仓库云端存储，可以存储代码，提供版本控制追踪，可以用于托管部署我们的 Hugo 网站。
-注册地址：https://github.com/join</p>
+<br>简而言之，这是一个开源的远程仓库云端存储，可以存储代码，提供版本控制追踪，可以用于托管部署我们的 Hugo 网站。
+<br>注册地址：https://github.com/join</p>
 <p>Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。
-下载地址：https://git-scm.com/downloads</p></blockquote>
+<br>下载地址：https://git-scm.com/downloads</p></blockquote>
 <h2 id="部署步骤">部署步骤
 </h2><h3 id="安装-hugo">安装 Hugo
 </h3><ul>
@@ -444,7 +452,66 @@
 	
 ></p>
 <h4 id="安装-hugo-主题">安装 Hugo 主题
-</h4><h3 id="安装-git">安装 Git
+</h4><ul>
+<li>下载喜欢的 Hugo 主题，解压到 <code>themes</code> 目录，即 <code>dev\themes</code>。</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo4.png"
+	width="625"
+	height="502"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo4_hu_727de9777877d93f.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo4_hu_45fa931cead34e20.png 1024w"
+	loading="lazy"
+	
+		alt="主题目录"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="124"
+		data-flex-basis="298px"
+	
+></p>
+<ul>
+<li>复制 <code>exampleSite</code> 文件夹下的 <code>content</code> 与 <code>hugo.yaml</code> 文件到 <code>dev</code> 目录。</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo5.png"
+	width="632"
+	height="175"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo5_hu_daa493a0a3efede5.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo5_hu_965a143e1acab7fd.png 1024w"
+	loading="lazy"
+	
+		alt="目录结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="361"
+		data-flex-basis="866px"
+	
+></p>
+<ul>
+<li>
+<p>打开 <code>hugo.yaml</code> 文件，修改 <code>baseurl</code> 与 <code>theme</code> 选项。</p>
+</li>
+<li>
+<p>如图所示：<code>baseurl</code>对应的是网站的根目录（即网站的域名此处应为 <code>yourusername.github.io</code>如果按接下里的流程走的话），<code>theme</code>对应的是主题名称。</p>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo6.png"
+	width="721"
+	height="531"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo6_hu_7a262c0d80d920df.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo6_hu_76b29b46e3726033.png 1024w"
+	loading="lazy"
+	
+		alt="修改配置文件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+></p>
+<ul>
+<li>补充：此处的 hugo.yaml 文件是 Hugo 的配置文件，同样的还有另一种 config.toml 文件，同为配置文件，可以根据自己的需求进行修改。</li>
+</ul>
+<h3 id="安装-git">安装 Git
 </h3><ul>
 <li>下载 Git 压缩包，安装到任意目录，比如 <code>C:\Git</code>。</li>
 </ul>
@@ -455,11 +522,9 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git init
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -488,11 +553,9 @@
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git config --global user.name &#34;your name&#34;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global user.name &#34;your name&#34;
 </span></span><span class="line"><span class="cl">git config --global user.email &#34;your email&#34;
 </span></span></code></pre></td></tr></table>
 </div>
@@ -508,9 +571,413 @@
 查看全局配置代码：git config -l（这是 l 不是 1）</p>
 </li>
 </ul>
-<h3 id="创建-github-仓库">创建 Github 仓库
+<h4 id="补充-git-自动部署需要">补充 Git （自动部署需要）
+</h4><ul>
+<li>新建 <code>.gitignore</code> 文件，添加忽略规则，存放在项目根目录下（此处即 dev 目录）。</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git2.png"
+	width="169"
+	height="122"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git2_hu_52284c76ae199c6f.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git2_hu_c6ed0fa99e57f5d4.png 1024w"
+	loading="lazy"
+	
+		alt=".gitignore文件内容"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="138"
+		data-flex-basis="332px"
+	
+></p>
+<ul>
+<li>新建 <code>deploy.yaml</code> 文件，添加自动部署脚本，存放在项目根目录(dev 目录)下的 <code>.github/workflows</code> 目录下(该目录需自己创建)。</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git3.png"
+	width="1123"
+	height="664"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git3_hu_6527ef6cbfe79420.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git3_hu_ef9c59bb9739321.png 1024w"
+	loading="lazy"
+	
+		alt="文件目录"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="169"
+		data-flex-basis="405px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: deploy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 代码提交到main分支时触发github action
+</span></span><span class="line"><span class="cl">on:
+</span></span><span class="line"><span class="cl">  push:
+</span></span><span class="line"><span class="cl">    branches:
+</span></span><span class="line"><span class="cl">      - main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">  deploy:
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-latest
+</span></span><span class="line"><span class="cl">    steps:
+</span></span><span class="line"><span class="cl">      - name: Checkout
+</span></span><span class="line"><span class="cl">        uses: actions/checkout@v4
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          fetch-depth: 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Setup Hugo
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-hugo@v3
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          hugo-version: &#34;latest&#34;
+</span></span><span class="line"><span class="cl">          extended: true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Build Web
+</span></span><span class="line"><span class="cl">        run: hugo -D
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Deploy Web
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-gh-pages@v4
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          PERSONAL_TOKEN: ${{ secrets.变量名 }}----需要修改
+</span></span><span class="line"><span class="cl">          EXTERNAL_REPOSITORY: 用户名/博客域名（yourusername.github.io）------需要修改
+</span></span><span class="line"><span class="cl">          PUBLISH_BRANCH: main
+</span></span><span class="line"><span class="cl">          PUBLISH_DIR: ./public
+</span></span><span class="line"><span class="cl">          commit_message: auto deploy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="创建-github-仓库重点">创建 Github 仓库（重点）
 </h3><ul>
-<li>登录 Github 网站，点击右上角的 <code>+</code> 号，选择 <code>New repository</code>，输入仓库名称，点击 <code>Create repository</code>。</li>
+<li>
+<p>登录 Github 网站，点击右上角的 <code>+</code> 号，选择 <code>New repository</code>，输入仓库名称，点击 <code>Create repository</code>。</p>
+</li>
+<li>
+<p>此处重点在于仓库名称的设置：</p>
+</li>
+<li>
+<p>创建一个部署 Hugo 网站的仓库，设置为公开仓库，并命名为 <code>yourusername.github.io</code>，其中 <code>yourusername</code> 是你的 Github 用户名。
+（注意：仓库名称应为 <code>yourusername.github.io</code>，否则可能导致后期混乱。）</p>
+</li>
+<li>
+<p>创建一个存储主要资源的仓库，设置为私有仓库，并命名为 <code>yourusername.github.io.source</code>，其中 <code>yourusername</code> 是你的 Github 用户名。
+（此处名称随意，但应与网站仓库名称不同且便于记忆。）</p>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github1.png"
+	width="769"
+	height="790"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github1_hu_6bb7a791125da0e5.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github1_hu_117167c8850cbc0f.png 1024w"
+	loading="lazy"
+	
+		alt="创建仓库"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="97"
+		data-flex-basis="233px"
+	
+></p>
+<h4 id="获取-token-自动部署需要">获取 token （自动部署需要）
+</h4><ul>
+<li>
+<p>点击个人头像，选择 <code>Settings（设置）</code>，选择 <code>Developer settings（开发者设置）</code>，选择 <code>Personal access tokens（个人访问令牌）</code>，点击 <code>Generate new token（生成新令牌，两个都可以）</code>。</p>
+</li>
+<li>
+<p>输入 <code>Token description（令牌描述）</code>，日期选择 <code>No expiration（永不过期）</code>，勾选 <code>repo（仓库）</code>，<code>workflow（工作流）</code>，点击 <code>Generate token（生成令牌）</code>。</p>
+</li>
+<li>
+<p>复制生成的 <code>ACCESS_TOKEN</code> 值（该值只会显示一次，请务必妥善保管），点击 <code>Close</code> 按钮。</p>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github2.png"
+	width="1147"
+	height="277"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github2_hu_8cc51d0cd4b4850b.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github2_hu_42caca9dbdcf8763.png 1024w"
+	loading="lazy"
+	
+		alt="生成token"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="414"
+		data-flex-basis="993px"
+	
+></p>
+<ul>
+<li>
+<p>进入刚刚创建的 <code>yourusername.github.io.source</code> 仓库，点击 <code>Settings</code>，选择 <code>Secrets（机密）</code>，点击 <code>New repository secret（新增机密）</code>，输入 <code>ACCESS_TOKEN（刚复制的令牌值）</code>，点击 <code>Add secret（添加机密）</code>。</p>
+</li>
+<li>
+<p>此处的 <code>ACCESS_TOKEN</code> 即为 Github 网站生成的个人访问令牌，用于自动部署。</p>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github3.png"
+	width="785"
+	height="856"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github3_hu_f6ddaf56be0d2269.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/github3_hu_c93090d7fd5b5d72.png 1024w"
+	loading="lazy"
+	
+		alt="生成token"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="91"
+		data-flex-basis="220px"
+	
+></p>
+<h3 id="部署网站">部署网站
+</h3><ul>
+<li>切换到 <code>dev</code> 目录，输入以下命令：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将 Markdown 文件转换为 HTML 文件，并将生成的 HTML 文件保存在 <code>dev\public</code> 目录下。</li>
+<li>(hugo -D 是 Hugo 的编译命令，<code>-D</code> 参数表示将生成的 HTML 文件放入 public 目录下，方便部署。)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git branch -M main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将当前分支重命名为 <code>main</code>，因为 Github 网站的默认分支名为 <code>main</code>。</li>
+<li>（<code>git branch -M</code>为重命名分支命令，<code>-M</code>参数为强制重命名，<code>main</code>是新分支名）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote add origin https://github.com/yourusername/yourusername.github.io.git
+</span></span><span class="line"><span class="cl">git remote add source https://github.com/yourusername/yourusername.github.io.source.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将本地仓库与 Github 仓库建立联系，并将本地仓库推送到 Github 仓库。</li>
+<li>（<code>git remote add</code>为添加远程仓库命令，<code>origin</code>和是部署博客展示的远程仓库名称，<code>https://github.com/yourusername/yourusername.github.io.git</code>是远程仓库的地址，<code>source</code>是存储主要资源的远程仓库名称，<code>https://github.com/yourusername/yourusername.github.io.source.git</code>是远程仓库的地址&mdash;-分为两个仓库，一个用于部署博客展示，一个用于存储主要资源）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将所有修改的文件添加到暂存区（.不可省略且此命令必须在 <code>git commit</code> 命令之前否则推送上去的仍然是旧文件）。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git commit -m &#34;save local changes before update&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将暂存区中的更改提交到本地的仓库，并添加消息，引号中消息根据内容自定义。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">git push source main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>该命令用于将本地仓库推送到 Github 仓库的 <code>main</code> 分支。</li>
+<li>（ <code>git push</code> 为推送命令， <code>-u</code> 参数为设置默认推送分支， <code>origin</code> 和 <code>source</code> 是远程仓库的名称， <code>main</code> 是分支名）</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git4.png"
+	width="627"
+	height="174"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git4_hu_9e0b09fc5fef2156.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git4_hu_6a2e1680c58a17a2.png 1024w"
+	loading="lazy"
+	
+		alt="推送成功"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="360"
+		data-flex-basis="864px"
+	
+></p>
+<ul>
+<li>等待几分钟，访问 <code>https://yourusername.github.io</code> 即可看到部署成功的网站。</li>
+</ul>
+<h2 id="扩展">扩展
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>验证远程库配置是否正确</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git5.png"
+	width="530"
+	height="80"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git5_hu_afda88ea894eddeb.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git5_hu_e6a5daed902fcbaf.png 1024w"
+	loading="lazy"
+	
+		alt="正确显示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="662"
+		data-flex-basis="1590px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git branch -a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>显示所有本地和远程分支（*代表当前分支&ndash;红字代表远程分支）</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git6.png"
+	width="679"
+	height="66"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git6_hu_15a309435bc312ac.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git6_hu_19f8a96d46e666c5.png 1024w"
+	loading="lazy"
+	
+		alt="显示所有本地和远程分支"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1028"
+		data-flex-basis="2469px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git log
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看提交历史(可以通过此处获取 hash 值，用于回退版本&mdash;慎用)</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git7.png"
+	width="742"
+	height="327"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git7_hu_3646bace4c053b8a.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git7_hu_9e1655e0679a13b4.png 1024w"
+	loading="lazy"
+	
+		alt="查看提交历史"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="226"
+		data-flex-basis="544px"
+	
+></p>
+<h2 id="报错处理">报错处理
+</h2><p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git8.png"
+	width="872"
+	height="65"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git8_hu_23219369d18a6875.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git8_hu_b27dbb419fc253c.png 1024w"
+	loading="lazy"
+	
+		alt="推送错误"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1341"
+		data-flex-basis="3219px"
+	
+></p>
+<ul>
+<li>
+<p>此报错发生于 <code>git push</code> 时（并非网络问题）</p>
+</li>
+<li>
+<p>解决方法：</p>
+<ul>
+<li>重设当前分支为 <code>main</code>(git branch -m 旧分支名 main)</li>
+<li>检查 <code>git push source main</code> 中 <code>main</code> 拼写是否正确</li>
+</ul>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git9.png"
+	width="897"
+	height="42"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git9_hu_5ba0128544df3a95.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git9_hu_f8ae692568420dc3.png 1024w"
+	loading="lazy"
+	
+		alt="推送错误"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2135"
+		data-flex-basis="5125px"
+	
+></p>
+<ul>
+<li>
+<p>此报错发生于 <code>git push</code> 时（网络问题）</p>
+</li>
+<li>
+<p>解决方法：更换未污染的 DNS 或添加代理</p>
+</li>
 </ul>
 
 </section>
