@@ -77,7 +77,26 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/style&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h2 id=&#34;更换鼠标样式&#34;&gt;更换鼠标样式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;逆天指针卡了我两个小时，也是够了，折腾了半天希望实现动态指针，通过网上找到的解析.ani 文件未.cur 并逐帧播放的方法，最终实现了动态指针效果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But！！！效果不佳，和 ppt 一样有明显卡顿感，但确实能行，并且会和原本的动态鼠标样式混淆，所以还是放弃了，转而采用传统的静态图标的方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But！！！奇葩的情况出现了，一般鼠标指针都为.cur 或.ani 格式，所以在替换时并没有太注意，结果出现了问题，指针在我的浏览器巨大无比，经过漫长的排查，最后发现调整成.png 格式就恢复正常了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;贴一下使用的链接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://imagetostl.com/cn/convert/file/cur/to/png#convert&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;.cur 转.ani&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
         </item>
         <item>
         <title>首次尝试部署Hugo到Github</title>
