@@ -270,10 +270,17 @@
     <li><a href="#前言">前言</a></li>
     <li><a href="#部署步骤">部署步骤</a>
       <ol>
-        <li><a href="#安装-hugo">安装 Hugo</a></li>
-        <li><a href="#配置-hugo">配置 Hugo</a></li>
-        <li><a href="#安装-git">安装 Git</a></li>
-        <li><a href="#配置-git">配置 Git</a></li>
+        <li><a href="#安装-hugo">安装 Hugo</a>
+          <ol>
+            <li><a href="#配置-hugo">配置 Hugo</a></li>
+            <li><a href="#安装-hugo-主题">安装 Hugo 主题</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装-git">安装 Git</a>
+          <ol>
+            <li><a href="#配置-git">配置 Git</a></li>
+          </ol>
+        </li>
         <li><a href="#创建-github-仓库">创建 Github 仓库</a></li>
       </ol>
     </li>
@@ -354,28 +361,27 @@
     
     <h2 id="前言">前言
 </h2><p>首先介绍用到的工具：</p>
-<ul>
-<li>Hugo：一个静态网站生成器，内置大量好看的主题，可以将 Markdown 文件转换为 HTML 文件，应该是开源项目，使用 go 语言编写（Google 开发的语言&ndash;大概）。
+<blockquote>
+<p>Hugo：一个静态网站生成器，内置大量好看的主题，可以将 Markdown 文件转换为 HTML 文件，应该是开源项目，使用 go 语言编写（Google 开发的语言&ndash;大概）。
 简而言之，这是一个框架，可以快速搭建个人博客。
-下载地址：https://github.com/gohugoio/hugo/releases
-<br></li>
-<li>Github：一个代码托管平台，可以托管代码，提供版本控制，可以与 Hugo 配合使用。
+下载地址：https://github.com/gohugoio/hugo/releases</p>
+<p>Github：一个代码托管平台，可以托管代码，提供版本控制，可以与 Hugo 配合使用。
 简而言之，这是一个开源的远程仓库云端存储，可以存储代码，提供版本控制追踪，可以用于托管部署我们的 Hugo 网站。
-注册地址：https://github.com/join
-<br>
-Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。
-下载地址：https://git-scm.com/downloads</li>
-</ul>
+注册地址：https://github.com/join</p>
+<p>Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。
+下载地址：https://git-scm.com/downloads</p></blockquote>
 <h2 id="部署步骤">部署步骤
 </h2><h3 id="安装-hugo">安装 Hugo
-</h3><p>下载 Hugo 压缩包，解压到任意目录，比如 <code>C:\Hugo</code>。</p>
+</h3><ul>
+<li>下载 Hugo 压缩包，解压到任意目录，比如 <code>C:\Hugo</code>。</li>
+</ul>
 <p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1.png"
 	width="623"
 	height="83"
 	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1_hu_eed3ccb54da0484e.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1_hu_f050bb731ac0d77e.png 1024w"
 	loading="lazy"
 	
-		alt="解释图片"
+		alt="解压后初始目录"
 	
 	
 		class="gallery-image" 
@@ -383,8 +389,10 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 		data-flex-basis="1801px"
 	
 ></p>
-<h3 id="配置-hugo">配置 Hugo
-</h3><p>打开命令行工具，切换到 Hugo 目录，输入以下命令：</p>
+<h4 id="配置-hugo">配置 Hugo
+</h4><ul>
+<li>打开命令行工具，切换到 Hugo 目录，输入以下命令：</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -393,15 +401,16 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site dev
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>此举是 Hugo 的命令，创建一个名为 <code>dev</code> 的网站目录。
-下图为部署步骤：
-<img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2.png"
+</div><ul>
+<li>该命令用于创建一个名为 <code>dev</code> 的网站目录。</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2.png"
 	width="819"
 	height="121"
 	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2_hu_b90e68d8f4cba182.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2_hu_1f6260ba9ecf2ad8.png 1024w"
 	loading="lazy"
 	
-		alt="解释图片"
+		alt="Hugo提供的部署步骤"
 	
 	
 		class="gallery-image" 
@@ -417,14 +426,16 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd dev
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>此举是进入 <code>dev</code> 目录。</p>
+</div><ul>
+<li>进入 <code>dev</code> 目录。</li>
+</ul>
 <p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3.png"
 	width="634"
 	height="289"
 	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3_hu_4b3d72f39a9860f9.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3_hu_1c41a920eb5a339c.png 1024w"
 	loading="lazy"
 	
-		alt="解释图片"
+		alt="创建后初始目录"
 	
 	
 		class="gallery-image" 
@@ -432,10 +443,15 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 		data-flex-basis="526px"
 	
 ></p>
-<h3 id="安装-git">安装 Git
-</h3><p>下载 Git 压缩包，安装到任意目录，比如 <code>C:\Git</code>。</p>
-<h3 id="配置-git">配置 Git
-</h3><p>打开 Git 命令行工具，输入以下命令：</p>
+<h4 id="安装-hugo-主题">安装 Hugo 主题
+</h4><h3 id="安装-git">安装 Git
+</h3><ul>
+<li>下载 Git 压缩包，安装到任意目录，比如 <code>C:\Git</code>。</li>
+</ul>
+<h4 id="配置-git">配置 Git
+</h4><ul>
+<li>打开 Git 命令行工具，输入以下命令：</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -446,8 +462,28 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 </span></span><span class="line"><span class="cl">git init
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>此举是 Git 版本控制系统中的一个基本命令，它的主要作用是在指定目录下创建一个新的 Git 仓库。这个命令会初始化一个空的仓库，为项目的版本控制和代码管理奠定基础。</p>
-<p>补充：执行 git init 后，Git 会在当前目录下创建一个名为 .git 的隐藏文件夹。这个文件夹是非常重要的，因为它包含了版本控制系统的所有必要信息，如配置文件、分支、标签等。这个文件夹是 Git 仓库的心脏，没有它，版本控制就无法进行。</p>
+</div><ul>
+<li>
+<p>此举是 Git 版本控制系统中的一个基本命令，它的主要作用是在指定目录下创建一个新的 Git 仓库。这个命令会初始化一个空的仓库，为项目的版本控制和代码管理奠定基础。</p>
+</li>
+<li>
+<p>补充：执行 git init 后，Git 会在当前目录下创建一个名为 .git 的隐藏文件夹。这个文件夹是非常重要的，因为它包含了版本控制系统的所有必要信息，如配置文件、分支、标签等。这个文件夹是 Git 仓库的心脏，没有它，版本控制就无法进行，git 开头代码将报错。</p>
+</li>
+</ul>
+<p><img src="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git1.png"
+	width="510"
+	height="24"
+	srcset="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git1_hu_98e7c27ea0d0a3a6.png 480w, /p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/git1_hu_a3bd169b60a49565.png 1024w"
+	loading="lazy"
+	
+		alt="创建初始仓库"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2125"
+		data-flex-basis="5100px"
+	
+></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -460,19 +496,23 @@ Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方
 </span></span><span class="line"><span class="cl">git config --global user.email &#34;your email&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>将 <code>your name</code> 和 <code>your email</code> 替换为你的真实姓名和邮箱。</p>
+</div><ul>
+<li>
+<p>将 <code>your name</code> 和 <code>your email</code> 替换为你的真实姓名和邮箱。</p>
+</li>
+<li>
 <p>此举是首次执行 Git 命令，会在你的电脑上创建一个全局配置，之后就表示你这台机器上所有的 Git 仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和 Email 地址。</p>
+</li>
+<li>
 <p>补充：
 查看全局配置代码：git config -l（这是 l 不是 1）</p>
+</li>
+</ul>
 <h3 id="创建-github-仓库">创建 Github 仓库
-</h3><p>登录 Github 网站，点击右上角的 <code>+</code> 号，选择 <code>New repository</code>，输入仓库名称，点击 <code>Create repository</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
-</div>
-</div>
+</h3><ul>
+<li>登录 Github 网站，点击右上角的 <code>+</code> 号，选择 <code>New repository</code>，输入仓库名称，点击 <code>Create repository</code>。</li>
+</ul>
+
 </section>
 
 
