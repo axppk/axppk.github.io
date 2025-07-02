@@ -13,7 +13,127 @@
         <pubDate>Wed, 02 Jul 2025 09:51:12 +0800</pubDate>
         
         <guid>https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/</guid>
-        <description></description>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;首先介绍用到的工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo：一个静态网站生成器，内置大量好看的主题，可以将 Markdown 文件转换为 HTML 文件，应该是开源项目，使用 go 语言编写（Google 开发的语言&amp;ndash;大概）。
+简而言之，这是一个框架，可以快速搭建个人博客。
+下载地址：https://github.com/gohugoio/hugo/releases
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Github：一个代码托管平台，可以托管代码，提供版本控制，可以与 Hugo 配合使用。
+简而言之，这是一个开源的远程仓库云端存储，可以存储代码，提供版本控制追踪，可以用于托管部署我们的 Hugo 网站。
+注册地址：https://github.com/join
+&lt;br&gt;
+Git Cmd：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。
+下载地址：https://git-scm.com/downloads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;部署步骤&#34;&gt;部署步骤
+&lt;/h2&gt;&lt;h3 id=&#34;安装-hugo&#34;&gt;安装 Hugo
+&lt;/h3&gt;&lt;p&gt;下载 Hugo 压缩包，解压到任意目录，比如 &lt;code&gt;C:\Hugo&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1.png&#34;
+	width=&#34;623&#34;
+	height=&#34;83&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1_hu_eed3ccb54da0484e.png 480w, https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo1_hu_f050bb731ac0d77e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解释图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;750&#34;
+		data-flex-basis=&#34;1801px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;配置-hugo&#34;&gt;配置 Hugo
+&lt;/h3&gt;&lt;p&gt;打开命令行工具，切换到 Hugo 目录，输入以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此举是 Hugo 的命令，创建一个名为 &lt;code&gt;dev&lt;/code&gt; 的网站目录。
+下图为部署步骤：
+&lt;img src=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2.png&#34;
+	width=&#34;819&#34;
+	height=&#34;121&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2_hu_b90e68d8f4cba182.png 480w, https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo2_hu_1f6260ba9ecf2ad8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解释图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;676&#34;
+		data-flex-basis=&#34;1624px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此举是进入 &lt;code&gt;dev&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3.png&#34;
+	width=&#34;634&#34;
+	height=&#34;289&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3_hu_4b3d72f39a9860f9.png 480w, https://axppk.github.io/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/hugo3_hu_1c41a920eb5a339c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解释图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装-git&#34;&gt;安装 Git
+&lt;/h3&gt;&lt;p&gt;下载 Git 压缩包，安装到任意目录，比如 &lt;code&gt;C:\Git&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;配置-git&#34;&gt;配置 Git
+&lt;/h3&gt;&lt;p&gt;打开 Git 命令行工具，输入以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此举是 Git 版本控制系统中的一个基本命令，它的主要作用是在指定目录下创建一个新的 Git 仓库。这个命令会初始化一个空的仓库，为项目的版本控制和代码管理奠定基础。&lt;/p&gt;
+&lt;p&gt;补充：执行 git init 后，Git 会在当前目录下创建一个名为 .git 的隐藏文件夹。这个文件夹是非常重要的，因为它包含了版本控制系统的所有必要信息，如配置文件、分支、标签等。这个文件夹是 Git 仓库的心脏，没有它，版本控制就无法进行。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &amp;#34;your name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &amp;#34;your email&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将 &lt;code&gt;your name&lt;/code&gt; 和 &lt;code&gt;your email&lt;/code&gt; 替换为你的真实姓名和邮箱。&lt;/p&gt;
+&lt;p&gt;此举是首次执行 Git 命令，会在你的电脑上创建一个全局配置，之后就表示你这台机器上所有的 Git 仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和 Email 地址。&lt;/p&gt;
+&lt;p&gt;补充：
+查看全局配置代码：git config -l（这是 l 不是 1）&lt;/p&gt;
+&lt;h3 id=&#34;创建-github-仓库&#34;&gt;创建 Github 仓库
+&lt;/h3&gt;&lt;p&gt;登录 Github 网站，点击右上角的 &lt;code&gt;+&lt;/code&gt; 号，选择 &lt;code&gt;New repository&lt;/code&gt;，输入仓库名称，点击 &lt;code&gt;Create repository&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         <item>
         <title>Chinese Test</title>
