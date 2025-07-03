@@ -10,7 +10,7 @@
 <meta property='og:description' content="前言 首先介绍一下 Hugo 使用样式文件的基本优先级，Hugo 会优先使用网站根目录下 layouts\\ 文件夹中的样式文件，之后使用模板中的样式文件，以 Stack 主题中的文章详情样式为例，它使用的模板是 themes\\hugo-theme-stack\\layouts\\partials\\article\\components\\details.html ，如果想要修改样式，则需要在同样的目录下创建同样的样式文件将其覆盖，即在 layouts\\partials\\article\\components\\ 目录下创建 details.html 文件，并将源文件中的代码复制过来。之后对该文件进行修改，加入想要的字数统计效果相关代码，加入位置和具体代码如下。\n">
 <meta property='og:url' content='https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-02T16:35:37&#43;08:00'/><meta property='article:modified_time' content='2025-07-03T15:09:52&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-02T16:35:37&#43;08:00'/><meta property='article:modified_time' content='2025-07-03T15:49:40&#43;08:00'/>
 <meta name="twitter:title" content="博客改造记录">
 <meta name="twitter:description" content="前言 首先介绍一下 Hugo 使用样式文件的基本优先级，Hugo 会优先使用网站根目录下 layouts\\ 文件夹中的样式文件，之后使用模板中的样式文件，以 Stack 主题中的文章详情样式为例，它使用的模板是 themes\\hugo-theme-stack\\layouts\\partials\\article\\components\\details.html ，如果想要修改样式，则需要在同样的目录下创建同样的样式文件将其覆盖，即在 layouts\\partials\\article\\components\\ 目录下创建 details.html 文件，并将源文件中的代码复制过来。之后对该文件进行修改，加入想要的字数统计效果相关代码，加入位置和具体代码如下。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,13 +54,7 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    
-                    
-                    
-                        
-                        <img src="/img/muzimi_hu_b430791ee60b1807.gif" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
+                    <img src="/img/muzimi.gif" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
@@ -274,6 +268,8 @@
     <li><a href="#显示文章字数统计">显示文章字数统计</a></li>
     <li><a href="#友链归档多列显示">友链、归档多列显示</a></li>
     <li><a href="#文章目录自动折叠">文章目录自动折叠</a></li>
+    <li><a href="#动态头像">动态头像</a></li>
+    <li><a href="#动态背景">动态背景</a></li>
   </ol>
 </nav>
         </div>
@@ -331,7 +327,7 @@
   <path d="M8 16h8" />
 </svg>
             <time class="article-time--reading">
-                本文共 1758 字
+                本文共 2078 字
             </time>
         </div>
         
@@ -347,7 +343,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 4 分钟
+                    阅读时长: 5 分钟
                 </time>
             </div>
         
@@ -913,7 +909,60 @@
 </div><ul>
 <li>文章就会默认隐藏子目录，等滚动到对应的目录后，才会将子目录进行展示。</li>
 </ul>
-
+<h2 id="动态头像">动态头像
+</h2><ul>
+<li>
+<p>准备合适大小的 gif 图片，如 <code>你的名字.gif</code>，将其放入 <code>static/img</code> 文件夹下（gif 过大将导致重影）</p>
+</li>
+<li>
+<p><code>hugo.yaml</code> 文件中更改配置 <code>local</code> 改为 <code>flase</code> 和 <code>avatar</code> 改为 <code>你的名字.gif</code></p>
+</li>
+<li>
+<p>补充：静态头像放在 <code>assets/img</code> 下（和原主题保持一致），此处放在 <code>static/img</code> 下是为了避开 Hugo 默认的资源处理（<code>static</code> 目录下不会被处理）。</p>
+</li>
+<li>
+<p>Stack 主题默认会在 assets/ 或 static/ 中查找头像文件，并通过 Hugo Pipes 处理（添加哈希值后缀&mdash;资源指纹，处理压缩&mdash;方便缓存，提高缓存速率）。</p>
+</li>
+<li>
+<p>local 设为 false 时，头像也可以直接采用 url 路径，如 <code>avatar: &quot;https://xxx.com/your-avatar.png&quot;</code>。</p>
+</li>
+</ul>
+<p><img src="/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/img.png"
+	width="545"
+	height="142"
+	srcset="/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/img_hu_2b4baee99b1d8810.png 480w, /p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/img_hu_2001284dc843b013.png 1024w"
+	loading="lazy"
+	
+		alt="如图所示"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="383"
+		data-flex-basis="921px"
+	
+></p>
+<h2 id="动态背景">动态背景
+</h2><ul>
+<li>
+<p>樱花飞舞背景</p>
+</li>
+<li>
+<p>下载<a class="link" href="https://letere-gzj.github.io/hugo-stack/p/hugo/custom-background/sakura.js"  target="_blank" rel="noopener"
+    >【sakura.js】</a>(Ctrl + S 保存)，并放到 <code>assets/background</code> 文件夹下</p>
+</li>
+<li>
+<p>在 <code>layouts/partials/footer/custom.html</code> 中，引入以下代码</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;script src={{ (resources.Get &#34;background/sakura.js&#34;).Permalink }}&gt;&lt;/script&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -942,7 +991,7 @@
 
 
         <span>
-            最后更新于 Jul 03, 2025 15:09 &#43;0800
+            最后更新于 Jul 03, 2025 15:49 &#43;0800
         </span>
     </section></footer>
 
