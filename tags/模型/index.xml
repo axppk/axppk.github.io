@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>模型 on KKPT的个人博客</title>
+        <link>https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/</link>
+        <description>Recent content in 模型 on KKPT的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>KKPT</copyright>
+        <lastBuildDate>Mon, 07 Jul 2025 12:09:03 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>赛璐璐风人物模型制作</title>
+        <link>https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</link>
+        <pubDate>Sun, 06 Jul 2025 19:38:14 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;模型使用 blender 制作，贴图使用 PT 制作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于模型制作周期过长，前期已经没法追溯了，后期再做类似模型再记录吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;骨骼绑定&#34;&gt;骨骼绑定
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;参考视频&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV15k4y1H7zc?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blender 教程丨【绑定篇】第 ② 集-卡通角色建模教程（头发衣服权重-上）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;创建 blender 自带骨架，删除多余骨骼，通过自动权重先默认绑定。&lt;br&gt;
+blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr+P 绑定骨骼附带自动权重。&lt;br&gt;
+自带权重一般效果不佳，通过模型的点层级调整对应的顶点权重。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/0.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/0_hu_8271aeeec52e891a.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/0_hu_bdc067a8982b82fb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;衣服权重不用传统的绑定方式，直接用数据传递，通过数据传递修改器获取角色身体顶点组，传递给衣服。&lt;br&gt;
+复制一个身体用作数据传递的身体，此方法可以避免数据传递的一些可能的小 bug（部分网格无法传递），添加上骨架，并且隐藏显示修改器结果（避免影响模型）。&lt;br&gt;
+衣服添加数据传递修改器（须在骨架修改器上方），他的父级身体，勾选顶点数据，顶点组，映射选择 最近的面插值，然后点击生成数据层，调整原身体骨架，观察效果。&lt;br&gt;
+太痛苦了，人体权重有问题的话将导致衣服各种抽搐！！！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1.png&#34;
+	width=&#34;294&#34;
+	height=&#34;574&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1_hu_18d48ba8cbc56011.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1_hu_58cc34f883010da1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;51&#34;
+		data-flex-basis=&#34;122px&#34;
+	
+&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2.png&#34;
+	width=&#34;323&#34;
+	height=&#34;518&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2_hu_d64c82b98c12a3e3.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2_hu_1cb73c3f6e45041b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;62&#34;
+		data-flex-basis=&#34;149px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;合并了身体，重新调整权重，修复后基本是这样，不仔细看其实不太能看出来权重的问题，效果还行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3_hu_f36fb795cfdfea08.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3_hu_db70d43ecf04297f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;饰品绑定：除固定式的，蝴蝶结发饰直接添加骨架，通过 head 头部顶点组控制，其他的都可以用数据传递，直接绑定到对应的父级衣服上（因为他们会根据衣服拉伸）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4_hu_904adf522d4b4de6.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4_hu_357f712cf2c8ba02.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;小翅膀绑定：新建骨骼，添加简单的面片，用来数据传递调整位置，然后通过数据传递修改器绑定到翅膀的顶点组上。&lt;br&gt;
+好处：调整面片的顶点位置就可以快速出效果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_204d292cdf46f72f.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_bf7d68e7fee2691f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Sun, 06 Jul 2025 13:11:02 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 07 Jul 2025 12:09:03 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>仿Nikki联动尼尔的启动动画</title>
         <link>https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/</link>
         <pubDate>Sat, 05 Jul 2025 12:02:23 +0800</pubDate>
@@ -885,7 +885,7 @@
 		data-flex-basis=&#34;951px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;基本思路在-domcontentloaded-事件中判断是否为第一次访问如果是则将-loadingbox-显示出来并执行下列动画否则不执行动画并打印日志&#34;&gt;基本思路：在 DOMContentLoaded 事件中，判断是否为第一次访问，如果是，则将 loadingBox 显示出来，并执行下列动画，否则不执行动画并打印日志。
+&lt;h3 id=&#34;基本思路在-domcontentloaded-事件中判断是否为第一次访问如果是则将-loadingbox-显示出来并执行下列动画否则不执行动画并打印日志利用简单的-css-控制大标题的透明度变化实现淡入利用-js-拆分字体通过拼接的方式以数组存储利用定时器打印出来&#34;&gt;基本思路：在 DOMContentLoaded 事件中，判断是否为第一次访问，如果是，则将 loadingBox 显示出来，并执行下列动画，否则不执行动画并打印日志，利用简单的 css 控制大标题的透明度变化实现淡入，利用 js 拆分字体，通过拼接的方式以数组存储，利用定时器打印出来。
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;定义 fadeIn 动画，淡入效果。&amp;mdash;-实现 loading 内容的淡入效果。&lt;/li&gt;
 &lt;/ul&gt;

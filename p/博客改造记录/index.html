@@ -10,7 +10,7 @@
 <meta property='og:description' content="用于记录博客改造的历程，主要是对 Stack 主题进行一些样式上的修改和功能上的增强。">
 <meta property='og:url' content='https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2025-07-02T16:35:37&#43;08:00'/><meta property='article:modified_time' content='2025-07-06T13:11:02&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2025-07-02T16:35:37&#43;08:00'/><meta property='article:modified_time' content='2025-07-07T12:09:03&#43;08:00'/>
 <meta name="twitter:title" content="博客改造记录">
 <meta name="twitter:description" content="用于记录博客改造的历程，主要是对 Stack 主题进行一些样式上的修改和功能上的增强。">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -488,6 +488,7 @@
     <li><a href="#动态背景">动态背景</a></li>
     <li><a href="#代码收缩">代码收缩</a></li>
     <li><a href="#返回顶部">返回顶部</a></li>
+    <li><a href="#点击特效">点击特效</a></li>
   </ol>
 </nav>
         </div>
@@ -557,7 +558,7 @@
   <path d="M8 16h8" />
 </svg>
             <time class="article-time--reading">
-                本文共 2755 字
+                本文共 4182 字
             </time>
         </div>
         
@@ -573,7 +574,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 6 分钟
+                    阅读时长: 9 分钟
                 </time>
             </div>
         
@@ -1531,7 +1532,468 @@
 </span></span><span class="line"><span class="cl">&lt;/script&gt;
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="点击特效">点击特效
+</h2><ul>
+<li>
+<p>获取网上下载的<a class="link" href="https://blog.csdn.net/ungoing/article/details/125071691"  target="_blank" rel="noopener"
+    >点击特效</a></p>
+</li>
+<li>
+<p>创建新的 js 文件，如 <code>click.js</code>放在 <code>assets/click-effect</code> 文件夹下</p>
+</li>
+<li>
+<p>将以下代码复制进 <code>click.js</code> 文件中</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/**</span>
+</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="err">鼠标点击和长按特效函数</span>
+</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="err">创建一个全屏</span><span class="n">canvas</span><span class="err">，实现点击和长按的粒子动画效果</span>
+</span></span><span class="line"><span class="cl"> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">function</span> <span class="n">clickEffect</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">balls</span> <span class="o">=</span> <span class="p">[];</span>             <span class="o">//</span> <span class="err">存储所有粒子的数组</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">longPressed</span> <span class="o">=</span> <span class="bp">false</span><span class="p">;</span>    <span class="o">//</span> <span class="err">是否长按的标志</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">longPress</span><span class="p">;</span>              <span class="o">//</span> <span class="err">长按定时器</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>         <span class="o">//</span> <span class="err">长按乘数，影响粒子大小和数量</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">;</span>          <span class="o">//</span> <span class="n">canvas宽高</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">origin</span><span class="p">;</span>                 <span class="o">//</span> <span class="err">原点位置</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">normal</span><span class="p">;</span>                 <span class="o">//</span> <span class="err">法线向量</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">ctx</span><span class="p">;</span>                    <span class="o">//</span> <span class="n">canvas上下文</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">粒子颜色数组</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">colours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;#F73859&#34;</span><span class="p">,</span> <span class="s2">&#34;#14FFEC&#34;</span><span class="p">,</span> <span class="s2">&#34;#00E0FF&#34;</span><span class="p">,</span> <span class="s2">&#34;#FF99FE&#34;</span><span class="p">,</span> <span class="s2">&#34;#FAF15D&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">创建全屏</span><span class="n">canvas元素并添加到页面</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">canvas</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&#34;canvas&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">canvas</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">canvas</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s2">&#34;style&#34;</span><span class="p">,</span> <span class="s2">&#34;width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">创建鼠标指针元素</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">pointer</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&#34;span&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pointer</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;pointer&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">pointer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">检查浏览器支持</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">canvas</span><span class="o">.</span><span class="n">getContext</span> <span class="o">&amp;&amp;</span> <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ctx</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">updateSize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">,</span> <span class="n">updateSize</span><span class="p">,</span> <span class="bp">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">loop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">鼠标按下事件</span> <span class="o">-</span> <span class="err">点击或长按的开始</span>
+</span></span><span class="line"><span class="cl">      <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s2">&#34;mousedown&#34;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">点击时创建</span><span class="mi">10</span><span class="o">-</span><span class="mi">20</span><span class="err">个粒子</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pushBalls</span><span class="p">(</span><span class="n">randBetween</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">e</span><span class="o">.</span><span class="n">clientX</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">clientY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;is-pressed&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">设置长按定时器</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">)</span> <span class="o">-</span> <span class="err">可调整长按检测时间</span>
+</span></span><span class="line"><span class="cl">        <span class="n">longPress</span> <span class="o">=</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">          <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;is-longpress&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="n">longPressed</span> <span class="o">=</span> <span class="bp">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="mi">500</span><span class="p">);</span> <span class="o">//</span> <span class="err">长按检测时间</span> <span class="o">-</span> <span class="err">可调整持续时间</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="bp">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">鼠标释放事件</span> <span class="o">-</span> <span class="err">点击或长按的结束</span>
+</span></span><span class="line"><span class="cl">      <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s2">&#34;mouseup&#34;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">clearInterval</span><span class="p">(</span><span class="n">longPress</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">longPressed</span> <span class="o">==</span> <span class="bp">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;is-longpress&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="o">//</span> <span class="err">长按结束时创建更多粒子</span><span class="p">(</span><span class="mi">50</span><span class="o">-</span><span class="mi">100</span> <span class="o">+</span> <span class="n">multiplier</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="n">pushBalls</span><span class="p">(</span><span class="n">randBetween</span><span class="p">(</span><span class="mi">50</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">multiplier</span><span class="p">),</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">multiplier</span><span class="p">)),</span> <span class="n">e</span><span class="o">.</span><span class="n">clientX</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">clientY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="n">longPressed</span> <span class="o">=</span> <span class="bp">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;is-pressed&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="bp">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">鼠标移动事件</span> <span class="o">-</span> <span class="err">更新指针位置</span>
+</span></span><span class="line"><span class="cl">      <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s2">&#34;mousemove&#34;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">x</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">clientX</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">y</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">clientY</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pointer</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pointer</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="bp">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&#34;canvas or addEventListener is unsupported!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">更新</span><span class="n">canvas尺寸</span><span class="err">，适应窗口变化</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">updateSize</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">高分辨率渲染</span>
+</span></span><span class="line"><span class="cl">      <span class="n">canvas</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerWidth</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">canvas</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerHeight</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">canvas</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerWidth</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">canvas</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerHeight</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ctx</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="n">width</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">height</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">innerHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">origin</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="p">:</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span><span class="p">:</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">      <span class="n">normal</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="p">:</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span><span class="p">:</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">粒子类</span> <span class="o">-</span> <span class="err">表示特效中的单个粒子</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="n">Ball</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">constructor</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">origin</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">origin</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>                 <span class="o">//</span> <span class="err">粒子</span><span class="n">x坐标</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>                 <span class="o">//</span> <span class="err">粒子</span><span class="n">y坐标</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">();</span>  <span class="o">//</span> <span class="err">粒子发射角度</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">粒子速度乘数</span> <span class="o">-</span> <span class="err">长按会产生更大更快的粒子</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">longPressed</span> <span class="o">==</span> <span class="bp">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">this</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">=</span> <span class="n">randBetween</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="n">multiplier</span><span class="p">,</span> <span class="mi">12</span> <span class="o">+</span> <span class="n">multiplier</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">this</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">=</span> <span class="n">randBetween</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">粒子速度分量</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">angle</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">angle</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">粒子初始半径</span> <span class="o">-</span> <span class="err">可调整粒子大小</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">randBetween</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">();</span> <span class="o">//</span> <span class="err">可调整粒子大小</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">随机选择粒子颜色</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">colours</span><span class="p">[</span><span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">colours</span><span class="o">.</span><span class="n">length</span><span class="p">)];</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">       <span class="o">*</span> <span class="err">更新粒子位置和属性</span>
+</span></span><span class="line"><span class="cl">       <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">      <span class="n">update</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">this</span><span class="o">.</span><span class="n">vx</span> <span class="o">-</span> <span class="n">normal</span><span class="o">.</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">this</span><span class="o">.</span><span class="n">vy</span> <span class="o">-</span> <span class="n">normal</span><span class="o">.</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">normal</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="n">window</span><span class="o">.</span><span class="n">innerWidth</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">angle</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">normal</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="n">window</span><span class="o">.</span><span class="n">innerHeight</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">angle</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">粒子半径减小</span> <span class="o">-</span> <span class="err">控制粒子消失速度</span><span class="p">(</span><span class="err">持续时间</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">r</span> <span class="o">-=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="o">//</span> <span class="err">可调整粒子消失速度</span><span class="p">(</span><span class="err">持续时间</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">速度衰减</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">vx</span> <span class="o">*=</span> <span class="mf">0.9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">vy</span> <span class="o">*=</span> <span class="mf">0.9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">创建指定数量的粒子</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">count</span> <span class="o">-</span> <span class="err">粒子数量</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">x</span> <span class="o">-</span> <span class="err">起始</span><span class="n">x坐标</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">y</span> <span class="o">-</span> <span class="err">起始</span><span class="n">y坐标</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">pushBalls</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">origin</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">origin</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">balls</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">new</span> <span class="n">Ball</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">生成指定范围内的随机整数</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="nb">min</span> <span class="o">-</span> <span class="err">最小值</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="nb">max</span> <span class="o">-</span> <span class="err">最大值</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">@</span><span class="n">returns</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="o">-</span> <span class="err">随机整数</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">randBetween</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="nb">max</span><span class="p">)</span> <span class="o">+</span> <span class="nb">min</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">动画循环</span> <span class="o">-</span> <span class="err">每一帧更新和绘制所有粒子</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">清空画布</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ctx</span><span class="o">.</span><span class="n">fillStyle</span> <span class="o">=</span> <span class="s2">&#34;rgba(255, 255, 255, 0)&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ctx</span><span class="o">.</span><span class="n">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">canvas</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">canvas</span><span class="o">.</span><span class="n">height</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">绘制并更新所有粒子</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">balls</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">b</span> <span class="o">=</span> <span class="n">balls</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">ctx</span><span class="o">.</span><span class="n">fillStyle</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ctx</span><span class="o">.</span><span class="n">beginPath</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ctx</span><span class="o">.</span><span class="n">arc</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ctx</span><span class="o">.</span><span class="n">fill</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">b</span><span class="o">.</span><span class="n">update</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">长按乘数更新</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">longPressed</span> <span class="o">==</span> <span class="bp">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">multiplier</span> <span class="o">+=</span> <span class="mf">0.2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">longPressed</span> <span class="o">&amp;&amp;</span> <span class="n">multiplier</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">multiplier</span> <span class="o">-=</span> <span class="mf">0.4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">移除离开画布或半径小于</span><span class="mi">0</span><span class="err">的粒子</span>
+</span></span><span class="line"><span class="cl">      <span class="n">removeBall</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">请求下一帧动画</span>
+</span></span><span class="line"><span class="cl">      <span class="n">requestAnimationFrame</span><span class="p">(</span><span class="n">loop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">移除超出边界或不可见的粒子</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">removeBall</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">balls</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">b</span> <span class="o">=</span> <span class="n">balls</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">b</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&gt;</span> <span class="n">width</span> <span class="o">||</span> <span class="n">b</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">b</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&gt;</span> <span class="n">height</span> <span class="o">||</span> <span class="n">b</span><span class="o">.</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">balls</span><span class="o">.</span><span class="n">splice</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="o">//</span> <span class="err">调用特效函数</span>
+</span></span><span class="line"><span class="cl">  <span class="n">clickEffect</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><ul>
+<li>和背景的 js 一样在 <code>layouts/partials/footer/custom.html</code> 中引入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;script src={{ (resources.Get &#34;click-effect/click.js&#34; ).Permalink }}&gt;&lt;/script&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这样就实现了鼠标点击和长按的粒子动画效果，该 js 已被添加注释，可以根据注释改动参数和效果。</li>
+</ul>
+
 </section>
 
 
@@ -1566,7 +2028,7 @@
 
 
         <span>
-            最后更新于 Jul 06, 2025 13:11 &#43;0800
+            最后更新于 Jul 07, 2025 12:09 &#43;0800
         </span>
     </section></footer>
 
@@ -1954,5 +2416,8 @@
 </script>
 
 <script src=https://axppk.github.io/background/sakura.js></script>
+
+<script src=https://axppk.github.io/click-effect/click.js></script>
+
     </body>
 </html>
