@@ -10,7 +10,7 @@
 <meta property='og:description' content="尝试用 CSS 和 JS 实现一些动画。--暂未完成。">
 <meta property='og:url' content='https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Css' /><meta property='article:tag' content='JavaScript' /><meta property='article:published_time' content='2025-07-05T12:02:23&#43;08:00'/><meta property='article:modified_time' content='2025-07-07T12:09:03&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Css' /><meta property='article:tag' content='JavaScript' /><meta property='article:published_time' content='2025-07-05T12:02:23&#43;08:00'/><meta property='article:modified_time' content='2025-07-08T20:02:56&#43;08:00'/>
 <meta name="twitter:title" content="仿Nikki联动尼尔的启动动画">
 <meta name="twitter:description" content="尝试用 CSS 和 JS 实现一些动画。--暂未完成。">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -575,7 +575,7 @@
   <path d="M8 16h8" />
 </svg>
             <time class="article-time--reading">
-                本文共 6044 字
+                本文共 7770 字
             </time>
         </div>
         
@@ -591,7 +591,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 13 分钟
+                    阅读时长: 16 分钟
                 </time>
             </div>
         
@@ -1195,6 +1195,20 @@
 </span><span class="lnt">215
 </span><span class="lnt">216
 </span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
@@ -1319,7 +1333,7 @@
 </span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">获取元素</span>
 </span></span><span class="line"><span class="cl">      <span class="k">const</span> <span class="n">lines</span> <span class="o">=</span> <span class="ne">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.line&#39;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">line</span> <span class="o">=&gt;</span> <span class="n">line</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">text</span> <span class="o">&amp;&amp;</span> <span class="n">line</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">trim</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="k">const</span> <span class="n">loadingText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;loadingText&#39;</span><span class="p">);</span><span class="o">//</span><span class="err">此处更具</span><span class="n">id获取元素</span><span class="o">--</span><span class="err">纯扩展</span>
+</span></span><span class="line"><span class="cl">      <span class="k">const</span> <span class="n">loadingText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;loadingText&#39;</span><span class="p">);</span><span class="o">//</span><span class="err">此处根据</span><span class="n">id获取元素</span><span class="o">--</span><span class="err">纯扩展</span>
 </span></span><span class="line"><span class="cl">      <span class="k">const</span> <span class="n">lineEnd</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="n">lines</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">定义加载动画状态</span>
@@ -1381,6 +1395,18 @@
 </span></span><span class="line"><span class="cl">        <span class="p">});</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="o">//</span> <span class="err">新增：等待所有资源加载完成（</span><span class="n">DOMContentLoaded不检测字体等资源是否加载完毕</span><span class="err">，所以需要另行检测）</span>
+</span></span><span class="line"><span class="cl">      <span class="n">function</span> <span class="n">waitForResourcesLoaded</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">readyState</span> <span class="o">===</span> <span class="s1">&#39;complete&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">resolve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="n">resolve</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="n">isFirstVisit</span> <span class="o">=</span> <span class="o">!</span><span class="n">sessionStorage</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">);</span>  <span class="o">//</span><span class="err">定义判断是否为第一次访问</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">isFirstVisit</span><span class="p">)</span> <span class="p">{</span>
@@ -1398,7 +1424,9 @@
 </span></span><span class="line"><span class="cl">            <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">          <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">          <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">500</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">          <span class="o">//</span> <span class="err">等待所有资源加载完成</span>
+</span></span><span class="line"><span class="cl">          <span class="n">await</span> <span class="n">waitForResourcesLoaded</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">          <span class="n">await</span> <span class="n">typeLine</span><span class="p">(</span><span class="n">lineEnd</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">          <span class="o">//</span> <span class="err">所有打字动画完成后，停止加载动画</span>
@@ -1411,6 +1439,443 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>以下版本为不进行资源加载判断，会出现字体很久加载出来劣化体验感受的情况(可以保证绝对能访问)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">html</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&#34;zh-CN&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;viewport&#34;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">font</span><span class="o">-</span><span class="n">face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">&#39;MyCustomFont&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">src</span><span class="p">:</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;/font/MarukoGothicCJKjp-Regular.ttf&#39;</span><span class="p">)</span> <span class="n">format</span><span class="p">(</span><span class="s1">&#39;truetype&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">loadingBox</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span><span class="p">:</span> <span class="n">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">justify</span><span class="o">-</span><span class="n">content</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">display</span><span class="p">:</span> <span class="n">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="n">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">height</span><span class="p">:</span> <span class="mi">100</span><span class="n">vh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#1d1d1d;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">z</span><span class="o">-</span><span class="n">index</span><span class="p">:</span> <span class="mi">9999</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">Bigbox</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#1d1d1d;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="n">monospace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">margin</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">&#39;MyCustomFont&#39;</span><span class="p">,</span> <span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">flex</span><span class="o">-</span><span class="n">direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">min</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mi">100</span><span class="n">vh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">h1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">animation</span><span class="p">:</span> <span class="n">fadeIn</span> <span class="mf">1.5</span><span class="n">s</span> <span class="nb">ease</span><span class="o">-</span><span class="ow">in</span> <span class="n">forwards</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span><span class="p">:</span> <span class="c1">#b4b4b4;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">:</span> <span class="n">inline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">white</span><span class="o">-</span><span class="n">space</span><span class="p">:</span> <span class="n">pre</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">loading</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">:</span> <span class="n">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">typewriter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span><span class="p">:</span> <span class="n">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">max</span><span class="o">-</span><span class="n">width</span><span class="p">:</span> <span class="mi">600</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">typewriter</span> <span class="o">.</span><span class="n">line</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">display</span><span class="p">:</span> <span class="n">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">overflow</span><span class="p">:</span> <span class="n">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">white</span><span class="o">-</span><span class="n">space</span><span class="p">:</span> <span class="n">nowrap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">margin</span><span class="o">-</span><span class="n">left</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">margin</span><span class="o">-</span><span class="n">top</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span><span class="p">:</span> <span class="c1">#b4b4b4;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">letter</span><span class="o">-</span><span class="n">spacing</span><span class="p">:</span> <span class="mi">2</span><span class="n">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">height</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">keyframes</span> <span class="n">fadeIn</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">from</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;loadingBox&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;Bigbox&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;loading&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">LOADING</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">h1</span> <span class="n">id</span><span class="o">=</span><span class="s2">&#34;loadingText&#34;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&#34;font-size: 15px;&#34;</span><span class="o">&gt;</span> <span class="o">-</span> <span class="err">系统启动中</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;typewriter&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;Neuro&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;Implanted&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;Machine for&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;Protecting&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;Human&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;突触连接：OFF&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;删除本机数据&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;网络连接&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;下载最新数据：完成&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;确认数据损失率：正常范围&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;确认神经元受损度：正常&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;确认神经元处理速度：正常&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;突触链接：ON&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;确认路由信息恢复率：正常范围&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;确认通信状态：良好&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;NIMPH系统：全部正常&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;数据自动保存&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;line&#34;</span> <span class="n">data</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&#34;准备完毕&#34;</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">document</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="n">async</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">使用类选择器获取元素</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">loading</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">&#39;.loadingBox&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">获取元素</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">lines</span> <span class="o">=</span> <span class="ne">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.line&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">line</span> <span class="o">=&gt;</span> <span class="n">line</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">text</span> <span class="o">&amp;&amp;</span> <span class="n">line</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">trim</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">loadingText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;loadingText&#39;</span><span class="p">);</span><span class="o">//</span><span class="err">此处更具</span><span class="n">id获取元素</span><span class="o">--</span><span class="err">纯扩展</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="n">lineEnd</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="n">lines</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">定义加载动画状态</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">dotCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">let</span> <span class="n">loadingInterval</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">启动加载动画</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">startLoadingAnimation</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">loadingInterval</span> <span class="o">=</span> <span class="n">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dotCount</span> <span class="o">=</span> <span class="p">(</span><span class="n">dotCount</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="o">//</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="err">循环</span>
+</span></span><span class="line"><span class="cl">        <span class="n">loadingText</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="s1">&#39;  -  系统启动中&#39;</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">dotCount</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="mi">500</span><span class="p">);</span> <span class="o">//</span> <span class="err">每</span><span class="mi">500</span><span class="n">ms更新一次</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">停止加载动画</span>
+</span></span><span class="line"><span class="cl">    <span class="n">function</span> <span class="n">stopLoadingAnimation</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">clearInterval</span><span class="p">(</span><span class="n">loadingInterval</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="n">loadingText</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="s1">&#39;  -  系统启动完成&#39;</span><span class="p">;</span> <span class="o">//</span> <span class="err">动画结束后显示完成状态</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">创建并执行动画</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="n">fadeOutAnimation</span> <span class="o">=</span> <span class="n">loading</span><span class="o">.</span><span class="n">animate</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span> <span class="n">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span> <span class="n">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">duration</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fill</span><span class="p">:</span> <span class="s1">&#39;forwards&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">动画结束后隐藏元素</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fadeOutAnimation</span><span class="o">.</span><span class="n">finished</span><span class="o">.</span><span class="n">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">loading</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sessionStorage</span><span class="o">.</span><span class="n">setItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">);</span><span class="o">//</span><span class="err">设置</span><span class="n">sessionStorage</span><span class="err">，标识为已被访问</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">打字动画函数</span>
+</span></span><span class="line"><span class="cl">    <span class="n">async</span> <span class="n">function</span> <span class="n">typeLine</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="n">fullText</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">text</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">line</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">fullText</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="n">firstChar</span> <span class="o">=</span> <span class="n">fullText</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="s1">&#39;|&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">let</span> <span class="n">currentIndex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">line</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">firstChar</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">function</span> <span class="n">type</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">currentIndex</span> <span class="o">&lt;</span> <span class="n">fullText</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">line</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">fullText</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentIndex</span><span class="p">)</span> <span class="o">+</span> <span class="n">firstChar</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">currentIndex</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">setTimeout</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="mi">20</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">line</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">fullText</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">resolve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">setTimeout</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="n">isFirstVisit</span> <span class="o">=</span> <span class="o">!</span><span class="n">sessionStorage</span><span class="o">.</span><span class="n">getItem</span><span class="p">(</span><span class="s1">&#39;visited&#39;</span><span class="p">);</span>  <span class="o">//</span><span class="err">定义判断是否为第一次访问</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">isFirstVisit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">loading</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">display</span> <span class="o">=</span> <span class="s2">&#34;block&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">执行流程：淡入动画</span> <span class="o">-&gt;</span> <span class="err">加载动画</span> <span class="o">-&gt;</span> <span class="err">打字动画</span>
+</span></span><span class="line"><span class="cl">        <span class="n">startLoadingAnimation</span><span class="p">();</span> <span class="o">//</span> <span class="err">先启动加载动画</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">等待淡入动画完成</span>
+</span></span><span class="line"><span class="cl">        <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">1500</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">处理除最后一行外的所有行</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">lines</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">await</span> <span class="n">typeLine</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">500</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">await</span> <span class="n">typeLine</span><span class="p">(</span><span class="n">lineEnd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">所有打字动画完成后，停止加载动画</span>
+</span></span><span class="line"><span class="cl">        <span class="n">await</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">resolve</span> <span class="o">=&gt;</span> <span class="n">setTimeout</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="mi">800</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stopLoadingAnimation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;已被访问过，不再执行动画&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
@@ -2638,7 +3103,7 @@
 
 
         <span>
-            最后更新于 Jul 07, 2025 12:09 &#43;0800
+            最后更新于 Jul 08, 2025 20:02 &#43;0800
         </span>
     </section></footer>
 
@@ -2654,6 +3119,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPR渲染尝试</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>NPR on KKPT的个人博客</title>
+        <link>https://axppk.github.io/tags/npr/</link>
+        <description>Recent content in NPR on KKPT的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>KKPT</copyright>
+        <lastBuildDate>Tue, 08 Jul 2025 20:02:56 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/npr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>NPR渲染尝试</title>
+        <link>https://axppk.github.io/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/</link>
+        <pubDate>Tue, 08 Jul 2025 19:40:43 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/</guid>
+        <description>&lt;h2 id=&#34;参考链接&#34;&gt;参考链接
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV19K411B787/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FernNPR：开源 NPR 项目&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/FernRP/FernRPExample&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;对应的仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1BQ4y1U7BX/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【深入浅出】PBR 与 BRDF 的原理以及在 Unity 中的实现&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1Tm421n7F3/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[Unity URP Shader]NPR 融入一点 PBR 的角色渲染以及 RenderFeature 拓展管线应用&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/KTSAMA001/Unity_URP_Learning&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;对应的仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;个人认知下，这些渲染，特效，应该都是 TA 岗需要的技能，但感觉这些都比较难，详细的教程要么浅显，要么付费，目前大二即将大三甚至都还没接触，渲染和打光真的让我很头疼。&lt;/li&gt;
+&lt;li&gt;感觉应该不会做不出来，毕竟看评论，同年龄的人花了 10 天就做出来了。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
