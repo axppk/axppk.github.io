@@ -199,6 +199,18 @@
         });
       }
 
+
+      
+      function waitForResourcesLoaded() {
+        return new Promise(resolve => {
+          if (document.readyState === 'complete') {
+            resolve();
+          } else {
+            window.addEventListener('load', resolve);
+          }
+        });
+      }
+
         const isFirstVisit = !sessionStorage.getItem('visited');  
 
         if (isFirstVisit) {
@@ -216,7 +228,9 @@
             await new Promise(resolve => setTimeout(resolve, 100));
           }
 
-          await new Promise(resolve => setTimeout(resolve, 500));
+          
+          await waitForResourcesLoaded();
+          
           await typeLine(lineEnd);
 
           

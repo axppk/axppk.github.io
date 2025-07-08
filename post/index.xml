@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Mon, 07 Jul 2025 12:09:03 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Jul 2025 14:16:50 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>赛璐璐风人物模型制作</title>
         <link>https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</link>
         <pubDate>Sun, 06 Jul 2025 19:38:14 +0800</pubDate>
@@ -19,7 +19,7 @@
 &lt;p&gt;模型使用 blender 制作，贴图使用 PT 制作。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;由于模型制作周期过长，前期已经没法追溯了，后期再做类似模型再记录吧。&lt;/p&gt;
+&lt;p&gt;由于模型制作周期过长，前期已经没法追溯了，后期做类似模型再记录吧。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;骨骼绑定&#34;&gt;骨骼绑定
@@ -48,7 +48,8 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 &lt;li&gt;衣服权重不用传统的绑定方式，直接用数据传递，通过数据传递修改器获取角色身体顶点组，传递给衣服。&lt;br&gt;
 复制一个身体用作数据传递的身体，此方法可以避免数据传递的一些可能的小 bug（部分网格无法传递），添加上骨架，并且隐藏显示修改器结果（避免影响模型）。&lt;br&gt;
 衣服添加数据传递修改器（须在骨架修改器上方），他的父级身体，勾选顶点数据，顶点组，映射选择 最近的面插值，然后点击生成数据层，调整原身体骨架，观察效果。&lt;br&gt;
-太痛苦了，人体权重有问题的话将导致衣服各种抽搐！！！&lt;/li&gt;
+太痛苦了，人体权重有问题的话将导致衣服各种抽搐！！！&lt;br&gt;
+数据传递的绑定方法，用于数据传递的物体位置和形状越接近，效果越好。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1.png&#34;
 	width=&#34;294&#34;
@@ -111,6 +112,120 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 	width=&#34;1920&#34;
 	height=&#34;1057&#34;
 	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_204d292cdf46f72f.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_bf7d68e7fee2691f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;头发绑定：同小翅膀绑定，都是数据传递的方式添加骨骼，面片。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6_hu_9718279c5d1833a7.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6_hu_a86d6cc18d5f1013.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;头发后发绑定：这个比较复杂，需要通过低边圆柱体调整至头发大小（头发当时也是用低边圆柱体做的），建好对应骨骼，通过自动权重用后发骨骼控制低边圆柱体，然后用数据传递给后发，同样的，顶部顶点调整为 head 控制。&lt;br&gt;
+最后挤出低边圆柱体面更大范围控制头发，避免穿模。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7_hu_ef43a70c4ca51d5.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7_hu_f4aa327ced797e4e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8_hu_3410ae502f87d1b9.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8_hu_8fdd48fc0b7c9af5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;补充：通过添加蒙版顶点组让一些不该动的头发不受骨骼控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9_hu_614b70dde33d7946.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9_hu_841b8d074bc684b0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10_hu_ba09230f8147dffa.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10_hu_b2574298f71d1ecc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;裙摆部分绑定：同样的有点小复杂，复制外套面片调整至合适位置和大小，添加骨骼，自动权重绑定，然后数据传递到裙摆上。&lt;br&gt;
+（此处由于该数据传递修改器之前还有一层数据传递，所以第二个数据传递也需要有第一层的顶点组，否则会导致不规则变形，所以需要多加一部，选择物体，选择骨架，添加空顶点组，保证第二层不影响第一层）&lt;br&gt;
+通过裙摆的顶点组控制裙摆的摆动（如果不添加裙摆的蒙版顶点组会导致上方衣服也跟着动&amp;mdash;原因是有两层数据传递）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11_hu_d8df09b7e6aeb49c.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11_hu_6abaae96ae083ebb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12_hu_50989163f0e099e9.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12_hu_38d63c7504f04c29.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;基本绑定结束，摆出个造型不至于衣服乱飞，目前袖子，挎包，鞋的数据传递有问题，需要调整，后期应用修改器再补充。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13_hu_f09c787163259961.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13_hu_6ca4b0fa62861e6f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
