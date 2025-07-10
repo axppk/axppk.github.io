@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Mon, 07 Jul 2025 12:09:03 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Jul 2025 11:59:12 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档 | Archives</title>
         <link>https://axppk.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -46,6 +46,11 @@
           &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;&lt;em&gt;或许可以引入 AI&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;完善赛璐璐风人物模型&lt;/em&gt;&lt;/td&gt;
           &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
@@ -57,6 +62,11 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;实现模型的 BPR 渲染并记录&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;em&gt;Flip Fluids 流体模拟场景训练&lt;/em&gt;&lt;/td&gt;
           &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
           &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
@@ -78,7 +88,8 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://axppk.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/</guid>
-        <description>&lt;p&gt;记录被我抄袭的人，开玩笑这些都是教程的贡献者&lt;/p&gt;
+        <description>&lt;p&gt;记录被我抄袭的人，开玩笑这些都是教程的贡献者。&lt;br&gt;
+抄了这么多，以后应该是从事 TA 岗搞特效呢，还是前端后端搞软件呢。喜欢建模，不喜欢骨骼绑定和 K 动作。&lt;/p&gt;
 </description>
         </item>
         

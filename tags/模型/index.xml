@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Tue, 08 Jul 2025 20:02:56 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Jul 2025 11:59:12 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>赛璐璐风人物模型制作</title>
         <link>https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</link>
         <pubDate>Sun, 06 Jul 2025 19:38:14 +0800</pubDate>
         
         <guid>https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</guid>
-        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.png" alt="Featured image of post 赛璐璐风人物模型制作" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;模型使用 blender 制作，贴图使用 PT 制作。&lt;/p&gt;
@@ -45,11 +45,13 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;衣服权重不用传统的绑定方式，直接用数据传递，通过数据传递修改器获取角色身体顶点组，传递给衣服。&lt;br&gt;
+&lt;li&gt;
+&lt;p&gt;衣服权重不用传统的绑定方式，直接用数据传递，通过数据传递修改器获取角色身体顶点组，传递给衣服。&lt;br&gt;
 复制一个身体用作数据传递的身体，此方法可以避免数据传递的一些可能的小 bug（部分网格无法传递），添加上骨架，并且隐藏显示修改器结果（避免影响模型）。&lt;br&gt;
-衣服添加数据传递修改器（须在骨架修改器上方），他的父级身体，勾选顶点数据，顶点组，映射选择 最近的面插值，然后点击生成数据层，调整原身体骨架，观察效果。&lt;br&gt;
-太痛苦了，人体权重有问题的话将导致衣服各种抽搐！！！&lt;br&gt;
-数据传递的绑定方法，用于数据传递的物体位置和形状越接近，效果越好。&lt;/li&gt;
+衣服添加数据传递修改器（须在骨架修改器上方），他的父级身体，勾选顶点数据，顶点组，映射选择 最近的面插值，然后点击生成数据层，调整原身体骨架，观察效果。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;太痛苦了，人体权重有问题的话将导致衣服各种抽搐！！！&lt;br&gt;
+数据传递的绑定方法，用于数据传递的物体位置和形状越接近，效果越好。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1.png&#34;
 	width=&#34;294&#34;
@@ -271,7 +273,142 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 		data-flex-basis=&#34;435px&#34;
 	
 &gt;&lt;/p&gt;
-</description>
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将单个表情互相混合，制作出最终的喜怒哀乐表情，用到的重要功能是创建混合后的新功能。&lt;br&gt;
+还有个用于快速调整大面积顶点的功能，从形状混合（从形态键中混合）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16_hu_892be29df014372d.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16_hu_5d6b280b2fc693f6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/17.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/17_hu_cf7ee74d7d459296.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/17_hu_deebc98fa74c01c7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;喜怒哀乐惊表情展示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/18.png&#34;
+	width=&#34;685&#34;
+	height=&#34;499&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/18_hu_16f554cdce6bd210.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/18_hu_13331e6a289ed02f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;329px&#34;
+	
+&gt; &lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/19.png&#34;
+	width=&#34;691&#34;
+	height=&#34;565&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/19_hu_ae4ac8fa02695c8.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/19_hu_1567d0f041c05fbf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;293px&#34;
+	
+&gt; &lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/20.png&#34;
+	width=&#34;671&#34;
+	height=&#34;518&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/20_hu_f01d1649848b304e.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/20_hu_96b26d12b4010c09.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;310px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/21.png&#34;
+	width=&#34;681&#34;
+	height=&#34;560&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/21_hu_e818589db61188bb.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/21_hu_45a0c8ff7f29b856.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;291px&#34;
+	
+&gt; &lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/22.png&#34;
+	width=&#34;689&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/22_hu_34c466128448e92d.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/22_hu_406f03c1289e187d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;星星眼，爱心眼等眼部变化表情的形态键&lt;br&gt;
+需要调整 UV，加上贴图，可以在 PS 里做，新建面片放在合适的位置，记得打开矫正面属性，否则 UV 会随着面拉伸变形。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/24.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/24_hu_2f3c1337e43faf85.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/24_hu_8ee956393f998695.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/23.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/23_hu_de3bf3a65b870700.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/23_hu_d26375de702dab0a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/25.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/25_hu_b2a270ae11591663.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/25_hu_d0566c40813b9b62.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;补充：这里其实省略了 wink 这种形态键，因为非对称形态键需要应用掉镜像修改器，而前面的对称形态键又需要镜像修改器，所以这里需要用到插件 shapekeyutil，懒得加了，以后用到再来加。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;还省略了铁青脸形态的制作，和星星眼等制作方法一样，不过这种局部透明（渐变）的就需要放在高光贴图里，星星眼的制作放在任意贴图都可以（这里放在脸部贴图中），PS 里画出来，复制脸部前面然后分离，赋予高光贴图，调整 UV 然后，调整下透明方式（blender 中需要调整，否则可能渐变效果不是那么好）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;导出模型&#34;&gt;导出模型
+&lt;/h2&gt;</description>
         </item>
         
     </channel>
