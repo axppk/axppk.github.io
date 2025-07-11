@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Thu, 10 Jul 2025 11:59:12 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Jul 2025 18:40:20 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档 | Archives</title>
         <link>https://axppk.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -51,9 +51,9 @@
           &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;完善赛璐璐风人物模型&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;&lt;del&gt;完善赛璐璐风人物模型&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;2025/07/11&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;最后导出有点敷衍&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;实现模型的 NPR 渲染并记录&lt;/em&gt;&lt;/td&gt;
