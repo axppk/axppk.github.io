@@ -7,6 +7,77 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>网站接入AI助手的尝试</title>
+        <link>https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/</link>
+        <pubDate>Sat, 12 Jul 2025 18:29:42 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。&lt;/p&gt;
+&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV12oL8zSEzM/?spm_id_from=333.337.top_right_bar_window_history.content.click&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;五分钟为你的项目添加 ai 小助手&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1jK9cYTEgt/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek 接入 Unity 制作一个二次元 AI 老婆&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.pingcode.com/baike/2194171&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;前端如何接入 ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://githubrsp.com/47049.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何在 GitHub 上安装和配置 GPT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://githubrsp.com/43095.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github 的 AI 部署：如何在 GitHub 上管理和部署人工智能项目————疑似胡扯&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dongaigc.com/a/free-gpt4-web-api-self-hosted&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Free-GPT4-WEB-API：自托管的免费 GPT-4 Web API 解决方案&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/aledipa/Free-GPT4-WEB-API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;免费 GPT4-WEB-API&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/fastai/fastai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fastai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.fastgpt.cn/docs/development/intro/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fastgpt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.chatbase.co/docs/developer-guides/client-side-custom-forms#field-types&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chatbase&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实现&#34;&gt;实现
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;此处以 chatbase 为例，需要注册账号，创建项目，私人改公共，获取 API Key。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图示介绍：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1.png&#34;
+	width=&#34;838&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_405e782706aa0ccb.png 480w, https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_c2839fa3ffa96c42.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;460px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;流程：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2.png&#34;
+	width=&#34;983&#34;
+	height=&#34;734&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_4cdf0a539e52c211.png 480w, https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_22ffaedd3efc698.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>NPR渲染尝试</title>
         <link>https://axppk.github.io/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/</link>
         <pubDate>Tue, 08 Jul 2025 19:40:43 +0800</pubDate>
