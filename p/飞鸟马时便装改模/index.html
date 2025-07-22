@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装\n">
+<title>飞鸟马时（便装）改模</title>
+
+<link rel='canonical' href='https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/'>
+
+<link rel="stylesheet" href="/scss/style.min.3d36c79f576f4f9f424160a7a521ac987221df2edb4a40d8b7a713da8cb30d95.css"><meta property='og:title' content="飞鸟马时（便装）改模">
+<meta property='og:description' content="前言 第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装\n">
+<meta property='og:url' content='https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-14T23:35:22&#43;08:00'/><meta property='article:modified_time' content='2025-07-22T17:17:47&#43;08:00'/>
+<meta name="twitter:title" content="飞鸟马时（便装）改模">
+<meta name="twitter:description" content="前言 第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('/font/MarukoGothicCJKjp-Regular.ttf') format('truetype');
+    }
+
+
+    .loadingBox {
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1d1d1d;
+        z-index: 9999;
+    }
+
+    .Bigbox {
+      background-color: #1d1d1d;
+      font-family: monospace;
+      margin: 20px;
+      padding: 0;
+      font-family: 'MyCustomFont', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+      color: #b4b4b4;
+      display: inline;
+      white-space: pre;
+    }
+
+    .loading {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .typewriter {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .typewriter .line {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 10px;
+      margin-top: -1px;
+      color: #b4b4b4;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 1.5em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loadingBox">
+    <div class="Bigbox">
+      <div class="loading">
+        <h1>LOADING</h1>
+        <h1 id="loadingText" style="font-size: 15px;"> - 系统启动中</h1>
+      </div>
+      <div class="typewriter">
+        <span class="line" data-text="Neuro"></span>
+        <span class="line" data-text="Implanted"></span>
+        <span class="line" data-text="Machine for"></span>
+        <span class="line" data-text="Protecting"></span>
+        <span class="line" data-text="Human"></span>
+        <span class="line" data-text="突触连接：OFF"></span>
+        <span class="line" data-text="删除本机数据"></span>
+        <span class="line" data-text="网络连接"></span>
+        <span class="line" data-text="下载最新数据：完成"></span>
+        <span class="line" data-text="确认数据损失率：正常范围"></span>
+        <span class="line" data-text="确认神经元受损度：正常"></span>
+        <span class="line" data-text="确认神经元处理速度：正常"></span>
+        <span class="line" data-text="突触链接：ON"></span>
+        <span class="line" data-text="确认路由信息恢复率：正常范围"></span>
+        <span class="line" data-text="确认通信状态：良好"></span>
+        <span class="line" data-text="NIMPH系统：全部正常"></span>
+        <span class="line" data-text="数据自动保存"></span>
+        <span class="line" data-text="准备完毕"></span>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+
+      
+      const loading = document.querySelector('.loadingBox');
+
+      
+      const lines = Array.from(document.querySelectorAll('.line'))
+        .filter(line => line.dataset.text && line.dataset.text.trim() !== '');
+      const loadingText = document.getElementById('loadingText');
+      const lineEnd = lines[lines.length - 1];
+
+      
+      let dotCount = 0;
+      let loadingInterval;
+
+      
+      function startLoadingAnimation() {
+        loadingInterval = setInterval(() => {
+          dotCount = (dotCount + 1) % 4; 
+          loadingText.textContent = '  -  系统启动中' + '.'.repeat(dotCount);
+        }, 500); 
+      }
+
+      
+      function stopLoadingAnimation() {
+        
+        
+
+
+        
+        const fadeOutAnimation = loading.animate([
+          { opacity: 1 },
+          { opacity: 0 }
+        ], {
+          duration: 800,
+          fill: 'forwards'
+        });
+
+        
+        fadeOutAnimation.finished.then(() => {
+          loading.style.display = "none";
+          sessionStorage.setItem('visited', 'true');
+        });
+      }
+
+      
+      async function typeLine(line) {
+        const fullText = line.dataset.text;
+        line.textContent = '';
+        if (!fullText) return;
+
+        const firstChar = fullText[0] || '|';
+        let currentIndex = 1;
+        line.textContent = firstChar;
+
+        return new Promise(resolve => {
+          function type() {
+            if (currentIndex < fullText.length) {
+              line.textContent = fullText.substring(0, currentIndex) + firstChar;
+              currentIndex++;
+              setTimeout(type, 20 + Math.random() * 15);
+            } else {
+              line.textContent = fullText;
+              resolve();
+            }
+          }
+          setTimeout(type, 20);
+        });
+      }
+
+
+      
+      function waitForResourcesLoaded() {
+        return new Promise(resolve => {
+          if (document.readyState === 'complete') {
+            resolve();
+          } else {
+            window.addEventListener('load', resolve);
+          }
+        });
+      }
+
+        const isFirstVisit = !sessionStorage.getItem('visited');  
+
+        if (isFirstVisit) {
+          loading.style.display = "block";
+
+          
+          startLoadingAnimation(); 
+
+          
+          await new Promise(resolve => setTimeout(resolve, 1500));
+
+          
+          for (let i = 0; i < lines.length - 1; i++) {
+            await typeLine(lines[i]);
+            await new Promise(resolve => setTimeout(resolve, 100));
+          }
+
+          
+          await waitForResourcesLoaded();
+          
+          await typeLine(lineEnd);
+
+          
+          await new Promise(resolve => setTimeout(resolve, 800));
+          stopLoadingAnimation();
+        }
+        else {
+          console.log('已被访问过，不再执行动画');
+        }
+
+    });
+  </script>
+</body>
+
+</html>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/muzimi.gif" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#结束">结束</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/">飞鸟马时（便装）改模</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 14, 2025</time>
+            </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  
+  <!-- 纸张背景 -->
+  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+  <path d="M8 8h8" />
+  <path d="M8 12h8" />
+  <path d="M8 16h8" />
+</svg>
+            <time class="article-time--reading">
+                本文共 508 字
+            </time>
+        </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><ul>
+<li>
+<p>第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装</p>
+</li>
+<li>
+<p>内衣和百褶裙挺好做的，直接正方体细分就可以了，百褶裙网上有教程，40 顶点的圆环可以调整出来，鞋子模型有点讲究，因为刚开始跟的二比豆包的图，导致建错了模型，后期又费力改了回来</p>
+</li>
+<li>
+<p>参考链接：<a class="link" href="https://www.bilibili.com/video/BV1he4y1i7ji/?share_source=copy_web&amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18"  target="_blank" rel="noopener"
+    >【Blender】JK 百褶裙怎么建模？一个视频弄明白！</a></p>
+</li>
+</ul>
+<p><a class="link" href="https://tstorage.info/download"  target="_blank" rel="noopener"
+    >飞鸟马时 模型下载（不知道可不可以二次修改）</a></p>
+<p><a class="link" href="https://www.bilibili.com/opus/110145845056076565"  target="_blank" rel="noopener"
+    >【动漫人物鞋子参考】一网打尽超多种类的鞋~（文末附素材下载）</a></p>
+<p><a class="link" href="https://www.bilibili.com/video/BV15g411D7Pz/?share_source=copy_web&amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18"  target="_blank" rel="noopener"
+    >Blender+SP | 制服鞋制作全过程</a></p>
+<ul>
+<li>这两个很简单，一小会就做完了</li>
+</ul>
+<p><img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1_hu_df069f14fe911776.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1_hu_84f034d2219a8e83.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+>
+<img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2_hu_bd58f6ad6836bb35.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2_hu_9d678b38d46c8beb.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>鞋子对比，以及由于没有细分导致的破面，调整布线，或者松弛周围顶点，或者加线，或者其他布线方法就可以解决。</li>
+</ul>
+<p><img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3_hu_bb948fb2dc6df240.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3_hu_de8119376823d4f3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+>
+<img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4_hu_245f064b56ed261a.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4_hu_bbea271ce5cf11e0.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>材质用 PT 做，先烘焙 2k 贴图，然后基本色，补充其他细节，最后导出，目前只用到了粗糙度和基本色，法向有点问题（目前没调整出来原图的颜色，质感差好多）。</li>
+</ul>
+<p><img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5_hu_150fe92677705871.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5_hu_1edd0285dc2c2b9d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+>
+<img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6_hu_dcf3028be3c0e801.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6_hu_5a692a1a370d357a.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>最后完成，修复了下裙子阴影和领口蝴蝶结位置</li>
+</ul>
+<p><img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8.png"
+	width="1920"
+	height="1080"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8_hu_4694feac0f6a4357.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8_hu_81c819722df8c510.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+>
+<img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7_hu_c846213b36a43a4d.png 480w, /p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7_hu_96834a04ce770096.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<h2 id="结束">结束
+</h2><ul>
+<li>个人感觉比较简单，并且耗时不是很长，上衣其实不太满意。</li>
+<li>由于比较懒，所以没有做衣服的骨骼绑定，后期有空再来补充吧，并且摆出想要的 pose，她真的好好看。</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Made with ❤️ by KKPT</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Jul 22, 2025 17:17 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 KKPT
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+
+
+   
+  @font-face {
+  font-family: 'MarukoGothicCJKjp-Regular';
+  src: url(https://axppk.github.io/font/MarukoGothicCJKjp-Regular.ttf) format('truetype');
+  }
+
+  :root {
+  --base-font-family: 'MarukoGothicCJKjp-Regular';
+  --code-font-family: 'MarukoGothicCJKjp-Regular';
+  }
+   
+
+   
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  initScrollTop();
+  initCodeMoreBox();
+  initTocHide()
+</script>
+
+<script src=https://axppk.github.io/background/sakura.js></script>
+
+<script src=https://axppk.github.io/click-effect/click.js></script>
+
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "X5h3L-_D2Lr-E1Xjxu8cd"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
+    </body>
+</html>

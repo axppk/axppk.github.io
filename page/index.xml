@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Sat, 12 Jul 2025 20:41:55 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 14 Jul 2025 23:53:03 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档 | Archives</title>
         <link>https://axppk.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -57,8 +57,13 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;&lt;del&gt;完善赛璐璐风人物模型&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/11&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;最后导出有点敷衍&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;2025/07/13&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;缺点是眉毛没有调整到最前面，原因不明&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;em&gt;建一个阿罗娜的人物模型&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;实现模型的 NPR 渲染并记录&lt;/em&gt;&lt;/td&gt;

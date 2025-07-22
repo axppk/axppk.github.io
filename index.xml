@@ -7,6 +7,345 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>碧蓝档案场景仿制</title>
+        <link>https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/</link>
+        <pubDate>Tue, 22 Jul 2025 16:48:42 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;纯瘾大，最近碧蓝档案国际服周年庆，fes200 抽全出了，非常高兴，仿制一下莉音藏身处的场景，场景模型由 blender 制作搭建，UV 贴图由 SP 和 PS 制作，耗时一周，其实不到一周，每天做俩小时，五天做完，一共 10+ 小时，不过质量其实堪忧，细节处理不是很到位，毕竟，是根据截图来做的，所以很多只能是主观臆想。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;流程记录&#34;&gt;流程记录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;第一天，搭建初步模型，大多数白膜，摆个占位就可以了，这次的占位其实摆的不是很好，后面快做完了，感觉长度给小了，导致右边显得很挤，参考截图上给人一种 2.5d 的感觉（可能），总之就是我摆出来的效果不是很好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/1_hu_6506ca9aa5c9ef2f.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/1_hu_a814b9b1485e8410.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进一步摆出更多物品，这一块很简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/2_hu_416253708c71bf22.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/2_hu_1a427db2b546b79d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第二天，犯了懒病，不是很想直接扣细节，所以开始绘制简单的 UV 贴图，在有材质的情况下去再次调整占位布局。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/3_hu_338282ed1570a943.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/3_hu_4c7e5e2eb90ec14a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后的调整效果，并且把墙连了起来，挺好玩，这个模型的墙是曲线链接的，是个曲面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/4.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/4_hu_9c74bcf86ede25df.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/4_hu_9ba77f74a3c13a67.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第三天，绘制细节，补充场景物品，画更多的 UV，主要耗时点在于绘制 UV 和调整 UV，这块没截 SP 的图，反复找各种笔刷。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/5.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/5_hu_5880619ab0d328ee.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/5_hu_4834fcff85e4d12c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/6.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/6_hu_2e6b79bba07f7d0a.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/6_hu_e96674da0f57fb07.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第四天，制作前衡君模型，这个摩西模型在参考图里很模糊，而且 ba 的建模也偷懒了，原画里这东西还挺复杂，不过这里仿制的游戏场景的截图，所以我也偷懒。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/7.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/7_hu_4d67944f73d38318.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/7_hu_25135a6c0f78c3f6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/8.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/8_hu_74f5654284da1559.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/8_hu_6882f183d94fe1c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这东西确实复杂，不过上色很简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/9.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/9_hu_d0177b9924956468.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/9_hu_6bc0920e8533ab00.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第五天，基本完成，调整一些纸团的细节，杂物等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/10.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/10_hu_47c934cfda344ebb.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/10_hu_2b732636dd88d2c0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/11.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/11_hu_24dfe638a3ab32a7.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/11_hu_eb11c08a5af951bf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最终完成，收容场景物品，分类，最后收工并记录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/12.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/12_hu_6bb3213099c282f8.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/12_hu_b0db53a33eabcc2e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结束&#34;&gt;结束
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;同样的，没有什么难度，毕竟是个人练习，没有什么精度要求，也没有面数显示，硬要说经验的话，可能是对于这种圆滑的模型，模型中那些接缝感，是通过倒角修改器（倒角）实现的，单纯的去挤出，做出来那种感觉，很差，并且倒角修改器，当面有点混乱时，会失去作用，比如有断面，断线，可能原因是这些面，线，点导致倒角修改器认为这些线离得很近，不用或者没法去倒角吧，maybe，理解不是很到位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总之机箱就是一个很大的败笔，因为是刚开始做的，导致它很硬，很直，也懒得改了。而后面做的那个地上的小柜子就会好很多，所以尽量还是避免挤出和内插，多用拆分会更好，在展 UV 的时候也会更舒服。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;倒角修改器在导出时被应用，UV 会被分开，在 SP 中绘制的时候可能会出现 UV 块丢失的问题，很雷人，感觉是模型的问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SP 不能够乱加模型，所以最好还是一批一批的绘制模型的贴图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>飞鸟马时（便装）改模</title>
+        <link>https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/</link>
+        <pubDate>Mon, 14 Jul 2025 23:35:22 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内衣和百褶裙挺好做的，直接正方体细分就可以了，百褶裙网上有教程，40 顶点的圆环可以调整出来，鞋子模型有点讲究，因为刚开始跟的二比豆包的图，导致建错了模型，后期又费力改了回来&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参考链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1he4y1i7ji/?share_source=copy_web&amp;amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【Blender】JK 百褶裙怎么建模？一个视频弄明白！&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tstorage.info/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;飞鸟马时 模型下载（不知道可不可以二次修改）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/opus/110145845056076565&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【动漫人物鞋子参考】一网打尽超多种类的鞋~（文末附素材下载）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV15g411D7Pz/?share_source=copy_web&amp;amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blender+SP | 制服鞋制作全过程&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这两个很简单，一小会就做完了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1_hu_df069f14fe911776.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/1_hu_84f034d2219a8e83.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;
+&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2_hu_bd58f6ad6836bb35.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/2_hu_9d678b38d46c8beb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鞋子对比，以及由于没有细分导致的破面，调整布线，或者松弛周围顶点，或者加线，或者其他布线方法就可以解决。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3_hu_bb948fb2dc6df240.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/3_hu_de8119376823d4f3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;
+&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4_hu_245f064b56ed261a.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/4_hu_bbea271ce5cf11e0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;材质用 PT 做，先烘焙 2k 贴图，然后基本色，补充其他细节，最后导出，目前只用到了粗糙度和基本色，法向有点问题（目前没调整出来原图的颜色，质感差好多）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5_hu_150fe92677705871.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/5_hu_1edd0285dc2c2b9d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;
+&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6_hu_dcf3028be3c0e801.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/6_hu_5a692a1a370d357a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后完成，修复了下裙子阴影和领口蝴蝶结位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8_hu_4694feac0f6a4357.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/8_hu_81c819722df8c510.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;img src=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7_hu_c846213b36a43a4d.png 480w, https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/img/7_hu_96834a04ce770096.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结束&#34;&gt;结束
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;个人感觉比较简单，并且耗时不是很长，上衣其实不太满意。&lt;/li&gt;
+&lt;li&gt;由于比较懒，所以没有做衣服的骨骼绑定，后期有空再来补充吧，并且摆出想要的 pose，她真的好好看。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>网站接入AI助手的尝试</title>
         <link>https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/</link>
         <pubDate>Sat, 12 Jul 2025 18:29:42 +0800</pubDate>
@@ -581,7 +920,7 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 		data-flex-basis=&#34;435px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;~~ 没有做材质分割，整体仍使用一个材质中，没有调整法线，没有做骨骼适配。~~&lt;/p&gt;
+&lt;p&gt;&lt;del&gt; 没有做材质分割，整体仍使用一个材质中，没有调整法线，没有做骨骼适配。 &lt;/del&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;现阶段最终版&lt;/li&gt;
 &lt;/ul&gt;
@@ -628,7 +967,9 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;unity 中效果，因为刚开始在 blender 中用的巧法实现的描边，所以单独分出来一个去掉描边的版本，实体化实现的描边会导致部分模型细节被遮挡（如果添加修改器之前这个模型面有问题，就会导致白膜挡住原本材质，可以在 unity 中更换材质顺序解决，但仍有丢失细节问题，这个是导致问题的重要原因）（用的-0.001 参数向内缩小，避免在 blender 中遮挡细节，但在 unity 中由于没有对应材质，会导致白模，总之是个可选项）&lt;/li&gt;
+&lt;li&gt;unity 中效果，因为刚开始在 blender 中用的巧法实现的描边，所以单独分出来一个去掉描边的版本，实体化实现的描边会导致部分模型细节被遮挡&lt;br&gt;
+（如果添加修改器之前这个模型面有问题，就会导致白膜挡住原本材质，可以在 unity 中更换材质顺序解决，但仍有丢失细节问题，这个是导致问题的重要原因）&lt;br&gt;
+（用的-0.001 参数向内缩小，避免在 blender 中遮挡细节，但在 unity 中由于没有对应材质，会导致白模，总之是个可选项）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/33.png&#34;
 	width=&#34;1041&#34;
@@ -657,6 +998,25 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;unity 中模型材质调整，眉毛通过 renderQueue 可以控制，但是 VRM1.0 中的 renderQueue 不太会用，调了没效果，眉毛在最上层，其次前发，其次发影，最后脸部&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/35.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/35_hu_93415088a4c7b1f2.png 480w, https://axppk.github.io/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/35_hu_da5c6e1da4ef64c5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;补充：&lt;a class=&#34;link&#34; href=&#34;https://docs.vrcd.org.cn/books/vrm-univrm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VRM 官方文档-汉化版 -【UniVRM】&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -5644,8 +6004,13 @@ $$</description>
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;&lt;del&gt;完善赛璐璐风人物模型&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/11&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;最后导出有点敷衍&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;2025/07/13&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;缺点是眉毛没有调整到最前面，原因不明&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;em&gt;建一个阿罗娜的人物模型&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;实现模型的 NPR 渲染并记录&lt;/em&gt;&lt;/td&gt;
