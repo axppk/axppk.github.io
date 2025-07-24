@@ -7,7 +7,101 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Tue, 22 Jul 2025 17:17:47 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 24 Jul 2025 23:50:14 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>3D数学与Sharder学习</title>
+        <link>https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/</link>
+        <pubDate>Thu, 24 Jul 2025 22:54:54 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后系统学习自定义 Sharder，之后才能自己去选择方向实现 PBR 和 NPR。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可怜的老师傅，为众人拾薪者，冻毙于荒野，这个 up 讲的很基础很明白，结果被干破防了，真的，很惋惜。要是能回归看到它的更多教程就好了，也不至于学的这么混乱。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1003&#34;
+	srcset=&#34;https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1_hu_6da1e934ec478744.png 480w, https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1_hu_325b78d787a62eb5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;459px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;生啃 games101 简直就是噩梦！！！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这些应该都属于是 TA 岗需要的吧，想要成为一个合格的建模师，需要考虑这个吗，我不是很清楚，但是我的模型现在只有 basecolor，表现很差。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;感觉会有用的:&lt;br&gt;
+1.(知乎讨论)[https://www.zhihu.com/question/633906688]&lt;br&gt;
+2.(blender 的程序化纹理)[https://zhuanlan.zhihu.com/p/1899834049452828495]&lt;br&gt;
+3.(b 站视频)[https://www.bilibili.com/video/BV1hr4y1P7cN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&amp;amp;p=71]&lt;br&gt;
+4.(b 站视频 2)[https://www.bilibili.com/video/BV1eS4y1n73m/?spm_id_from=333.1391.0.0&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;~~&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl Shift 左键点击 预览当前节点
+F 连接节点
+Shift D 复制节点
+H 隐藏节点
+Ctrl H 隐藏不用的接口
+M 禁用/启用节点
+Ctrl X 消除
+Alt D 分离节点，但会把原来的连线也弄没了
+L 选择左边面相连的节点
+Shift L 选择右边面相连的节点
+Ctrl J 加框
+Ctrl G 打组
+
+合成器 背景图像预览控制
+
+V 缩小背景图像
+Alt V 放大背景图像
+Alt Home 背景图像适配窗口
+Alt 中键 移动背景图像
+
+Node Wrangler 专属
+
+Ctrl T 图像纹理三件套
+Ctrl Shift T PBR 纹理
+Alt R 重载图像
+Shift S 修改当前节点类型
+Ctrl 右键拖动 切断
+Alt 右键拖动 连接
+Alt Shift 右键拖动 连接 可以选源点和目标点
+选中两个或多个 按 K 键也可以连接
+Alt S 切换连接目标点，也可交换两个输入点
+Ctrl + - _ / 对两个同类节点进行各种混合
+Alt + - _ / 把当前节点混合模式改为 + - \* /
+Alt ← → 调整节点里的系数
+上下键切换节点的模式
+Ctrl Shift 右键拖动 建立两个节点的混合模式
+Shift 右键拖动 切出转接点
+Alt X 清除没用的节点
+Alt 拖动 拆离节点
+Shift P 加框
+Shift = 强迫症患者专用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;~~&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>碧蓝档案场景仿制</title>
         <link>https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/</link>
         <pubDate>Tue, 22 Jul 2025 16:48:42 +0800</pubDate>
