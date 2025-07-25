@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 开始的动力来源于一篇白丝的 sharder 制作教程（我认为这个应该属于程序化纹理？），真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
 <title>3D数学与Sharder学习</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/'>
 
 <link rel="stylesheet" href="/scss/style.min.3d36c79f576f4f9f424160a7a521ac987221df2edb4a40d8b7a713da8cb30d95.css"><meta property='og:title' content="3D数学与Sharder学习">
-<meta property='og:description' content="前言 开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
+<meta property='og:description' content="前言 开始的动力来源于一篇白丝的 sharder 制作教程（我认为这个应该属于程序化纹理？），真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
 <meta property='og:url' content='https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-24T22:54:54&#43;08:00'/><meta property='article:modified_time' content='2025-07-24T23:50:14&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-24T22:54:54&#43;08:00'/><meta property='article:modified_time' content='2025-07-25T16:20:23&#43;08:00'/>
 <meta name="twitter:title" content="3D数学与Sharder学习">
-<meta name="twitter:description" content="前言 开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
+<meta name="twitter:description" content="前言 开始的动力来源于一篇白丝的 sharder 制作教程（我认为这个应该属于程序化纹理？），真的熟练，真的强。\n为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -469,7 +469,39 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#学习记录">学习记录</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -518,7 +550,7 @@
   <path d="M8 16h8" />
 </svg>
             <time class="article-time--reading">
-                本文共 901 字
+                本文共 840 字
             </time>
         </div>
         
@@ -552,7 +584,7 @@
     <h2 id="前言">前言
 </h2><ul>
 <li>
-<p>开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。</p>
+<p>开始的动力来源于一篇白丝的 sharder 制作教程（我认为这个应该属于程序化纹理？），真的熟练，真的强。</p>
 </li>
 <li>
 <p>为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。</p>
@@ -561,7 +593,7 @@
 <p>之后系统学习自定义 Sharder，之后才能自己去选择方向实现 PBR 和 NPR。</p>
 </li>
 <li>
-<p>可怜的老师傅，为众人拾薪者，冻毙于荒野，这个 up 讲的很基础很明白，结果被干破防了，真的，很惋惜。要是能回归看到它的更多教程就好了，也不至于学的这么混乱。</p>
+<p>可怜的老师傅，为众人拾薪者，冻毙于荒野，这个 up 讲的很基础很明白，结果被干破防了，真的很惋惜。要是能回归看到它的更多教程就好了，也不至于学的这么混乱。</p>
 </li>
 </ul>
 <p><img src="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.png"
@@ -584,57 +616,125 @@
 <p>这些应该都属于是 TA 岗需要的吧，想要成为一个合格的建模师，需要考虑这个吗，我不是很清楚，但是我的模型现在只有 basecolor，表现很差。</p>
 </li>
 <li>
-<p>感觉会有用的:<br>
-1.(知乎讨论)[https://www.zhihu.com/question/633906688]<br>
-2.(blender 的程序化纹理)[https://zhuanlan.zhihu.com/p/1899834049452828495]<br>
-3.(b 站视频)[https://www.bilibili.com/video/BV1hr4y1P7cN?spm_id_from=333.788.videopod.episodes&amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&amp;p=71]<br>
-4.(b 站视频 2)[https://www.bilibili.com/video/BV1eS4y1n73m/?spm_id_from=333.1391.0.0&amp;vd_source=7ef3888cbac99bdb5d95af08adacada0]</p>
+<p>感觉会有用的:<br></p>
+<ol>
+<li><a class="link" href="https://www.zhihu.com/question/633906688"  target="_blank" rel="noopener"
+    >知乎讨论</a><br></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/1899834049452828495"  target="_blank" rel="noopener"
+    >blender 的程序化纹理</a><br></li>
+<li><a class="link" href="https://www.bilibili.com/video/BV1hr4y1P7cN?spm_id_from=333.788.videopod.episodes&amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&amp;p=71"  target="_blank" rel="noopener"
+    >b 站视频</a><br></li>
+<li><a class="link" href="https://www.bilibili.com/video/BV1eS4y1n73m/?spm_id_from=333.1391.0.0&amp;vd_source=7ef3888cbac99bdb5d95af08adacada0"  target="_blank" rel="noopener"
+    >b 站视频 2</a><br></li>
+<li><a class="link" href="https://www.bilibili.com/video/BV16m4y1b7m2/?share_source=copy_web&amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18"  target="_blank" rel="noopener"
+    >b 站视频 3</a><br></li>
+<li><a class="link" href="https://www.bilibili.com/video/BV15D421p7GJ/?share_source=copy_web&amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18"  target="_blank" rel="noopener"
+    >星穹铁道 unity 纯享版 卡通渲染 shader</a></li>
+<li><a class="link" href="https://www.bilibili.com/video/BV1ix4y1Q7bB?spm_id_from=333.788.videopod.sections&amp;vd_source=7ef3888cbac99bdb5d95af08adacada0"  target="_blank" rel="noopener"
+    >URPsharder 入门</a></li>
+</ol>
 </li>
 </ul>
-<p>~~</p>
-<pre><code>Ctrl Shift 左键点击 预览当前节点
-F 连接节点
-Shift D 复制节点
-H 隐藏节点
-Ctrl H 隐藏不用的接口
-M 禁用/启用节点
-Ctrl X 消除
-Alt D 分离节点，但会把原来的连线也弄没了
-L 选择左边面相连的节点
-Shift L 选择右边面相连的节点
-Ctrl J 加框
-Ctrl G 打组
-
-合成器 背景图像预览控制
-
-V 缩小背景图像
-Alt V 放大背景图像
-Alt Home 背景图像适配窗口
-Alt 中键 移动背景图像
-
-Node Wrangler 专属
-
-Ctrl T 图像纹理三件套
-Ctrl Shift T PBR 纹理
-Alt R 重载图像
-Shift S 修改当前节点类型
-Ctrl 右键拖动 切断
-Alt 右键拖动 连接
-Alt Shift 右键拖动 连接 可以选源点和目标点
-选中两个或多个 按 K 键也可以连接
-Alt S 切换连接目标点，也可交换两个输入点
-Ctrl + - _ / 对两个同类节点进行各种混合
-Alt + - _ / 把当前节点混合模式改为 + - \* /
-Alt ← → 调整节点里的系数
-上下键切换节点的模式
-Ctrl Shift 右键拖动 建立两个节点的混合模式
-Shift 右键拖动 切出转接点
-Alt X 清除没用的节点
-Alt 拖动 拆离节点
-Shift P 加框
-Shift = 强迫症患者专用
-</code></pre>
-<p>~~</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  Ctrl Shift 左键点击 预览当前节点
+</span></span><span class="line"><span class="cl">  F 连接节点
+</span></span><span class="line"><span class="cl">  Shift D 复制节点
+</span></span><span class="line"><span class="cl">  H 隐藏节点
+</span></span><span class="line"><span class="cl">  Ctrl H 隐藏不用的接口
+</span></span><span class="line"><span class="cl">  M 禁用/启用节点
+</span></span><span class="line"><span class="cl">  Ctrl X 消除
+</span></span><span class="line"><span class="cl">  Alt D 分离节点，但会把原来的连线也弄没了
+</span></span><span class="line"><span class="cl">  L 选择左边面相连的节点
+</span></span><span class="line"><span class="cl">  Shift L 选择右边面相连的节点
+</span></span><span class="line"><span class="cl">  Ctrl J 加框
+</span></span><span class="line"><span class="cl">  Ctrl G 打组
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  合成器 背景图像预览控制
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  V 缩小背景图像
+</span></span><span class="line"><span class="cl">  Alt V 放大背景图像
+</span></span><span class="line"><span class="cl">  Alt Home 背景图像适配窗口
+</span></span><span class="line"><span class="cl">  Alt 中键 移动背景图像
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Node Wrangler 专属
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Ctrl T 图像纹理三件套
+</span></span><span class="line"><span class="cl">  Ctrl Shift T PBR 纹理
+</span></span><span class="line"><span class="cl">  Alt R 重载图像
+</span></span><span class="line"><span class="cl">  Shift S 修改当前节点类型
+</span></span><span class="line"><span class="cl">  Ctrl 右键拖动 切断
+</span></span><span class="line"><span class="cl">  Alt 右键拖动 连接
+</span></span><span class="line"><span class="cl">  Alt Shift 右键拖动 连接 可以选源点和目标点
+</span></span><span class="line"><span class="cl">  选中两个或多个 按 K 键也可以连接
+</span></span><span class="line"><span class="cl">  Alt S 切换连接目标点，也可交换两个输入点
+</span></span><span class="line"><span class="cl">  Ctrl + - _ / 对两个同类节点进行各种混合
+</span></span><span class="line"><span class="cl">  Alt + - _ / 把当前节点混合模式改为 + - \* /
+</span></span><span class="line"><span class="cl">  Alt ← → 调整节点里的系数
+</span></span><span class="line"><span class="cl">  上下键切换节点的模式
+</span></span><span class="line"><span class="cl">  Ctrl Shift 右键拖动 建立两个节点的混合模式
+</span></span><span class="line"><span class="cl">  Shift 右键拖动 切出转接点
+</span></span><span class="line"><span class="cl">  Alt X 清除没用的节点
+</span></span><span class="line"><span class="cl">  Alt 拖动 拆离节点
+</span></span><span class="line"><span class="cl">  Shift P 加框
+</span></span><span class="line"><span class="cl">  Shift = 强迫症患者专用
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="学习记录">学习记录
+</h2><ul>
+<li>
+<p>这些手搓 sharder 的真是怪物，这是熟能生巧吗。</p>
+</li>
+<li>
+<p>sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。</p>
+</li>
+<li>
+<p>原理貌似是通过灰度图和颜色图来控制显示。</p>
+</li>
+</ul>
 
 </section>
 
@@ -664,7 +764,7 @@ Shift = 强迫症患者专用
 
 
         <span>
-            最后更新于 Jul 24, 2025 23:50 &#43;0800
+            最后更新于 Jul 25, 2025 16:20 &#43;0800
         </span>
     </section></footer>
 
@@ -679,46 +779,55 @@ Shift = 强迫症患者专用
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
+    <script
+    src="https://giscus.app/client.js"
+        data-repo="axppk/axppk.github.io"
+        data-repo-id="R_kgDOPFCzDg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFCzDs4CtZcr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+></script>
 <script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
         }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
     }
-</style>
 
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
         }
-    })
+    })();
 </script>
 
     

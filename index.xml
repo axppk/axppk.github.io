@@ -15,7 +15,7 @@
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;开始的动力来源于一篇白丝的 sharder 制作教程，真的熟练，真的强。&lt;/p&gt;
+&lt;p&gt;开始的动力来源于一篇白丝的 sharder 制作教程（我认为这个应该属于程序化纹理？），真的熟练，真的强。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;为了学会 PBR 和 NPR，需要先了解其原理，所以先入门一下 3D 数学，了解一些基本的概念和公式。可能还需要学习下 OpenGL 框架。&lt;/p&gt;
@@ -24,7 +24,7 @@
 &lt;p&gt;之后系统学习自定义 Sharder，之后才能自己去选择方向实现 PBR 和 NPR。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;可怜的老师傅，为众人拾薪者，冻毙于荒野，这个 up 讲的很基础很明白，结果被干破防了，真的，很惋惜。要是能回归看到它的更多教程就好了，也不至于学的这么混乱。&lt;/p&gt;
+&lt;p&gt;可怜的老师傅，为众人拾薪者，冻毙于荒野，这个 up 讲的很基础很明白，结果被干破防了，真的很惋惜。要是能回归看到它的更多教程就好了，也不至于学的这么混乱。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.png&#34;
@@ -47,57 +47,125 @@
 &lt;p&gt;这些应该都属于是 TA 岗需要的吧，想要成为一个合格的建模师，需要考虑这个吗，我不是很清楚，但是我的模型现在只有 basecolor，表现很差。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;感觉会有用的:&lt;br&gt;
-1.(知乎讨论)[https://www.zhihu.com/question/633906688]&lt;br&gt;
-2.(blender 的程序化纹理)[https://zhuanlan.zhihu.com/p/1899834049452828495]&lt;br&gt;
-3.(b 站视频)[https://www.bilibili.com/video/BV1hr4y1P7cN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&amp;amp;p=71]&lt;br&gt;
-4.(b 站视频 2)[https://www.bilibili.com/video/BV1eS4y1n73m/?spm_id_from=333.1391.0.0&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0]&lt;/p&gt;
+&lt;p&gt;感觉会有用的:&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/633906688&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎讨论&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/1899834049452828495&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blender 的程序化纹理&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1hr4y1P7cN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&amp;amp;p=71&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;b 站视频&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1eS4y1n73m/?spm_id_from=333.1391.0.0&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;b 站视频 2&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV16m4y1b7m2/?share_source=copy_web&amp;amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;b 站视频 3&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV15D421p7GJ/?share_source=copy_web&amp;amp;vd_source=c8be1c1e34b47f3ccc1b760c87b79c18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;星穹铁道 unity 纯享版 卡通渲染 shader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1ix4y1Q7bB?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=7ef3888cbac99bdb5d95af08adacada0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;URPsharder 入门&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;~~&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Ctrl Shift 左键点击 预览当前节点
-F 连接节点
-Shift D 复制节点
-H 隐藏节点
-Ctrl H 隐藏不用的接口
-M 禁用/启用节点
-Ctrl X 消除
-Alt D 分离节点，但会把原来的连线也弄没了
-L 选择左边面相连的节点
-Shift L 选择右边面相连的节点
-Ctrl J 加框
-Ctrl G 打组
-
-合成器 背景图像预览控制
-
-V 缩小背景图像
-Alt V 放大背景图像
-Alt Home 背景图像适配窗口
-Alt 中键 移动背景图像
-
-Node Wrangler 专属
-
-Ctrl T 图像纹理三件套
-Ctrl Shift T PBR 纹理
-Alt R 重载图像
-Shift S 修改当前节点类型
-Ctrl 右键拖动 切断
-Alt 右键拖动 连接
-Alt Shift 右键拖动 连接 可以选源点和目标点
-选中两个或多个 按 K 键也可以连接
-Alt S 切换连接目标点，也可交换两个输入点
-Ctrl + - _ / 对两个同类节点进行各种混合
-Alt + - _ / 把当前节点混合模式改为 + - \* /
-Alt ← → 调整节点里的系数
-上下键切换节点的模式
-Ctrl Shift 右键拖动 建立两个节点的混合模式
-Shift 右键拖动 切出转接点
-Alt X 清除没用的节点
-Alt 拖动 拆离节点
-Shift P 加框
-Shift = 强迫症患者专用
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;~~&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl Shift 左键点击 预览当前节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  F 连接节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift D 复制节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  H 隐藏节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl H 隐藏不用的接口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  M 禁用/启用节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl X 消除
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt D 分离节点，但会把原来的连线也弄没了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  L 选择左边面相连的节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift L 选择右边面相连的节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl J 加框
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl G 打组
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  合成器 背景图像预览控制
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  V 缩小背景图像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt V 放大背景图像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt Home 背景图像适配窗口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt 中键 移动背景图像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Node Wrangler 专属
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl T 图像纹理三件套
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl Shift T PBR 纹理
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt R 重载图像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift S 修改当前节点类型
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl 右键拖动 切断
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt 右键拖动 连接
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt Shift 右键拖动 连接 可以选源点和目标点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  选中两个或多个 按 K 键也可以连接
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt S 切换连接目标点，也可交换两个输入点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl + - _ / 对两个同类节点进行各种混合
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt + - _ / 把当前节点混合模式改为 + - \* /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt ← → 调整节点里的系数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  上下键切换节点的模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Ctrl Shift 右键拖动 建立两个节点的混合模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift 右键拖动 切出转接点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt X 清除没用的节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Alt 拖动 拆离节点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift P 加框
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Shift = 强迫症患者专用
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;学习记录&#34;&gt;学习记录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这些手搓 sharder 的真是怪物，这是熟能生巧吗。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原理貌似是通过灰度图和颜色图来控制显示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -4991,6 +5059,43 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;这样就实现了鼠标点击和长按的粒子动画效果，该 js 已被添加注释，可以根据注释改动参数和效果。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;评论系统&#34;&gt;评论系统
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;目前博客使用的是 giscus 评论系统（这个主题内置了多个评论系统）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus.png&#34;
+	width=&#34;490&#34;
+	height=&#34;331&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus_hu_5889def0b1217194.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus_hu_cfd3d6d461acb37f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;直接跟着官方文档走即可&lt;a class=&#34;link&#34; href=&#34;https://giscus.app/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;giscus&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后改一下配置文件就行了。(想进一步改动的可以了解下，改动 &lt;code&gt;giscus.html&lt;/code&gt; 即可)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1078&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus2_hu_fd7afbb194df7c92.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/giscus2_hu_77d691d3f21d6c23.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;427px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -6087,9 +6192,9 @@ $$</description>
           &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;添加评论区功能&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;&lt;del&gt;添加评论区功能&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;2025/07/25&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;很简单&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;&lt;del&gt;或许可以引入 AI&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
