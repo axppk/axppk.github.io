@@ -7,7 +7,223 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Fri, 25 Jul 2025 16:20:23 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Aug 2025 21:40:42 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>长风玩偶建模</title>
+        <link>https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/</link>
+        <pubDate>Fri, 01 Aug 2025 20:56:27 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/</guid>
+        <description>&lt;img src="https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/back.png" alt="Featured image of post 长风玩偶建模" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;心血来潮，3d 化一下可爱的长风。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二个无三视图人体建模，由于是玩偶，所以没有建的那么圆，反而有点扁平。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只靠一张图去建模还是有点难度的，总共耗时五天。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原参考图是 AI 图，其实建模的时候就感觉有点奇怪，为什么有些地方模糊混乱。。。画纹理的时候直接就是看不清细节，只能凭感觉，加上褶皱和阴影画的少，直接给自己画崩溃了，所以直接就这样吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;过程记录&#34;&gt;过程记录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;首先是头部，由于没有三视图，只能先用正视图打底，而且这个姿势歪的也不是很厉害，所以直接照着建好了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/1.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/1_hu_abfc7ae48a87e331.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/1_hu_f3404825e990efd3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;超快速调整出整个身体大小和部分头发。主要还是刘海，其他的其实不重要。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/2_hu_bee5798bed4ab4a5.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/2_hu_4ff23dc60f29c2d3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单画上眼睛，方便定型和调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/3.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/3_hu_5cdafca92e28246a.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/3_hu_3a9c3bad435dab89.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同样的，方便纠正感觉，把刘海也做出来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/4.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/4_hu_e1319f25c0ea65e3.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/4_hu_ab9194561cbea663.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进一步制作，帽子和后发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/5.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/5_hu_d008e82275d06add.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/5_hu_2dbf2cf6c3aa467c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;双马尾，其实这里我偷懒了，本来想用线条去堆，但是刚开始用面片做的发丝太好看了，不忍心，就直接弄了个空心的柱子，贴上发丝即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/6.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/6_hu_64c6865225e2eb5a.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/6_hu_cf9c8abd69405267.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;偷懒先做鞋子，因为简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/7.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/7_hu_21ec479c6626430b.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/7_hu_f5745448addee9c0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上衣部分开始&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/8.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/8_hu_8477e6ea824dbe3e.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/8_hu_f16db4c0e8b2aedf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于不会雕刻，所以褶皱就只能古法折叠，效果一般。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/9.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/9_hu_9aeb2644427f61a8.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/9_hu_e22931050afb9b9c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本模型建好了，简单的分分材质。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/10.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/10_hu_75fa29d8d9ce8927.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/10_hu_ede1170b65d9b95c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;画点简单的纹理（这时候还没意识到，原图是 AI 图，所以仍然在凭感觉画）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/11.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/11_hu_1c5af49f76bec4ba.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/11_hu_d8d030aae5894aa1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;崩溃了，暂时纹理就这样吧，原图太糊了，看不清具体图案和细节。（而且褶皱的阴影好难画）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/12.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/12_hu_471d29e2c3b95bd2.png 480w, https://axppk.github.io/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/img/12_hu_2ea661e236048bce.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结束&#34;&gt;结束
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单个图建模很容易出现身体走型问题，只靠正试图建模容易出现纸片人的情况，所以一定要及时调整形体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不要依赖 AI 图建模！！！！而且为什么每次图都这么模糊，很难看清细节，感觉做几个模型，视力下降好多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;手指有点疼，给自己点休息时间吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>3D数学与Sharder学习</title>
         <link>https://axppk.github.io/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Thu, 24 Jul 2025 22:54:54 +0800</pubDate>
@@ -175,10 +391,27 @@
         <pubDate>Tue, 22 Jul 2025 16:48:42 +0800</pubDate>
         
         <guid>https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/</guid>
-        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/back.png" alt="Featured image of post 碧蓝档案场景仿制" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;纯瘾大，最近碧蓝档案国际服周年庆，fes200 抽全出了，非常高兴，仿制一下莉音藏身处的场景，场景模型由 blender 制作搭建，UV 贴图由 SP 和 PS 制作，耗时一周，其实不到一周，每天做俩小时，五天做完，一共 10+ 小时，不过质量其实堪忧，细节处理不是很到位，毕竟，是根据截图来做的，所以很多只能是主观臆想。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;纯瘾大，最近碧蓝档案国际服周年庆，fes200 抽全出了，非常高兴，仿制一下莉音藏身处的场景，场景模型由 blender 制作搭建，UV 贴图由 SP 和 PS 制作，耗时一周，其实不到一周，每天做俩小时，五天做完，一共 10+ 小时，不过质量其实堪忧，细节处理不是很到位，毕竟，是根据截图来做的，所以很多只能是主观臆想。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其实后面还做了个圣娅纸箱，不过工程量很小，不值得写个博客了。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/%E6%B8%B2%E6%9F%93%E5%9B%BE.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/%E6%B8%B2%E6%9F%93%E5%9B%BE_hu_4870cd8c7118d3ea.png 480w, https://axppk.github.io/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/img/%E6%B8%B2%E6%9F%93%E5%9B%BE_hu_d2bcda54f5aed86.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;流程记录&#34;&gt;流程记录
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;第一天，搭建初步模型，大多数白膜，摆个占位就可以了，这次的占位其实摆的不是很好，后面快做完了，感觉长度给小了，导致右边显得很挤，参考截图上给人一种 2.5d 的感觉（可能），总之就是我摆出来的效果不是很好。&lt;/li&gt;
@@ -374,7 +607,7 @@
         <pubDate>Mon, 14 Jul 2025 23:35:22 +0800</pubDate>
         
         <guid>https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/</guid>
-        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://axppk.github.io/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/back.png" alt="Featured image of post 飞鸟马时（便装）改模" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;第一次尝试改模，挺冷门的角色，由于没有三视图，只能找个别人做好的模型改了（默认裸模的眼睛材质有问题，需要替换其他版本模型的 eye3 材质，它自带的 eye 好像和发影一样调整了透明度），主要添加便装&lt;/p&gt;
