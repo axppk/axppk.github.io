@@ -120,6 +120,8 @@
         <span class="line" data-text="确认通信状态：良好"></span>
         <span class="line" data-text="NIMPH系统：全部正常"></span>
         <span class="line" data-text="数据自动保存"></span>
+        <span class="line" data-text="如果您为手机用户，则此页面将持续5S后自动关闭"></span>
+        <span class="line" data-text="此时可能会导致部分特效或字体失效"></span>
         <span class="line" data-text="准备完毕"></span>
       </div>
     </div>
@@ -205,10 +207,20 @@
         return new Promise(resolve => {
           if (document.readyState === 'complete') {
             resolve();
-          } else {
+          } 
+          else {
             window.addEventListener('load', resolve);
           }
         });
+
+        setTimeout(() => {
+          if (!isResolved) {
+            resolve();
+            
+            window.removeEventListener('load', handleLoad);
+            console.log('当前为强制结束等待资源加载的状态');
+          }
+        }, 5000); 
       }
 
         const isFirstVisit = !sessionStorage.getItem('visited');  
