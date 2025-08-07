@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 第三个无三视图人体模型，这次做三个，先做一个裸模做基础，然后三套衣服，甚至三个头发。\n头发还是挺有挑战的，我的是面片法，不一定全适合。\n裸模没有三视图更是折磨。。用其他人的当作参考自己调整（不能直接用其他人的，毕竟都已经应用了修改器，而且大部分和这体型不一样）。\n">
+<title>浅黄睦月三模型制作</title>
+
+<link rel='canonical' href='https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/'>
+
+<link rel="stylesheet" href="/scss/style.min.3d36c79f576f4f9f424160a7a521ac987221df2edb4a40d8b7a713da8cb30d95.css"><meta property='og:title' content="浅黄睦月三模型制作">
+<meta property='og:description' content="前言 第三个无三视图人体模型，这次做三个，先做一个裸模做基础，然后三套衣服，甚至三个头发。\n头发还是挺有挑战的，我的是面片法，不一定全适合。\n裸模没有三视图更是折磨。。用其他人的当作参考自己调整（不能直接用其他人的，毕竟都已经应用了修改器，而且大部分和这体型不一样）。\n">
+<meta property='og:url' content='https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Blender' /><meta property='article:tag' content='模型' /><meta property='article:published_time' content='2025-08-04T14:10:45&#43;08:00'/><meta property='article:modified_time' content='2025-08-07T19:03:11&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.png' />
+<meta name="twitter:title" content="浅黄睦月三模型制作">
+<meta name="twitter:description" content="前言 第三个无三视图人体模型，这次做三个，先做一个裸模做基础，然后三套衣服，甚至三个头发。\n头发还是挺有挑战的，我的是面片法，不一定全适合。\n裸模没有三视图更是折磨。。用其他人的当作参考自己调整（不能直接用其他人的，毕竟都已经应用了修改器，而且大部分和这体型不一样）。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('/font/MarukoGothicCJKjp-Regular.ttf') format('truetype');
+    }
+
+
+    .loadingBox {
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1d1d1d;
+        z-index: 9999;
+    }
+
+    .Bigbox {
+      background-color: #1d1d1d;
+      font-family: monospace;
+      margin: 20px;
+      padding: 0;
+      font-family: 'MyCustomFont', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+      color: #b4b4b4;
+      display: inline;
+      white-space: pre;
+    }
+
+    .loading {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .typewriter {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .typewriter .line {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 10px;
+      margin-top: -1px;
+      color: #b4b4b4;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 1.5em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loadingBox">
+    <div class="Bigbox">
+      <div class="loading">
+        <h1>LOADING</h1>
+        <h1 id="loadingText" style="font-size: 15px;"> - 系统启动中</h1>
+      </div>
+      <div class="typewriter">
+        <span class="line" data-text="Neuro"></span>
+        <span class="line" data-text="Implanted"></span>
+        <span class="line" data-text="Machine for"></span>
+        <span class="line" data-text="Protecting"></span>
+        <span class="line" data-text="Human"></span>
+        <span class="line" data-text="突触连接：OFF"></span>
+        <span class="line" data-text="删除本机数据"></span>
+        <span class="line" data-text="网络连接"></span>
+        <span class="line" data-text="下载最新数据：完成"></span>
+        <span class="line" data-text="确认数据损失率：正常范围"></span>
+        <span class="line" data-text="确认神经元受损度：正常"></span>
+        <span class="line" data-text="确认神经元处理速度：正常"></span>
+        <span class="line" data-text="突触链接：ON"></span>
+        <span class="line" data-text="确认路由信息恢复率：正常范围"></span>
+        <span class="line" data-text="确认通信状态：良好"></span>
+        <span class="line" data-text="NIMPH系统：全部正常"></span>
+        <span class="line" data-text="数据自动保存"></span>
+        <span class="line" data-text="准备完毕"></span>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+
+      
+      const loading = document.querySelector('.loadingBox');
+
+      
+      const lines = Array.from(document.querySelectorAll('.line'))
+        .filter(line => line.dataset.text && line.dataset.text.trim() !== '');
+      const loadingText = document.getElementById('loadingText');
+      const lineEnd = lines[lines.length - 1];
+
+      
+      let dotCount = 0;
+      let loadingInterval;
+
+      
+      function startLoadingAnimation() {
+        loadingInterval = setInterval(() => {
+          dotCount = (dotCount + 1) % 4; 
+          loadingText.textContent = '  -  系统启动中' + '.'.repeat(dotCount);
+        }, 500); 
+      }
+
+      
+      function stopLoadingAnimation() {
+        
+        
+
+
+        
+        const fadeOutAnimation = loading.animate([
+          { opacity: 1 },
+          { opacity: 0 }
+        ], {
+          duration: 800,
+          fill: 'forwards'
+        });
+
+        
+        fadeOutAnimation.finished.then(() => {
+          loading.style.display = "none";
+          sessionStorage.setItem('visited', 'true');
+        });
+      }
+
+      
+      async function typeLine(line) {
+        const fullText = line.dataset.text;
+        line.textContent = '';
+        if (!fullText) return;
+
+        const firstChar = fullText[0] || '|';
+        let currentIndex = 1;
+        line.textContent = firstChar;
+
+        return new Promise(resolve => {
+          function type() {
+            if (currentIndex < fullText.length) {
+              line.textContent = fullText.substring(0, currentIndex) + firstChar;
+              currentIndex++;
+              setTimeout(type, 20 + Math.random() * 15);
+            } else {
+              line.textContent = fullText;
+              resolve();
+            }
+          }
+          setTimeout(type, 20);
+        });
+      }
+
+
+      
+      function waitForResourcesLoaded() {
+        return new Promise(resolve => {
+          if (document.readyState === 'complete') {
+            resolve();
+          } else {
+            window.addEventListener('load', resolve);
+          }
+        });
+      }
+
+        const isFirstVisit = !sessionStorage.getItem('visited');  
+
+        if (isFirstVisit) {
+          loading.style.display = "block";
+
+          
+          startLoadingAnimation(); 
+
+          
+          await new Promise(resolve => setTimeout(resolve, 1500));
+
+          
+          for (let i = 0; i < lines.length - 1; i++) {
+            await typeLine(lines[i]);
+            await new Promise(resolve => setTimeout(resolve, 100));
+          }
+
+          
+          await waitForResourcesLoaded();
+          
+          await typeLine(lineEnd);
+
+          
+          await new Promise(resolve => setTimeout(resolve, 800));
+          stopLoadingAnimation();
+        }
+        else {
+          console.log('已被访问过，不再执行动画');
+        }
+
+    });
+  </script>
+</body>
+
+</html>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/muzimi.gif" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#过程">过程</a>
+      <ol>
+        <li><a href="#脸模制作">脸模制作</a></li>
+        <li><a href="#身体制作">身体制作</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/">
+                <img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back_hu_ab133b0024b7a7ba.png"
+                        srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back_hu_ab133b0024b7a7ba.png 800w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back_hu_8514cf56ef4dfe26.png 1600w"
+                        width="800" 
+                        height="440" 
+                        loading="lazy"
+                        alt="Featured image of post 浅黄睦月三模型制作" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%B0%9D%E8%AF%95/" style="background-color: #2a9d8f; color: #fff;">
+                尝试
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/">浅黄睦月三模型制作</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 04, 2025</time>
+            </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  
+  <!-- 纸张背景 -->
+  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+  <path d="M8 8h8" />
+  <path d="M8 12h8" />
+  <path d="M8 16h8" />
+</svg>
+            <time class="article-time--reading">
+                本文共 399 字
+            </time>
+        </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><ul>
+<li>
+<p>第三个无三视图人体模型，这次做三个，先做一个裸模做基础，然后三套衣服，甚至三个头发。</p>
+</li>
+<li>
+<p>头发还是挺有挑战的，我的是面片法，不一定全适合。</p>
+</li>
+<li>
+<p>裸模没有三视图更是折磨。。用其他人的当作参考自己调整（不能直接用其他人的，毕竟都已经应用了修改器，而且大部分和这体型不一样）。</p>
+</li>
+<li>
+<p>感觉都不错啊，不过估计时长会长不少，毕竟单靠一张透视图去做还是有点难度的。</p>
+</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01.png"
+	width="817"
+	height="2280"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01_hu_a333e67566648fe7.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01_hu_72bfda9365e731cd.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="35"
+		data-flex-basis="86px"
+	
+>
+<img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/02.jpg"
+	width="1296"
+	height="1812"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/02_hu_1c98b68ba75b7e46.jpg 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/02_hu_251bd368f209cb2c.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="71"
+		data-flex-basis="171px"
+	
+>
+<img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/03.jpg"
+	width="4299"
+	height="6071"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/03_hu_ff7501030789d251.jpg 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/03_hu_f42a6df26ab6b568.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="169px"
+	
+></p>
+<h2 id="过程">过程
+</h2><h3 id="脸模制作">脸模制作
+</h3><ul>
+<li>先以第一个图为基础，做一个脸模出来，毕竟这张图的脸还算正。这张图嘴是张开的，而且幅度很大，那后面的形态键应该怎么做呢（问题暂留）</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01.png"
+	width="817"
+	height="2280"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01_hu_a333e67566648fe7.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/01_hu_72bfda9365e731cd.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="35"
+		data-flex-basis="86px"
+	
+></p>
+<ul>
+<li>捏好脸</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1_hu_8eb274845e47b958.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/1_hu_82491739819745f1.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>简单上色</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2_hu_42daef04c580e814.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/2_hu_ca2b29827b17c8fa.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>捏刘海</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3_hu_899cdcddf67946e6.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/3_hu_2703ed06df106cff.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>捏头发</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4_hu_6a70275294b5dd93.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/4_hu_d28091186701655e.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<h3 id="身体制作">身体制作
+</h3><ul>
+<li>基础的胸部</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_c8a96b197ed2a39f.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/5_hu_c6bc3c1242f433b4.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>整个身体</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6_hu_e80160a0b2b95e14.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/6_hu_956d99b58f4d9f2e.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>脚部，这些指甲布线真麻烦，还有人体的结构</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7_hu_5ca481a714cf2631.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/7_hu_1655cfff3a0d2c24.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>完成身体</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8_hu_86cb3949aa6505a2.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/8_hu_516af4d9680d79b4.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>后发的补充，这里的分层不会做，只能是在一个整体上切割了，效果一般，卡了我不少时间</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9_hu_5961c24361e50bbb.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/9_hu_1c54579125b0dce6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>简单的衣服，头发也上了下纹理，感觉头发好像分层有点严重。（要不加个帽子掩盖一下哈哈）</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10_hu_a1240073af2e7d0a.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10_hu_f93e80c0df877e1.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>有点诡异，这西装没有参考还真不好做。</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11_hu_fdc01ce782729ab4.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/11_hu_842fe727a0bb2965.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<ul>
+<li>暂时完成，有需要再改吧</li>
+</ul>
+<p><img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12.png"
+	width="1920"
+	height="1057"
+	srcset="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12_hu_c6a3b983985aba36.png 480w, /p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/12_hu_fb4b2bcb890562ed.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/blender/">Blender</a>
+        
+            <a href="/tags/%E6%A8%A1%E5%9E%8B/">模型</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Made with ❤️ by KKPT</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Aug 07, 2025 19:03 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/back.9c16b4147ed921e4ec9dcbd2afaa94be_hu_db6c2899b9da046f.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 长风玩偶建模"
+                        
+                        data-hash="md5-nBa0FH7ZIeTsncvSr6qUvg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">长风玩偶建模</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/back.e0567dba92ed9249063151b121677fb4_hu_125e6822a2ae4cf3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 碧蓝档案场景仿制"
+                        
+                        data-hash="md5-4FZ9upLtkkkGMVGxIWd/tA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">碧蓝档案场景仿制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E9%A3%9E%E9%B8%9F%E9%A9%AC%E6%97%B6%E4%BE%BF%E8%A3%85%E6%94%B9%E6%A8%A1/back.a0c20f5e755a11952e2b57028f0422c7_hu_4b5cd0f08c2a6b04.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 飞鸟马时（便装）改模"
+                        
+                        data-hash="md5-oMIPXnVaEZUuK1cCjwQixw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">飞鸟马时（便装）改模</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E8%B5%9B%E7%92%90%E7%92%90%E9%A3%8E%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.66cda37538f7dd6a06b7b9688688a2d9_hu_7e583ecb127181af.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 赛璐璐风人物模型制作"
+                        
+                        data-hash="md5-Zs2jdTj33WoGt7lohoii2Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">赛璐璐风人物模型制作</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPR渲染尝试</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+        data-repo="axppk/axppk.github.io"
+        data-repo-id="R_kgDOPFCzDg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFCzDs4CtZcr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 KKPT
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+
+
+   
+  @font-face {
+  font-family: 'MarukoGothicCJKjp-Regular';
+  src: url(https://axppk.github.io/font/MarukoGothicCJKjp-Regular.ttf) format('truetype');
+  }
+
+  :root {
+  --base-font-family: 'MarukoGothicCJKjp-Regular';
+  --code-font-family: 'MarukoGothicCJKjp-Regular';
+  }
+   
+
+   
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  initScrollTop();
+  initCodeMoreBox();
+  initTocHide()
+</script>
+
+<script src=https://axppk.github.io/background/sakura.js></script>
+
+<script src=https://axppk.github.io/click-effect/click.js></script>
+
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "X5h3L-_D2Lr-E1Xjxu8cd"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
+    </body>
+</html>
