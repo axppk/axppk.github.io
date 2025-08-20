@@ -199,39 +199,7 @@
           setTimeout(type, 20);
         });
       }
-
-
       
-
-      const handleLoad = () => {
-        isResolved = true;
-        resolve();
-        console.log('已在强制结束等待资源加载的状态后完成资源加载');
-      };
-
-      function waitForResourcesLoaded() {
-
-        let isResolved = false;
-
-        return new Promise(resolve => {
-          if (document.readyState === 'complete') {
-            resolve();
-          } 
-          else {
-            window.addEventListener('load', resolve);
-          }
-        });
-
-        setTimeout(() => {
-          if (!isResolved) {
-            resolve();
-            console.log('已强制结束等待资源加载的状态，此时资源未全部加载');
-            
-            window.removeEventListener('load', handleLoad);
-          }
-        }, 5000); 
-      }
-
         const isFirstVisit = !sessionStorage.getItem('visited');  
 
         if (isFirstVisit) {
@@ -249,8 +217,6 @@
             await new Promise(resolve => setTimeout(resolve, 100));
           }
 
-          
-          await waitForResourcesLoaded();
           
           await typeLine(lineEnd);
 
