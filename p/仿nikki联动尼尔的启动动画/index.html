@@ -119,8 +119,7 @@
         <span class="line" data-text="确认通信状态：良好"></span>
         <span class="line" data-text="NIMPH系统：全部正常"></span>
         <span class="line" data-text="数据自动保存"></span>
-        <span class="line" data-text="如果您为手机用户，则此页面将持续5S后自动关闭"></span>
-        <span class="line" data-text="此时可能会导致部分特效或字体失效"></span>
+        <span class="line" data-text="正在等待字体加载完成..."></span>
         <span class="line" data-text="准备完毕"></span>
       </div>
     </div>
@@ -202,7 +201,17 @@
 
 
       
+
+      const handleLoad = () => {
+        isResolved = true;
+        resolve();
+        console.log('已在强制结束等待资源加载的状态后完成资源加载');
+      };
+
       function waitForResourcesLoaded() {
+
+        let isResolved = false;
+
         return new Promise(resolve => {
           if (document.readyState === 'complete') {
             resolve();
@@ -215,9 +224,9 @@
         setTimeout(() => {
           if (!isResolved) {
             resolve();
+            console.log('已强制结束等待资源加载的状态，此时资源未全部加载');
             
             window.removeEventListener('load', handleLoad);
-            console.log('当前为强制结束等待资源加载的状态');
           }
         }, 5000); 
       }
@@ -644,15 +653,15 @@
 <li>莫名其妙手机访问的话会很慢加载资源，甚至无法加载，需要加个定时器保证手机也能访问</li>
 </ul>
 <p><img src="/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu10.png"
-	width="1920"
-	height="1078"
-	srcset="/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu10_hu_c17b4110a69c2a7a.png 480w, /p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu10_hu_b1ef03c839182a5c.png 1024w"
+	width="656"
+	height="550"
+	srcset="/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu10_hu_741895ba36233617.png 480w, /p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu10_hu_43349d398f90eaee.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="178"
-		data-flex-basis="427px"
+		data-flex-grow="119"
+		data-flex-basis="286px"
 	
 ></p>
 <h2 id="效果预览">效果预览

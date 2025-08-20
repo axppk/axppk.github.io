@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Thu, 07 Aug 2025 19:03:11 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 18 Aug 2025 11:48:05 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>浅黄睦月三模型制作</title>
         <link>https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/</link>
         <pubDate>Mon, 04 Aug 2025 14:10:45 +0800</pubDate>
@@ -217,7 +217,8 @@
 		data-flex-basis=&#34;435px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;衣服制作&#34;&gt;衣服制作
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;简单的衣服，头发也上了下纹理，感觉头发好像分层有点严重。（要不加个帽子掩盖一下哈哈）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/10.png&#34;
@@ -260,6 +261,67 @@
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;181&#34;
 		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;细节制作&#34;&gt;细节制作
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;搁置一段时间，又回来补充了一下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13_hu_32d52d7f8fe4bdac.png 480w, https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/13_hu_a911f1b07f60aef6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加上了描边&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/14.png&#34;
+	width=&#34;657&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/14_hu_20bdd800ffb59cff.png 480w, https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/14_hu_4f2ddceac61e2d55.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;72&#34;
+		data-flex-basis=&#34;173px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;效果依旧一般，很奇怪&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/15.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1057&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/15_hu_d50f9bf525efe557.png 480w, https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/15_hu_71c56853141cbda1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最终成果，仍然是没有权重。权重真的好麻烦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16.png&#34;
+	width=&#34;2160&#34;
+	height=&#34;3840&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16_hu_e1bbb0112dc12d7f.png 480w, https://axppk.github.io/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/img/16_hu_7fce9a2845be6874.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;56&#34;
+		data-flex-basis=&#34;135px&#34;
 	
 &gt;&lt;/p&gt;
 </description>

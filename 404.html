@@ -10,7 +10,7 @@
 <meta property='og:description' content="KKPT个人博客">
 <meta property='og:url' content='https://axppk.github.io/404.html'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-08-07T19:28:05&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-08-20T21:15:07&#43;08:00 '/>
 <meta name="twitter:title" content="404 Page not found">
 <meta name="twitter:description" content="KKPT个人博客">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -119,8 +119,7 @@
         <span class="line" data-text="确认通信状态：良好"></span>
         <span class="line" data-text="NIMPH系统：全部正常"></span>
         <span class="line" data-text="数据自动保存"></span>
-        <span class="line" data-text="如果您为手机用户，则此页面将持续5S后自动关闭"></span>
-        <span class="line" data-text="此时可能会导致部分特效或字体失效"></span>
+        <span class="line" data-text="正在等待字体加载完成..."></span>
         <span class="line" data-text="准备完毕"></span>
       </div>
     </div>
@@ -202,7 +201,17 @@
 
 
       
+
+      const handleLoad = () => {
+        isResolved = true;
+        resolve();
+        console.log('已在强制结束等待资源加载的状态后完成资源加载');
+      };
+
       function waitForResourcesLoaded() {
+
+        let isResolved = false;
+
         return new Promise(resolve => {
           if (document.readyState === 'complete') {
             resolve();
@@ -215,9 +224,9 @@
         setTimeout(() => {
           if (!isResolved) {
             resolve();
+            console.log('已强制结束等待资源加载的状态，此时资源未全部加载');
             
             window.removeEventListener('load', handleLoad);
-            console.log('当前为强制结束等待资源加载的状态');
           }
         }, 5000); 
       }

@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Fri, 25 Jul 2025 16:20:23 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 Aug 2025 21:15:07 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档 | Archives</title>
         <link>https://axppk.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -31,9 +31,9 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;实现启动的动画的仿制&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;&lt;del&gt;实现启动的动画的仿制&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;2025/07/10&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;完成度 50%左右&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;添加 live2d 小人&lt;/em&gt;&lt;/td&gt;
@@ -48,7 +48,7 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;&lt;del&gt;添加评论区功能&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
           &lt;td&gt;&lt;strong&gt;2025/07/25&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;很简单&lt;/td&gt;
+          &lt;td&gt;很简单，有现成插件，用 github 自带的评论功能&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;em&gt;&lt;del&gt;或许可以引入 AI&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
