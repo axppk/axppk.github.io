@@ -1472,7 +1472,8 @@
     &gt;Github&lt;/a&gt;：一个代码托管平台，可以托管代码，提供版本控制，可以与 Hugo 配合使用。
 &lt;br&gt;简而言之，这是一个开源的远程仓库云端存储，可以存储代码，提供版本控制追踪，可以用于托管部署我们的 Hugo 网站。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Git Cmd&lt;/a&gt;：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。&lt;/p&gt;&lt;/blockquote&gt;
+    &gt;Git Cmd&lt;/a&gt;：一个 Git 命令行工具，可以与 Github 配合使用，可以方便地管理执行 Git 命令代码。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;部署步骤&#34;&gt;部署步骤
 &lt;/h2&gt;&lt;h3 id=&#34;安装-hugo&#34;&gt;安装 Hugo
 &lt;/h3&gt;&lt;ul&gt;
