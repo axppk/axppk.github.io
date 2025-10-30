@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+<title>SpringBoot学习之路</title>
+
+<link rel='canonical' href='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
+
+<link rel="stylesheet" href="/scss/style.min.74cd586f6c42a987f8446198903b1d3d819162a064a1f3e01848b59a12a63cd9.css"><meta property='og:title' content="SpringBoot学习之路">
+<meta property='og:description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+<meta property='og:url' content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-30T17:15:19&#43;08:00'/><meta property='article:modified_time' content='2025-10-30T18:00:02&#43;08:00'/>
+<meta name="twitter:title" content="SpringBoot学习之路">
+<meta name="twitter:description" content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('/font/MarukoGothicCJKjp-Regular.ttf') format('truetype');
+    }
+
+
+    .loadingBox {
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1d1d1d;
+        z-index: 9999;
+    }
+
+    .Bigbox {
+      background-color: #1d1d1d;
+      font-family: monospace;
+      margin: 20px;
+      padding: 0;
+      font-family: 'MyCustomFont', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+      color: #b4b4b4;
+      display: inline;
+      white-space: pre;
+    }
+
+    .loading {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .typewriter {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .typewriter .line {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 10px;
+      margin-top: -1px;
+      color: #b4b4b4;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 1.5em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loadingBox">
+    <div class="Bigbox">
+      <div class="loading">
+        <h1>LOADING</h1>
+        <h1 id="loadingText" style="font-size: 15px;"> - 系统启动中</h1>
+      </div>
+      <div class="typewriter">
+        <span class="line" data-text="Neuro"></span>
+        <span class="line" data-text="Implanted"></span>
+        <span class="line" data-text="Machine for"></span>
+        <span class="line" data-text="Protecting"></span>
+        <span class="line" data-text="Human"></span>
+        <span class="line" data-text="突触连接：OFF"></span>
+        <span class="line" data-text="删除本机数据"></span>
+        <span class="line" data-text="网络连接"></span>
+        <span class="line" data-text="下载最新数据：完成"></span>
+        <span class="line" data-text="确认数据损失率：正常范围"></span>
+        <span class="line" data-text="确认神经元受损度：正常"></span>
+        <span class="line" data-text="确认神经元处理速度：正常"></span>
+        <span class="line" data-text="突触链接：ON"></span>
+        <span class="line" data-text="确认路由信息恢复率：正常范围"></span>
+        <span class="line" data-text="确认通信状态：良好"></span>
+        <span class="line" data-text="NIMPH系统：全部正常"></span>
+        <span class="line" data-text="数据自动保存"></span>
+        <span class="line" data-text="手机可能出现异常显示..."></span>
+        <span class="line" data-text="准备完毕"></span>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+
+      
+      const loading = document.querySelector('.loadingBox');
+
+      
+      const lines = Array.from(document.querySelectorAll('.line'))
+        .filter(line => line.dataset.text && line.dataset.text.trim() !== '');
+      const loadingText = document.getElementById('loadingText');
+      const lineEnd = lines[lines.length - 1];
+
+      
+      let dotCount = 0;
+      let loadingInterval;
+
+      
+      function startLoadingAnimation() {
+        loadingInterval = setInterval(() => {
+          dotCount = (dotCount + 1) % 4; 
+          loadingText.textContent = '  -  系统启动中' + '.'.repeat(dotCount);
+        }, 500); 
+      }
+
+      
+      function stopLoadingAnimation() {
+        
+        
+
+
+        
+        const fadeOutAnimation = loading.animate([
+          { opacity: 1 },
+          { opacity: 0 }
+        ], {
+          duration: 800,
+          fill: 'forwards'
+        });
+
+        
+        fadeOutAnimation.finished.then(() => {
+          loading.style.display = "none";
+          sessionStorage.setItem('visited', 'true');
+        });
+      }
+
+      
+      async function typeLine(line) {
+        const fullText = line.dataset.text;
+        line.textContent = '';
+        if (!fullText) return;
+
+        const firstChar = fullText[0] || '|';
+        let currentIndex = 1;
+        line.textContent = firstChar;
+
+        return new Promise(resolve => {
+          function type() {
+            if (currentIndex < fullText.length) {
+              line.textContent = fullText.substring(0, currentIndex) + firstChar;
+              currentIndex++;
+              setTimeout(type, 20 + Math.random() * 15);
+            } else {
+              line.textContent = fullText;
+              resolve();
+            }
+          }
+          setTimeout(type, 20);
+        });
+      }
+      
+        const isFirstVisit = !sessionStorage.getItem('visited');  
+
+        if (isFirstVisit) {
+          loading.style.display = "block";
+
+          
+          startLoadingAnimation(); 
+
+          
+          await new Promise(resolve => setTimeout(resolve, 1500));
+
+          
+          for (let i = 0; i < lines.length - 1; i++) {
+            await typeLine(lines[i]);
+            await new Promise(resolve => setTimeout(resolve, 100));
+          }
+
+          
+          await typeLine(lineEnd);
+
+          
+          await new Promise(resolve => setTimeout(resolve, 800));
+          stopLoadingAnimation();
+        }
+        else {
+          console.log('已被访问过，不再执行动画');
+        }
+
+    });
+  </script>
+</body>
+
+</html>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/muzimi.gif" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档 | Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前期准备">前期准备</a></li>
+    <li><a href="#创建项目">创建项目</a></li>
+    <li><a href="#项目结构">项目结构</a>
+      <ol>
+        <li><a href="#基本知识">基本知识</a></li>
+        <li><a href="#前提了解">前提了解</a></li>
+        <li><a href="#目前在用">目前在用</a></li>
+        <li><a href="#实例示例">实例示例</a></li>
+      </ol>
+    </li>
+    <li><a href="#运行项目">运行项目</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">SpringBoot学习之路</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 30, 2025</time>
+            </div>
+        
+
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  
+  <!-- 纸张背景 -->
+  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+  <path d="M8 8h8" />
+  <path d="M8 12h8" />
+  <path d="M8 16h8" />
+</svg>
+            <time class="article-time--reading">
+                本文共 183 字
+            </time>
+        </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前期准备">前期准备
+</h2><ul>
+<li>安装 JDK 17 以上</li>
+<li>安装 Idea 2021.3 以上</li>
+</ul>
+<h2 id="创建项目">创建项目
+</h2><ul>
+<li>Idea 直接创建 springboot 或通过 <a class="link" href="https://start.spring.io/"  target="_blank" rel="noopener"
+    >Spring 官网在线</a> 创建出来导入 Idea</li>
+</ul>
+<h2 id="项目结构">项目结构
+</h2><h3 id="基本知识">基本知识
+</h3><p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8.png"
+	width="814"
+	height="860"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_376c332da98c3d5.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_c732e73275452236.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="94"
+		data-flex-basis="227px"
+	
+></p>
+<h3 id="前提了解">前提了解
+</h3><ul>
+<li><a class="link" href="https://www.cnblogs.com/xiaotian0422/p/16496908.html"  target="_blank" rel="noopener"
+    >ORM 前提了解</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/1962870403258115638"  target="_blank" rel="noopener"
+    >mybatis 与 springboot data jpa 的区别</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/115507328"  target="_blank" rel="noopener"
+    >JPA + Hibernate + springboot data jpa</a></li>
+<li><a class="link" href="https://blog.csdn.net/guyue35/article/details/84327858#:~:text=%E6%9C%AC%E6%96%87%E8%A7%A3%E6%9E%90%E4%BA%86Java%20Persistence%20API%20%28JPA%29%20%E5%92%8C%20SpringDataJPA,%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB%E3%80%82%20JPA%E4%BD%9C%E4%B8%BASun%E5%AE%98%E6%96%B9%E7%9A%84ORM%E8%A7%84%E8%8C%83%EF%BC%8C%E8%A2%AB%E5%A4%9A%E4%B8%AA%E6%A1%86%E6%9E%B6%E5%A6%82Hibernate%E6%89%80%E5%AE%9E%E7%8E%B0%E3%80%82%20SpringDataJPA%E5%88%99%E5%9C%A8JPA%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E9%80%9A%E8%BF%87Repository%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8C%96%E4%BA%86CRUD%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%8F%90%E4%BE%9B%E4%BA%86%E6%9B%B4%E4%BE%BF%E6%8D%B7%E7%9A%84%E6%8C%81%E4%B9%85%E5%B1%82%E7%AE%A1%E7%90%86%E3%80%82%20spring%20data%20jpa%E6%98%AFspring%E5%85%AC%E5%8F%B8%E4%B8%8B%E7%9A%84spring%20data%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E3%80%82"  target="_blank" rel="noopener"
+    >JPA 和 springboot data jpa 的区别</a></li>
+</ul>
+<h3 id="目前在用">目前在用
+</h3><ul>
+<li>一种是 <a class="link" href="https://mybatis.net.cn/"  target="_blank" rel="noopener"
+    >Mybatis</a></li>
+<li>另一种是 <a class="link" href="https://www.cnblogs.com/mq0036/p/8522150.html"  target="_blank" rel="noopener"
+    >Hibernate</a> + <a class="link" href="https://blog.csdn.net/cmx1060220219/article/details/106259423"  target="_blank" rel="noopener"
+    >JPA</a> + <a class="link" href="https://www.cnblogs.com/l-y-h/p/12127923.html"  target="_blank" rel="noopener"
+    >Spring Data JPA</a></li>
+</ul>
+<h3 id="实例示例">实例示例
+</h3><ul>
+<li>
+<p>基本结构如下</p>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png"
+	width="450"
+	height="737"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_ad85665028196917.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_3749421901e8f499.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="61"
+		data-flex-basis="146px"
+	
+></p>
+</li>
+<li>
+<p>实体类(entity)
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_feffbc55c27d227d.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_4fde843eec5742cd.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+<li>
+<p>控制器层接口(controller)
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_93a0d385ba45ec2f.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_3fcd1352cb15b994.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+<li>
+<p>数据层实现(repository)
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_3577aa0bff6bb778.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_6482cac04a5ca5fe.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+<li>
+<p>服务层接口(service)
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_8eca80911837279f.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_920db0a65efa4750.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+<li>
+<p><a class="link" href="https://apifox.com/apiskills/spring-boot-application-properties/"  target="_blank" rel="noopener"
+    >application.properties</a>
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_31f0fd83c7fa886b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_d8d0e77e0d0f59bf.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+<li>
+<p><a class="link" href="https://blog.csdn.net/qq_20236937/article/details/135893883"  target="_blank" rel="noopener"
+    >pom.xml</a>
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_bf829081876352ac.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_dcf6a1d0a95fd00b.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+</li>
+</ul>
+<h2 id="运行项目">运行项目
+</h2><ul>
+<li>右键项目 -&gt; Run &lsquo;Application&rsquo;</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Made with ❤️ by KKPT</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Oct 30, 2025 18:00 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+        data-repo="axppk/axppk.github.io"
+        data-repo-id="R_kgDOPFCzDg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFCzDs4CtZcr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 KKPT
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+
+
+   
+  @font-face {
+  font-family: 'MarukoGothicCJKjp-Regular';
+  src: url(https://axppk.github.io/font/MarukoGothicCJKjp-Regular.ttf) format('truetype');
+  }
+
+  :root {
+  --base-font-family: 'MarukoGothicCJKjp-Regular';
+  --code-font-family: 'MarukoGothicCJKjp-Regular';
+  }
+   
+
+   
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  initScrollTop();
+  initCodeMoreBox();
+  initTocHide()
+</script>
+
+<script src=https://axppk.github.io/background/sakura.js></script>
+
+<script src=https://axppk.github.io/click-effect/click.js></script>
+
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "X5h3L-_D2Lr-E1Xjxu8cd"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
+    </body>
+</html>

@@ -7,6 +7,172 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SpringBoot学习之路</title>
+        <link>https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</link>
+        <pubDate>Thu, 30 Oct 2025 17:15:19 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</guid>
+        <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;安装 JDK 17 以上&lt;/li&gt;
+&lt;li&gt;安装 Idea 2021.3 以上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;创建项目&#34;&gt;创建项目
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Idea 直接创建 springboot 或通过 &lt;a class=&#34;link&#34; href=&#34;https://start.spring.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Spring 官网在线&lt;/a&gt; 创建出来导入 Idea&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目结构&#34;&gt;项目结构
+&lt;/h2&gt;&lt;h3 id=&#34;基本知识&#34;&gt;基本知识
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8.png&#34;
+	width=&#34;814&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_376c332da98c3d5.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_c732e73275452236.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;94&#34;
+		data-flex-basis=&#34;227px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;前提了解&#34;&gt;前提了解
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/xiaotian0422/p/16496908.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ORM 前提了解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/1962870403258115638&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mybatis 与 springboot data jpa 的区别&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/115507328&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JPA + Hibernate + springboot data jpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/guyue35/article/details/84327858#:~:text=%E6%9C%AC%E6%96%87%E8%A7%A3%E6%9E%90%E4%BA%86Java%20Persistence%20API%20%28JPA%29%20%E5%92%8C%20SpringDataJPA,%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB%E3%80%82%20JPA%E4%BD%9C%E4%B8%BASun%E5%AE%98%E6%96%B9%E7%9A%84ORM%E8%A7%84%E8%8C%83%EF%BC%8C%E8%A2%AB%E5%A4%9A%E4%B8%AA%E6%A1%86%E6%9E%B6%E5%A6%82Hibernate%E6%89%80%E5%AE%9E%E7%8E%B0%E3%80%82%20SpringDataJPA%E5%88%99%E5%9C%A8JPA%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E9%80%9A%E8%BF%87Repository%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8C%96%E4%BA%86CRUD%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%8F%90%E4%BE%9B%E4%BA%86%E6%9B%B4%E4%BE%BF%E6%8D%B7%E7%9A%84%E6%8C%81%E4%B9%85%E5%B1%82%E7%AE%A1%E7%90%86%E3%80%82%20spring%20data%20jpa%E6%98%AFspring%E5%85%AC%E5%8F%B8%E4%B8%8B%E7%9A%84spring%20data%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E3%80%82&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JPA 和 springboot data jpa 的区别&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;目前在用&#34;&gt;目前在用
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一种是 &lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mybatis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;另一种是 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/8522150.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hibernate&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/cmx1060220219/article/details/106259423&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JPA&lt;/a&gt; + &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/l-y-h/p/12127923.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Spring Data JPA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;实例示例&#34;&gt;实例示例
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;基本结构如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png&#34;
+	width=&#34;450&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_ad85665028196917.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_3749421901e8f499.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;61&#34;
+		data-flex-basis=&#34;146px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实体类(entity)
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_feffbc55c27d227d.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_4fde843eec5742cd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;控制器层接口(controller)
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_93a0d385ba45ec2f.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_3fcd1352cb15b994.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据层实现(repository)
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_3577aa0bff6bb778.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_6482cac04a5ca5fe.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务层接口(service)
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_8eca80911837279f.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_920db0a65efa4750.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://apifox.com/apiskills/spring-boot-application-properties/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;application.properties&lt;/a&gt;
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_31f0fd83c7fa886b.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_d8d0e77e0d0f59bf.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_20236937/article/details/135893883&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pom.xml&lt;/a&gt;
+&lt;img src=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1439&#34;
+	srcset=&#34;https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_bf829081876352ac.png 480w, https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_dcf6a1d0a95fd00b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运行项目&#34;&gt;运行项目
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;右键项目 -&amp;gt; Run &amp;lsquo;Application&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>明日方舟联动箱子建模打光练习</title>
         <link>https://axppk.github.io/p/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E8%81%94%E5%8A%A8%E7%AE%B1%E5%AD%90%E5%BB%BA%E6%A8%A1%E6%89%93%E5%85%89%E7%BB%83%E4%B9%A0/</link>
         <pubDate>Sat, 11 Oct 2025 16:29:16 +0800</pubDate>
@@ -53,7 +219,7 @@
 &gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;初步渲染&lt;/li&gt;
-&lt;li&gt;还是有明显区别的，没有加上周围那一圈失焦炫光的样子吗，因为调了自带的聚焦值，可能有些模糊，想更精细应该去 PS 中再精修一下，这里是直出图。&lt;/li&gt;
+&lt;li&gt;还是有明显区别的，没有加上周围那一圈失焦炫光的样子（合成器中的色散节点），因为调了自带的聚焦值，可能有些模糊，想更精细应该去 PS 中再精修一下，这里是直出图。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E8%81%94%E5%8A%A8%E7%AE%B1%E5%AD%90%E5%BB%BA%E6%A8%A1%E6%89%93%E5%85%89%E7%BB%83%E4%B9%A0/img/2.png&#34;
 	width=&#34;1920&#34;
@@ -10933,6 +11099,36 @@ blender 中好像后选的是父级，所以先选骨架后选角色模型，ctr
 		data-flex-basis=&#34;427px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;小-bug-处理&#34;&gt;小 BUG 处理
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;github action 提示 you can try to increase the ’timeout’ config setting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于 github action 编译时间超过了 hugo 允许的编译时间导致的提交失败（action 中有错误提示和解决方法）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在如图位置添加 time：6000s 即可（数值自行调整）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug.png&#34;
+	width=&#34;604&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug_hu_d7a49d04a416c3ca.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug_hu_448a2033cba6e18.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;461&#34;
+		data-flex-basis=&#34;1106px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zata.cc/p/hugo%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考链接&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>

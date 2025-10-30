@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Fri, 25 Jul 2025 16:20:23 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Oct 2025 18:00:02 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>博客改造记录</title>
         <link>https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/</link>
         <pubDate>Wed, 02 Jul 2025 16:35:37 +0800</pubDate>
@@ -1454,6 +1454,36 @@
 		data-flex-basis=&#34;427px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;h2 id=&#34;小-bug-处理&#34;&gt;小 BUG 处理
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;github action 提示 you can try to increase the ’timeout’ config setting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于 github action 编译时间超过了 hugo 允许的编译时间导致的提交失败（action 中有错误提示和解决方法）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在如图位置添加 time：6000s 即可（数值自行调整）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug.png&#34;
+	width=&#34;604&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug_hu_d7a49d04a416c3ca.png 480w, https://axppk.github.io/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/bug_hu_448a2033cba6e18.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;461&#34;
+		data-flex-basis=&#34;1106px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.zata.cc/p/hugo%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考链接&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
