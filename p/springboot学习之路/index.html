@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n">
 <title>SpringBoot学习之路</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
 
 <link rel="stylesheet" href="/scss/style.min.74cd586f6c42a987f8446198903b1d3d819162a064a1f3e01848b59a12a63cd9.css"><meta property='og:title' content="SpringBoot学习之路">
-<meta property='og:description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+<meta property='og:description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n">
 <meta property='og:url' content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-30T17:15:19&#43;08:00'/><meta property='article:modified_time' content='2025-10-30T18:00:02&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-30T17:15:19&#43;08:00'/><meta property='article:modified_time' content='2025-11-14T15:35:06&#43;08:00'/>
 <meta name="twitter:title" content="SpringBoot学习之路">
-<meta name="twitter:description" content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 目前在用 一种是 Mybatis 另一种是 Hibernate + JPA + Spring Data JPA 实例示例 基本结构如下\n">
+<meta name="twitter:description" content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -485,10 +485,50 @@
         <li><a href="#基本知识">基本知识</a></li>
         <li><a href="#前提了解">前提了解</a></li>
         <li><a href="#目前在用">目前在用</a></li>
-        <li><a href="#实例示例">实例示例</a></li>
+        <li><a href="#实例示例以-springboot-与-hibernate--jpa--spring-data-jpa-为例">实例示例（以 Springboot 与 Hibernate + JPA + Spring Data JPA 为例）</a>
+          <ol>
+            <li><a href="#实体类">实体类</a></li>
+            <li><a href="#控制器层">控制器层</a></li>
+            <li><a href="#数据层">数据层</a></li>
+            <li><a href="#服务层">服务层</a></li>
+          </ol>
+        </li>
+        <li><a href="#hibernate-整合">Hibernate 整合</a>
+          <ol>
+            <li><a href="#引入依赖">引入依赖</a></li>
+            <li><a href="#快速创建实体类">快速创建实体类</a></li>
+          </ol>
+        </li>
+        <li><a href="#实例示例以-springboot-与-mybatis-plus-为例">实例示例（以 springboot 与 mybatis-plus 为例）</a>
+          <ol>
+            <li><a href="#这里只展示-mybatis-plus-多出来的几个结构">这里只展示 mybatis-plus 多出来的几个结构</a></li>
+            <li><a href="#dto">DTO</a></li>
+            <li><a href="#mapper">Mapper</a></li>
+            <li><a href="#implement">implement</a></li>
+          </ol>
+        </li>
+        <li><a href="#mybatis-plus-整合">Mybatis-plus 整合</a>
+          <ol>
+            <li><a href="#引入依赖-1">引入依赖</a></li>
+            <li><a href="#快速创建结构">快速创建结构</a></li>
+            <li><a href="#特殊点">特殊点</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
     <li><a href="#运行项目">运行项目</a></li>
+    <li><a href="#连接数据库">连接数据库</a></li>
+    <li><a href="#测试">测试</a>
+      <ol>
+        <li><a href="#实体类-1">实体类</a></li>
+        <li><a href="#dto-1">DTO</a></li>
+        <li><a href="#mapper-1">Mapper</a></li>
+        <li><a href="#impl">impl</a></li>
+        <li><a href="#service">service</a></li>
+        <li><a href="#controller">controller</a></li>
+      </ol>
+    </li>
+    <li><a href="#问题汇总">问题汇总</a></li>
   </ol>
 </nav>
         </div>
@@ -546,7 +586,7 @@
   <path d="M8 16h8" />
 </svg>
             <time class="article-time--reading">
-                本文共 183 字
+                本文共 2648 字
             </time>
         </div>
         
@@ -562,7 +602,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 6 分钟
                 </time>
             </div>
         
@@ -611,17 +651,23 @@
     >JPA + Hibernate + springboot data jpa</a></li>
 <li><a class="link" href="https://blog.csdn.net/guyue35/article/details/84327858#:~:text=%E6%9C%AC%E6%96%87%E8%A7%A3%E6%9E%90%E4%BA%86Java%20Persistence%20API%20%28JPA%29%20%E5%92%8C%20SpringDataJPA,%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB%E3%80%82%20JPA%E4%BD%9C%E4%B8%BASun%E5%AE%98%E6%96%B9%E7%9A%84ORM%E8%A7%84%E8%8C%83%EF%BC%8C%E8%A2%AB%E5%A4%9A%E4%B8%AA%E6%A1%86%E6%9E%B6%E5%A6%82Hibernate%E6%89%80%E5%AE%9E%E7%8E%B0%E3%80%82%20SpringDataJPA%E5%88%99%E5%9C%A8JPA%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E9%80%9A%E8%BF%87Repository%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8C%96%E4%BA%86CRUD%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%8F%90%E4%BE%9B%E4%BA%86%E6%9B%B4%E4%BE%BF%E6%8D%B7%E7%9A%84%E6%8C%81%E4%B9%85%E5%B1%82%E7%AE%A1%E7%90%86%E3%80%82%20spring%20data%20jpa%E6%98%AFspring%E5%85%AC%E5%8F%B8%E4%B8%8B%E7%9A%84spring%20data%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E3%80%82"  target="_blank" rel="noopener"
     >JPA 和 springboot data jpa 的区别</a></li>
+<li><a class="link" href="https://blog.csdn.net/2509_92430413/article/details/153930195"  target="_blank" rel="noopener"
+    >Mynatis-plus 介绍</a></li>
 </ul>
 <h3 id="目前在用">目前在用
 </h3><ul>
-<li>一种是 <a class="link" href="https://mybatis.net.cn/"  target="_blank" rel="noopener"
-    >Mybatis</a></li>
-<li>另一种是 <a class="link" href="https://www.cnblogs.com/mq0036/p/8522150.html"  target="_blank" rel="noopener"
+<li>
+<p>一种是 <a class="link" href="https://mybatis.net.cn/"  target="_blank" rel="noopener"
+    >Mybatis</a></p>
+</li>
+<li>
+<p>另一种是 <a class="link" href="https://www.cnblogs.com/mq0036/p/8522150.html"  target="_blank" rel="noopener"
     >Hibernate</a> + <a class="link" href="https://blog.csdn.net/cmx1060220219/article/details/106259423"  target="_blank" rel="noopener"
     >JPA</a> + <a class="link" href="https://www.cnblogs.com/l-y-h/p/12127923.html"  target="_blank" rel="noopener"
-    >Spring Data JPA</a></li>
+    >Spring Data JPA</a></p>
+</li>
 </ul>
-<h3 id="实例示例">实例示例
+<h3 id="实例示例以-springboot-与-hibernate--jpa--spring-data-jpa-为例">实例示例（以 Springboot 与 Hibernate + JPA + Spring Data JPA 为例）
 </h3><ul>
 <li>
 <p>基本结构如下</p>
@@ -637,6 +683,22 @@
 		data-flex-basis="146px"
 	
 ></p>
+<h4 id="实体类">实体类
+</h4></li>
+<li>
+<p><code>@Entity</code> 实体类注解，表示这是一个实体类，可以被 JPA 识别</p>
+</li>
+<li>
+<p><code>@Table</code> 表名注解，可以指定表名</p>
+</li>
+<li>
+<p><code>@Id</code> 主键注解，可以指定主键</p>
+</li>
+<li>
+<p><code>@GeneratedValue</code> 主键生成策略注解，可以指定主键生成策略</p>
+</li>
+<li>
+<p><code>@Column</code> 列注解，可以指定列名，列类型，是否可空等属性</p>
 </li>
 <li>
 <p>实体类(entity)
@@ -653,6 +715,35 @@
 	
 ></p>
 </li>
+</ul>
+<h4 id="控制器层">控制器层
+</h4><ul>
+<li><code>@RestController</code> 控制器层注解，表示这是一个控制器类，可以返回 json 数据</li>
+<li><code>@RequestMapping</code> 请求映射注解，可以指定请求路径</li>
+</ul>
+<br>
+<ul>
+<li><code>@Autowired</code> 自动注入注解，可以自动注入相应的类</li>
+<li><code>@PathVariable</code> 路径参数注解，可以获取路径参数</li>
+<li><code>@RequestParam</code> 请求参数注解，可以获取请求参数</li>
+<li><code>@RequestBody</code> 请求体注解，可以获取请求体</li>
+<li><code>@ResponseBody</code> 响应体注解，可以返回响应体</li>
+<li><code>@ExceptionHandler</code> 异常处理注解，可以处理异常</li>
+</ul>
+<br>
+<ul>
+<li>
+<p><code>@GetMapping</code> 获取请求注解，可以指定 GET 请求路径</p>
+</li>
+<li>
+<p><code>@PostMapping</code> 新增请求注解，可以指定 POST 请求路径</p>
+</li>
+<li>
+<p><code>@PutMapping</code> 更新请求注解，可以指定 PUT 请求路径</p>
+</li>
+<li>
+<p><code>@DeleteMapping</code> 删除请求注解，可以指定 DELETE 请求路径</p>
+</li>
 <li>
 <p>控制器层接口(controller)
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5.png"
@@ -668,6 +759,18 @@
 	
 ></p>
 </li>
+</ul>
+<h4 id="数据层">数据层
+</h4><ul>
+<li>
+<p><code>@Repository</code> 数据层注解，表示这是一个数据访问类，可以访问数据库</p>
+</li>
+<li>
+<p><code>@Query</code> 查询注解，可以指定查询语句</p>
+</li>
+<li>
+<p><code>@Modifying</code> 修改注解，可以指定修改语句</p>
+</li>
 <li>
 <p>数据层实现(repository)
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3.png"
@@ -682,6 +785,18 @@
 		data-flex-basis="426px"
 	
 ></p>
+</li>
+</ul>
+<h4 id="服务层">服务层
+</h4><ul>
+<li>
+<p><code>@Service</code> 服务层注解，表示这是一个服务类，可以实现业务逻辑</p>
+</li>
+<li>
+<p><code>@Autowired</code> 自动注入注解，可以自动注入相应的类</p>
+</li>
+<li>
+<p><code>@Transactional</code> 事务注解，可以实现事务操作</p>
 </li>
 <li>
 <p>服务层接口(service)
@@ -731,10 +846,1020 @@
 ></p>
 </li>
 </ul>
+<h3 id="hibernate-整合">Hibernate 整合
+</h3><h4 id="引入依赖">引入依赖
+</h4><ul>
+<li>引入 Hibernate 依赖，并引入 mysql-connector-j 依赖</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;scope&gt;test&lt;/scope&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;com.mysql&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;scope&gt;runtime&lt;/scope&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="快速创建实体类">快速创建实体类
+</h4><ul>
+<li>参考连接数据库时操作</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h3 id="实例示例以-springboot-与-mybatis-plus-为例">实例示例（以 springboot 与 mybatis-plus 为例）
+</h3><ul>
+<li>基本结构如下</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14.png"
+	width="339"
+	height="636"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_c7691e093e7d5ffc.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_56d6b930851cf805.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="53"
+		data-flex-basis="127px"
+	
+></p>
+<h4 id="这里只展示-mybatis-plus-多出来的几个结构">这里只展示 mybatis-plus 多出来的几个结构
+</h4><h4 id="dto">DTO
+</h4><ul>
+<li>DTO
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_1350b2fe31a92083.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_dc0344b9a881ecb8.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+>
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_ff3a60c94ac642fd.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_f060e13b2511d0c1.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></li>
+</ul>
+<h4 id="mapper">Mapper
+</h4><ul>
+<li>Mapper
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_b72bc28a309d45f9.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_f852d78dc8e6fdfe.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></li>
+<li>Mapper.xml（这个文件是 mybatis 映射文件，可以自定义 sql 语句，当自带的库不能满足需求时，可以自己写）
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_ea5cf0ed6f390f6e.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_852022aedc8f5e3f.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></li>
+</ul>
+<h4 id="implement">implement
+</h4><p>-impl（implement）
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17.png"
+	width="2560"
+	height="1439"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_e4ea2d50b9aa8d00.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_f16400740718a8be.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h3 id="mybatis-plus-整合">Mybatis-plus 整合
+</h3><h4 id="引入依赖-1">引入依赖
+</h4><ul>
+<li>并非只有单纯的 mybatis-plus，还可以引入 springboot-starter-web，lombok，validation，mysql-connector-j 依赖</li>
+<li>lombok 用于省略 getter/setter 方法（数据库字段不规范将会在导致通信时字段名大小写不一致，badrequest 异常原因之一）</li>
+<li>validation 用于校验</li>
+<li>mysql-connector-j 用于连接数据库</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">        &lt;!-- lombok --&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;optional&gt;true&lt;/optional&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- test --&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;scope&gt;test&lt;/scope&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- Validation --&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-validation&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- MyBatis-Plus Starter (这是唯一需要的 MyBatis 相关依赖) --&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;mybatis-plus-spring-boot3-starter&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;version&gt;3.5.7&lt;/version&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        &lt;!-- MySQL Driver --&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;com.mysql&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;scope&gt;runtime&lt;/scope&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="快速创建结构">快速创建结构
+</h4><ul>
+<li>
+<p>可以通过 idea 插件（<a class="link" href="https://plugins.jetbrains.com/plugin/12670-mybatisplus"  target="_blank" rel="noopener"
+    >mybatis-plus</a>）快速创建 mybatis-plus 相关结构</p>
+</li>
+<li>
+<p>首先连接数据库，记得改成自己的数据库名字（此处为 soilerosion）</p>
+</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20.png"
+	width="731"
+	height="507"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_2118ffcc0898a68a.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_84368d7be1636156.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="346px"
+	
+></p>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21.png"
+	width="483"
+	height="284"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_a171c62c0a080374.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_9278ab55c326ee1.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+></p>
+<ul>
+<li>点击创建，会自动生成实体类，mapper 接口，mapper.xml 等文件</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22.png"
+	width="984"
+	height="561"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_8aa672bf584a4b82.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_c77d14456db410ec.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="420px"
+	
+></p>
+<h4 id="特殊点">特殊点
+</h4><ul>
+<li>需要设置 Mapper 的扫描路径(记得导入下扫描的包)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import org.mybatis.spring.annotation.MapperScan;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23.png"
+	width="945"
+	height="307"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_f09fb752a14a124b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_fbea2e5e4cd8aaee.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="307"
+		data-flex-basis="738px"
+	
+></p>
 <h2 id="运行项目">运行项目
 </h2><ul>
 <li>右键项目 -&gt; Run &lsquo;Application&rsquo;</li>
 </ul>
+<h2 id="连接数据库">连接数据库
+</h2><ul>
+<li>idea 右侧有数据库连接插件，选择对应的服务器，这里以 mysql 为例</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9.png"
+	width="692"
+	height="896"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_781462f7bdcf55e7.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_641eea053e1365b6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+></p>
+<ul>
+<li>填写 localhost，端口号，用户名，密码，数据库名</li>
+<li>点击测试连接，如果连接成功，则会出现一个绿色的勾（记得按提示安装驱动）</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10.png"
+	width="800"
+	height="692"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_86aa8bfc0e980b94.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_158689e9507a35e9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="115"
+		data-flex-basis="277px"
+	
+></p>
+<ul>
+<li>装 JPA 模块，这里以 Hibernate 为例，可以实现自动将表创建为实体类</li>
+</ul>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13.png"
+	width="308"
+	height="594"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_51b924886afbfba.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_5cb7e773fa11aebb.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="51"
+		data-flex-basis="124px"
+	
+>
+<img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12.png"
+	width="1307"
+	height="860"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_3bdfdfe3ad02b0b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_78bc30a7b1eb9105.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="364px"
+	
+></p>
+<p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11.png"
+	width="375"
+	height="798"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_7f2527f8076438a1.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_993e8f180c8eb654.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="46"
+		data-flex-basis="112px"
+	
+></p>
+<ul>
+<li>
+<p>由于上述操作是通过 idea 集成的插件做的，所以项目中其实没有配置数据源，需要在 application.properties 中配置数据源信息，同时在 pom.xml 中引入依赖</p>
+</li>
+<li>
+<p>配置数据源</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">spring.datasource.url=jdbc:mysql://localhost:3306/soilerosion
+</span></span><span class="line"><span class="cl">spring.datasource.username=root
+</span></span><span class="line"><span class="cl">spring.datasource.password=123321
+</span></span><span class="line"><span class="cl">spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>引入依赖(也可以通过 idea 集成的插件快速引入，搜名字就行)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span><span class="line"><span class="cl">        &lt;dependency&gt;
+</span></span><span class="line"><span class="cl">            &lt;groupId&gt;com.mysql&lt;/groupId&gt;
+</span></span><span class="line"><span class="cl">            &lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+</span></span><span class="line"><span class="cl">            &lt;scope&gt;runtime&lt;/scope&gt;
+</span></span><span class="line"><span class="cl">        &lt;/dependency&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="测试">测试
+</h2><ul>
+<li>下面是各层的代码实现简单增删改查</li>
+</ul>
+<h3 id="实体类-1">实体类
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">entity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableName</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">IdType</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableId</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">Serializable</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">EqualsAndHashCode</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">experimental</span><span class="p">.</span><span class="nx">Accessors</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * &lt;p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * &lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @author author
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @since 2025-10-31
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nx">Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nf">EqualsAndHashCode</span><span class="p">(</span><span class="nx">callSuper</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nf">Accessors</span><span class="p">(</span><span class="nx">chain</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nf">TableName</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="nx">implements</span><span class="w"> </span><span class="nx">Serializable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">static</span><span class="w"> </span><span class="nx">final</span><span class="w"> </span><span class="nx">long</span><span class="w"> </span><span class="nx">serialVersionUID</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="nx">L</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">TableId</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="p">,</span><span class="w"> </span><span class="kd">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">IdType</span><span class="p">.</span><span class="nx">AUTO</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uName</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uPassword</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dto-1">DTO
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/dto/UserDTO.java</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nx">Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">UserDTO</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uName</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 注意：这里不包含 uPassword，保护敏感信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">springboottest2</span><span class="o">/</span><span class="n">dto</span><span class="o">/</span><span class="n">UserCreateDTO</span><span class="o">.</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">package</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">dto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">jakarta</span><span class="o">.</span><span class="n">validation</span><span class="o">.</span><span class="n">constraints</span><span class="o">.</span><span class="n">NotBlank</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">fasterxml</span><span class="o">.</span><span class="n">jackson</span><span class="o">.</span><span class="n">annotation</span><span class="o">.</span><span class="n">JsonProperty</span><span class="p">;</span> <span class="o">//</span> <span class="err">需导入依赖（</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">web已包含</span><span class="err">）</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">lombok</span><span class="o">.</span><span class="n">Data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="n">Data</span>
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="k">class</span> <span class="n">UserCreateDTO</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">NotBlank</span><span class="p">(</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&#34;用户名不能为空&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">JsonProperty</span><span class="p">(</span><span class="s2">&#34;uName&#34;</span><span class="p">)</span> <span class="o">//</span> <span class="err">强制绑定</span><span class="n">JSON的uName键</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="ne">String</span> <span class="n">uName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">NotBlank</span><span class="p">(</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&#34;密码不能为空&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">JsonProperty</span><span class="p">(</span><span class="s2">&#34;uPassword&#34;</span><span class="p">)</span> <span class="o">//</span> <span class="err">强制绑定</span><span class="n">JSON的uPassword键</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="ne">String</span> <span class="n">uPassword</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">临时添加，测试</span><span class="n">Lombok是否生效</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">void</span> <span class="n">printFields</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&#34;uName: &#34;</span> <span class="o">+</span> <span class="n">uName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&#34;uPassword: &#34;</span> <span class="o">+</span> <span class="n">uPassword</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="mapper-1">Mapper
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">springboottest2</span><span class="o">/</span><span class="n">mapper</span><span class="o">/</span><span class="n">UserMapper</span><span class="o">.</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">package</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">mapper</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">baomidou</span><span class="o">.</span><span class="n">mybatisplus</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">BaseMapper</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">User</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="n">interface</span> <span class="n">UserMapper</span> <span class="k">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="impl">impl
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">springboottest2</span><span class="o">/</span><span class="n">service</span><span class="o">/</span><span class="n">impl</span><span class="o">/</span><span class="n">UserServiceImpl</span><span class="o">.</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">package</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">impl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">baomidou</span><span class="o">.</span><span class="n">mybatisplus</span><span class="o">.</span><span class="n">extension</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">impl</span><span class="o">.</span><span class="n">ServiceImpl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">dto</span><span class="o">.</span><span class="n">UserCreateDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">dto</span><span class="o">.</span><span class="n">UserDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">User</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">UserMapper</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">UserService</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">org</span><span class="o">.</span><span class="n">springframework</span><span class="o">.</span><span class="n">beans</span><span class="o">.</span><span class="n">BeanUtils</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">org</span><span class="o">.</span><span class="n">springframework</span><span class="o">.</span><span class="n">stereotype</span><span class="o">.</span><span class="n">Service</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">org</span><span class="o">.</span><span class="n">springframework</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">StringUtils</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">List</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">Collectors</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="n">Service</span>
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="k">class</span> <span class="n">UserServiceImpl</span> <span class="k">extends</span> <span class="n">ServiceImpl</span><span class="o">&lt;</span><span class="n">UserMapper</span><span class="p">,</span> <span class="n">User</span><span class="o">&gt;</span> <span class="n">implements</span> <span class="n">UserService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">将</span> <span class="n">User</span> <span class="n">Entity</span> <span class="err">转换为</span> <span class="n">UserDTO</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="n">UserDTO</span> <span class="n">convertToDTO</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">UserDTO</span> <span class="n">userDTO</span> <span class="o">=</span> <span class="n">new</span> <span class="n">UserDTO</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BeanUtils</span><span class="o">.</span><span class="n">copyProperties</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">userDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">userDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">将</span> <span class="n">UserCreateDTO</span> <span class="err">转换为</span> <span class="n">User</span> <span class="n">Entity</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="n">User</span> <span class="n">convertToEntity</span><span class="p">(</span><span class="n">UserCreateDTO</span> <span class="n">createDTO</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">new</span> <span class="n">User</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BeanUtils</span><span class="o">.</span><span class="n">copyProperties</span><span class="p">(</span><span class="n">createDTO</span><span class="p">,</span> <span class="n">user</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">user</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">Override</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">UserDTO</span> <span class="n">createUser</span><span class="p">(</span><span class="n">UserCreateDTO</span> <span class="n">createDTO</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">convertToEntity</span><span class="p">(</span><span class="n">createDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">✅</span> <span class="err">使用父类</span> <span class="n">ServiceImpl</span> <span class="err">提供的</span> <span class="n">save</span><span class="p">()</span> <span class="err">方法</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">convertToDTO</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">Override</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">UserDTO</span> <span class="n">getUserById</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">✅</span> <span class="err">使用父类</span> <span class="n">ServiceImpl</span> <span class="err">提供的</span> <span class="n">getById</span><span class="p">()</span> <span class="err">方法</span>
+</span></span><span class="line"><span class="cl">        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">user</span> <span class="o">!=</span> <span class="n">null</span> <span class="err">?</span> <span class="n">convertToDTO</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="p">:</span> <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">Override</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserDTO</span><span class="o">&gt;</span> <span class="n">listAllUsers</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">✅</span> <span class="err">使用父类</span> <span class="n">ServiceImpl</span> <span class="err">提供的</span> <span class="n">list</span><span class="p">()</span> <span class="err">方法</span>
+</span></span><span class="line"><span class="cl">        <span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">users</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">list</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">users</span><span class="o">.</span><span class="n">stream</span><span class="p">()</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">this</span><span class="p">::</span><span class="n">convertToDTO</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="o">.</span><span class="n">toList</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">Override</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">UserDTO</span> <span class="n">updateUser</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">,</span> <span class="n">UserCreateDTO</span> <span class="n">updateDTO</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">User</span> <span class="n">existingUser</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">existingUser</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="o">.</span><span class="n">hasText</span><span class="p">(</span><span class="n">updateDTO</span><span class="o">.</span><span class="n">getUName</span><span class="p">()))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">existingUser</span><span class="o">.</span><span class="n">setUName</span><span class="p">(</span><span class="n">updateDTO</span><span class="o">.</span><span class="n">getUName</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="o">.</span><span class="n">hasText</span><span class="p">(</span><span class="n">updateDTO</span><span class="o">.</span><span class="n">getUPassword</span><span class="p">()))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">existingUser</span><span class="o">.</span><span class="n">setUPassword</span><span class="p">(</span><span class="n">updateDTO</span><span class="o">.</span><span class="n">getUPassword</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">✅</span> <span class="err">使用父类</span> <span class="n">ServiceImpl</span> <span class="err">提供的</span> <span class="n">updateById</span><span class="p">()</span> <span class="err">方法</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">updateById</span><span class="p">(</span><span class="n">existingUser</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">convertToDTO</span><span class="p">(</span><span class="n">existingUser</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="n">Override</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">boolean</span> <span class="n">deleteUser</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">✅</span> <span class="err">使用父类</span> <span class="n">ServiceImpl</span> <span class="err">提供的</span> <span class="n">removeById</span><span class="p">()</span> <span class="err">方法</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">removeById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="service">service
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">src</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">springboottest2</span><span class="o">/</span><span class="n">service</span><span class="o">/</span><span class="n">UserService</span><span class="o">.</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">package</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">service</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">baomidou</span><span class="o">.</span><span class="n">mybatisplus</span><span class="o">.</span><span class="n">extension</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">IService</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">dto</span><span class="o">.</span><span class="n">UserDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">dto</span><span class="o">.</span><span class="n">UserCreateDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">com</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">springboottest3</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">User</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">List</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="n">interface</span> <span class="n">UserService</span> <span class="k">extends</span> <span class="n">IService</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="p">{</span> <span class="o">//</span> <span class="err">注意，</span><span class="n">IService的泛型仍然是Entity</span>
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">创建用户</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">UserDTO</span> <span class="n">createUser</span><span class="p">(</span><span class="n">UserCreateDTO</span> <span class="n">createDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">根据</span><span class="n">ID获取用户信息</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">UserDTO</span> <span class="n">getUserById</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">获取所有用户</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">List</span><span class="o">&lt;</span><span class="n">UserDTO</span><span class="o">&gt;</span> <span class="n">listAllUsers</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">更新用户</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">UserDTO</span> <span class="n">updateUser</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">,</span> <span class="n">UserCreateDTO</span> <span class="n">updateDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">删除用户</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">boolean</span> <span class="n">deleteUser</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="controller">controller
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/controller/UserController.java</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">controller</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserCreateDTO</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserDTO</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">service</span><span class="p">.</span><span class="nx">UserService</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">beans</span><span class="p">.</span><span class="nx">factory</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Autowired</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">HttpStatus</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseEntity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Validated</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">bind</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="o">*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">jakarta</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">Valid</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">List</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nx">RestController</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nf">RequestMapping</span><span class="p">(</span><span class="s">&#34;/api/users&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">@</span><span class="nx">Validated</span><span class="w"> </span><span class="c1">// 开启参数校验</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">UserController</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">UserService</span><span class="w"> </span><span class="nx">userService</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 创建用户</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">PostMapping</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="err">@</span><span class="nx">Valid</span><span class="w"> </span><span class="err">@</span><span class="nx">RequestBody</span><span class="w"> </span><span class="nx">UserCreateDTO</span><span class="w"> </span><span class="nx">userCreateDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">userCreateDTO</span><span class="p">.</span><span class="nf">printFields</span><span class="p">();</span><span class="w"> </span><span class="c1">// 打印参数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">createdUser</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">createUser</span><span class="p">(</span><span class="nx">userCreateDTO</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;&gt;(</span><span class="nx">createdUser</span><span class="p">,</span><span class="w"> </span><span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">CREATED</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 根据 ID 获取用户</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">GetMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">getUserById</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">getUserById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 获取所有用户</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">GetMapping</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">listAllUsers</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 更新用户</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">PutMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">updateUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="err">@</span><span class="nx">Valid</span><span class="w"> </span><span class="err">@</span><span class="nx">RequestBody</span><span class="w"> </span><span class="nx">UserCreateDTO</span><span class="w"> </span><span class="nx">userUpdateDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">updatedUser</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">updateUser</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">userUpdateDTO</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">updatedUser</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">updatedUser</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 删除用户</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">DeleteMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">Void</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">deleteUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">boolean</span><span class="w"> </span><span class="nx">deleted</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">deleteUser</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">deleted</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">noContent</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="问题汇总">问题汇总
+</h2><ol>
+<li>整合 mybatis-plus 时需注意 springboot3 应引入对应的 boot3 版本，学习网站上的 boot4 并非和他说一样 springboot3.5 后面用</li>
+<li>lombok 可能会导致通信时字段名大小写不匹配从而出现空赋值，如果有 validation 检验的话，会直接被拦截,该接口直接就是不会执行，在调试时可以发现接口处断点是禁止的白色符号，代表该接口未被调用，可以通过此排查问题</li>
+</ol>
 
 </section>
 
@@ -764,7 +1889,7 @@
 
 
         <span>
-            最后更新于 Oct 30, 2025 18:00 &#43;0800
+            最后更新于 Nov 14, 2025 15:35 &#43;0800
         </span>
     </section></footer>
 
