@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Mon, 12 Jan 2026 23:10:30 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Feb 2026 22:14:54 +0800</lastBuildDate><atom:link href="https://axppk.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SpringBoot学习之路</title>
         <link>https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</link>
         <pubDate>Thu, 30 Oct 2025 17:15:19 +0800</pubDate>
@@ -7304,14 +7304,26 @@ animator.Play(&amp;ldquo;Click Animation&amp;rdquo;, -1, 0f);
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;学习记录&#34;&gt;学习记录
 &lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这些手搓 sharder 的真是怪物，这是熟能生巧吗。&lt;/li&gt;
+&lt;li&gt;sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。&lt;/li&gt;
+&lt;li&gt;原理貌似是通过灰度图和颜色图来控制显示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;20260223更新&#34;&gt;2026/02/23更新
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;这些手搓 sharder 的真是怪物，这是熟能生巧吗。&lt;/p&gt;
+&lt;p&gt;入门书选择的冯乐乐的《UnityShader入门精要》没想到我们这大学的图书馆居然能有，很方便就借到手了，经过暑假这一段时间的学习，对UnityShader有了一个全新的认识，以前的认识还可以，不算错误，Shader这东西是图形渲染流程中，程序员用来实现效果的工具，目前Unity使用的应该是HLSL吧。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。&lt;/p&gt;
+&lt;p&gt;接触到了知乎，对我的影响很大，里面有很多TA大佬分享经验，运气好还会有大佬指点迷津。由于这是个人博客，记录一些个人小碎碎念，就不那么有条理了，但知乎上应该把思路理清再写。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;原理貌似是通过灰度图和颜色图来控制显示。&lt;/p&gt;
+&lt;p&gt;这里就不得不提知乎大佬了，本来我学习的动力不强，但是经过大佬一说，我认识到了我学的太杂这个问题，所以才真正下定决心专攻渲染向TA，希望问心无愧吧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现在书看到了180页左右，看到中级篇了，离开学还有5天，学了很多，目前感觉重复的不少，很多写的迷迷糊糊的，基本上重要点就是顶点着色器和片元着色器两个大块，前者用来处理顶点，比如坐标空间的转化，位置这东西很重要，worldPos多次出现，很多转换基于这个，转换到世界空间中；后者是处理像素层级，比如最后输出就是把所有颜色相加return fixed4(ambien + diffuse,texColor.a * AlphaScale) 这个是透明度混合，很多声明的时候该选择float还是fixed不是很清楚，就只记得法线是3个了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;等开学有时间了，就把图也贴出来，整理一下。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -7781,8 +7793,9 @@ animator.Play(&amp;ldquo;Click Animation&amp;rdquo;, -1, 0f);
 &lt;li&gt;个人认知下，这些渲染，特效，应该都是 TA 岗需要的技能，但感觉这些都比较难，详细的教程要么浅显，要么付费，目前大二即将大三甚至都还没接触，渲染和打光真的让我很头疼。&lt;/li&gt;
 &lt;li&gt;感觉应该不会做不出来，毕竟看评论，同年龄的人花了 10 天就做出来了。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;已搁置不想了解图形学&#34;&gt;已搁置&amp;mdash;不想了解图形学
-&lt;/h2&gt;</description>
+&lt;p&gt;&lt;del&gt;已搁置&amp;mdash;不想了解图形学 &lt;/del&gt;
+已经开始了，抽空补全这篇&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>赛璐璐风人物模型制作</title>
