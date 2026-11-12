@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ai on KKPT的个人博客</title>
+        <link>https://axppk.github.io/categories/ai/</link>
+        <description>Recent content in Ai on KKPT的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>KKPT</copyright>
+        <lastBuildDate>Thu, 12 Nov 2026 19:07:26 +0800</lastBuildDate><atom:link href="https://axppk.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Agent时代对技术开发的革新</title>
+        <link>https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/</link>
+        <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/</guid>
+        <description>&lt;img src="https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg" alt="Featured image of post Agent时代对技术开发的革新" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。&lt;/p&gt;
+&lt;p&gt;AI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。&lt;/p&gt;
+&lt;p&gt;截至文章写下的日期，本人已连续四个月高强度使用Cdoex（GPT）开发，涉及Web网站开发，3D资源制作和优化，3D动画制作和优化，AI生图，AI动作，Unity游戏开发，引擎渲染技术逆向等。&lt;/p&gt;
+&lt;p&gt;强烈建议没有接触过Claude，Codex，DeepseekHarness的去了解下这些Agent的发展，已经日新月异了。截至2026/11/12日，当前实际体验下的AI排行（由于小版本更新迅速，以商家代称）如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Claude&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GPT&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gemini&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DeepSeek&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kimi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GLM&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grok&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Qwen&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web网站开发影响&#34;&gt;Web网站开发影响
+&lt;/h2&gt;&lt;p&gt;现在前后端均可以让Agent代行，以往的前后端职责分离，还得后期联调，服务器部署也需要相关知识。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但是&lt;/strong&gt;大人时代变了，GPT可以直接前后端完整可以根据要求直接修改，默认回传检测的时候会同步修改前端调用和后端定义，以及数据库构成，方便快捷。极大提高了生产力，一个人一天即可开发完整的一个商业管理平台，包含用户端和管理端和服务器部署。&lt;/p&gt;
+&lt;p&gt;甚至部署可以写一个小工具，一键构建部署更新，附带更新说明。（看不懂Liunx？没关系，不需要看了）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c.png&#34;
+	width=&#34;1052&#34;
+	height=&#34;566&#34;
+	srcset=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_5f1a2dfbc862b7b.png 480w, https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_eefb3b4b89c055af.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;446px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3d资源制作&#34;&gt;3D资源制作
+&lt;/h2&gt;&lt;p&gt;很遗憾，AI的3D资源实际上没有那么神乎其神，仍然还是起步状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tripo当时测试的是国内版，效果一般。&lt;/li&gt;
+&lt;li&gt;Hi3D也是国内版，比Tripo还差。&lt;/li&gt;
+&lt;li&gt;混元3D同样国内版，比Hi3D好，比Tripo效果差些。&lt;/li&gt;
+&lt;li&gt;Hyper3D当时测试时他对二次元模型有特化，但是有点贵没买。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主要问题就是无法细看，二次处理困难，包括不限于UV，贴图，面处理的问题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1417&#34;
+	srcset=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_cc5daf4f3f345692.png 480w, https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_8bf33aed642e518d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;433px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3d动画制作&#34;&gt;3D动画制作
+&lt;/h2&gt;&lt;p&gt;3D动画方面AI凭借视觉模块已经能理解大部分动作，并且能实现了，就算不是特化动作的GPT也能清楚理解你所表达的肢体动作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kimodo作为AI生成动作的本地模型，已经非常优秀，不过穿模情况仍然严重。&lt;/li&gt;
+&lt;li&gt;ARDY是云端的API式AI动作生成，可以和Kimodo配合使用，效果拔群。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有兴趣可以去推特上看&lt;a class=&#34;link&#34; href=&#34;https://x.com/L_ARCH_01/status/2109348423661215892?a=I0sjmyM4tD3f2paEbTs&amp;amp;s=05&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;效果链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553.png&#34;
+	width=&#34;548&#34;
+	height=&#34;304&#34;
+	srcset=&#34;https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_9052793e55e8d095.png 480w, https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_6390275721be0c09.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;432px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

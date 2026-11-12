@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n">
+<title>Agent时代对技术开发的革新</title>
+
+<link rel='canonical' href='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="Agent时代对技术开发的革新">
+<meta property='og:description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n">
+<meta property='og:url' content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2026-11-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-11-12T19:07:26&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg' />
+<meta name="twitter:title" content="Agent时代对技术开发的革新">
+<meta name="twitter:description" content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<style>
+    @font-face {
+        font-family: "KKPT Rounded";
+        src: url(/font/KKPTRounded.6e1e615348b0f33fc00bb91e89d7a4904f12ee7c145b133641ca0113942e4a6a.woff2) format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
+    :root {
+        --base-font-family: "KKPT Rounded", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+        --code-font-family: "Cascadia Mono", Consolas, "SFMono-Regular", "PingFang SC", "Microsoft YaHei", monospace;
+    }
+</style>
+
+    </head>
+    <body class="article-page template-reading">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <picture>
+                        <source media="(prefers-reduced-motion: reduce)" srcset="/img/muzimi-still.webp">
+                        <img src="/img/muzimi.webp" width="152" height="152" class="site-logo" decoding="async" alt="Avatar">
+                    </picture>
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/axppk'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.aplaybox.com/u/342878629'
+                        target="_blank"
+                        title="模之屋"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 7 4.5 3.5A1 1 0 0 0 3 4.3V11m14-4 2.5-3.5a1 1 0 0 1 1.5.8V11"/>
+  <rect x="3" y="7" width="18" height="13" rx="4"/>
+  <path d="M7.5 13h.01m9 0h.01M10.5 15.5l1.5 1 1.5-1"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.zhihu.com/people/bilan-40-49'
+                        target="_blank"
+                        title="知乎"
+                        rel="me"
+                    >
+                        
+                        
+                            <!-- Tabler Icons · https://tabler.io/icons/icon/brand-zhihu -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M14 6h6v12h-2l-2 2l-1 -2h-1l0 -12M4 12h6.5M10.5 6h-5M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5M8 6v7c0 4.5 -2 5.5 -4 7M11 18l-3 -5"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/vibe/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                
+                <span>时间线 | Timeline</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+    
+    
+    
+        <li class="site-music">
+            <button class="site-music-button" type="button" popovertarget="site-music-player">
+                <span class="site-music-icon" aria-hidden="true">♫</span><span>听歌</span>
+            </button>
+            <div id="site-music-player" class="site-music-panel" popover="auto"
+                data-player-url="https://music.163.com/outchain/player?type=0&amp;id=2130626378&amp;auto=0&amp;height=328">
+                <header class="site-music-heading">
+                    <strong>网易云歌单</strong>
+                    <button type="button" popovertarget="site-music-player" popovertargetaction="hide" aria-label="收起播放器">×</button>
+                </header>
+                
+                    <div class="site-music-frame" data-loading>
+                        <div class="site-music-loading" role="status">
+                            <span class="site-music-spinner" aria-hidden="true"></span>
+                            <span>正在加载网易云歌单…</span>
+                        </div>
+                    </div>
+                
+                <a href="https://music.163.com/playlist?id=2130626378" target="_blank" rel="noopener noreferrer">在网易云音乐打开 ↗</a>
+            </div>
+        </li>
+    
+
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+    
+        <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#web网站开发影响">Web网站开发影响</a></li>
+    <li><a href="#3d资源制作">3D资源制作</a></li>
+    <li><a href="#3d动画制作">3D动画制作</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+        <section class="reading-lyrics reading-lyrics--desktop" data-reading-lyrics hidden aria-label="歌词">
+    <label class="reading-lyrics-toggle">
+        <span>歌词</span>
+        <input type="checkbox" aria-label="显示同步歌词" data-lyrics-toggle>
+    </label>
+    <div class="reading-lyrics-content" data-lyrics-content hidden>
+        <p class="reading-lyrics-status" data-lyrics-status></p>
+        <div class="reading-lyrics-lines" data-lyrics-lines></div>
+    </div>
+</section>
+
+    </aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article reading-frame">
+        
+
+
+
+
+<header class="reading-header">
+    <h1>Agent时代对技术开发的革新</h1>
+    
+        <div class="reading-meta notebook-meta">
+            
+                <time datetime="2026-11-12"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>2026-11-12</time>
+            
+            
+    <time class="article-updated" datetime="2026-11-12T19:07:26&#43;08:00" title="最后更新于 2026-11-12 19:07"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+更新 2026-11-12</time>
+
+
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  
+  <!-- 纸张背景 -->
+  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+  <path d="M8 8h8" />
+  <path d="M8 12h8" />
+  <path d="M8 16h8" />
+</svg>本文共 853 字</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+阅读时长: 2 分钟</span>
+            
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+<a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a></span>
+            
+        </div>
+    
+
+    
+        <div class="reading-categories">
+            
+                <a href="/categories/ai/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+Ai</a>
+            
+        </div>
+    
+
+    
+
+    
+
+    
+        <div class="reading-cover">
+            
+                
+                
+                    
+                
+                <img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239_hu_8547e0e71c175aa8.jpg" width="1120" height="840" decoding="async" alt="">
+            
+        </div>
+    
+</header>
+
+
+        
+            <details class="reading-mobile-toc">
+                <summary>目录</summary>
+                <nav id="MobileTableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#web网站开发影响">Web网站开发影响</a></li>
+    <li><a href="#3d资源制作">3D资源制作</a></li>
+    <li><a href="#3d动画制作">3D动画制作</a></li>
+  </ol>
+</nav>
+            </details>
+        
+
+        <section class="reading-lyrics reading-lyrics--mobile" data-reading-lyrics hidden aria-label="歌词">
+    <label class="reading-lyrics-toggle">
+        <span>歌词</span>
+        <input type="checkbox" aria-label="显示同步歌词" data-lyrics-toggle>
+    </label>
+    <div class="reading-lyrics-content" data-lyrics-content hidden>
+        <p class="reading-lyrics-status" data-lyrics-status></p>
+        <div class="reading-lyrics-lines" data-lyrics-lines></div>
+    </div>
+</section>
+
+        <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。</p>
+<p>AI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。</p>
+<p>截至文章写下的日期，本人已连续四个月高强度使用Cdoex（GPT）开发，涉及Web网站开发，3D资源制作和优化，3D动画制作和优化，AI生图，AI动作，Unity游戏开发，引擎渲染技术逆向等。</p>
+<p>强烈建议没有接触过Claude，Codex，DeepseekHarness的去了解下这些Agent的发展，已经日新月异了。截至2026/11/12日，当前实际体验下的AI排行（由于小版本更新迅速，以商家代称）如下：</p>
+<ul>
+<li>
+<p>Claude</p>
+</li>
+<li>
+<p>GPT</p>
+</li>
+<li>
+<p>Gemini</p>
+</li>
+<li>
+<p>DeepSeek</p>
+</li>
+<li>
+<p>Kimi</p>
+</li>
+<li>
+<p>GLM</p>
+</li>
+<li>
+<p>Grok</p>
+</li>
+<li>
+<p>Qwen</p>
+</li>
+</ul>
+<h2 id="web网站开发影响">Web网站开发影响
+</h2><p>现在前后端均可以让Agent代行，以往的前后端职责分离，还得后期联调，服务器部署也需要相关知识。</p>
+<p><strong>但是</strong>大人时代变了，GPT可以直接前后端完整可以根据要求直接修改，默认回传检测的时候会同步修改前端调用和后端定义，以及数据库构成，方便快捷。极大提高了生产力，一个人一天即可开发完整的一个商业管理平台，包含用户端和管理端和服务器部署。</p>
+<p>甚至部署可以写一个小工具，一键构建部署更新，附带更新说明。（看不懂Liunx？没关系，不需要看了）</p>
+<p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c.png"
+	width="1052"
+	height="566"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_5f1a2dfbc862b7b.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_eefb3b4b89c055af.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+></p>
+<h2 id="3d资源制作">3D资源制作
+</h2><p>很遗憾，AI的3D资源实际上没有那么神乎其神，仍然还是起步状态。</p>
+<ul>
+<li>Tripo当时测试的是国内版，效果一般。</li>
+<li>Hi3D也是国内版，比Tripo还差。</li>
+<li>混元3D同样国内版，比Hi3D好，比Tripo效果差些。</li>
+<li>Hyper3D当时测试时他对二次元模型有特化，但是有点贵没买。</li>
+</ul>
+<p>主要问题就是无法细看，二次处理困难，包括不限于UV，贴图，面处理的问题。</p>
+<p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b.png"
+	width="2560"
+	height="1417"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_cc5daf4f3f345692.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_8bf33aed642e518d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="433px"
+	
+></p>
+<h2 id="3d动画制作">3D动画制作
+</h2><p>3D动画方面AI凭借视觉模块已经能理解大部分动作，并且能实现了，就算不是特化动作的GPT也能清楚理解你所表达的肢体动作。</p>
+<ul>
+<li>Kimodo作为AI生成动作的本地模型，已经非常优秀，不过穿模情况仍然严重。</li>
+<li>ARDY是云端的API式AI动作生成，可以和Kimodo配合使用，效果拔群。</li>
+</ul>
+<p>有兴趣可以去推特上看<a class="link" href="https://x.com/L_ARCH_01/status/2109348423661215892?a=I0sjmyM4tD3f2paEbTs&amp;s=05"  target="_blank" rel="noopener"
+    >效果链接</a></p>
+<p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553.png"
+	width="548"
+	height="304"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_9052793e55e8d095.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_6390275721be0c09.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+
+</section>
+
+        <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Made with ❤️ by KKPT</span>
+    </section>
+    </footer>
+
+        
+    </article>
+
+    
+    
+
+    
+    <div data-kkpt-theme-light="light" data-kkpt-theme-dark="dark_dimmed">
+<script data-kkpt-instance
+    src="https://giscus.app/client.js"
+        data-repo="axppk/axppk.github.io"
+        data-repo-id="R_kgDOPFCzDg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFCzDs4CtZcr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+></script>
+</div>
+
+    <footer class="site-footer">
+    <div class="blog-footer-content">
+        <div>
+            
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<div class="blog-stats">
+    
+        
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+    
+    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+</div>
+
+            <section class="copyright">
+                &copy;
+                
+                    2020 -
+                
+                2026 KKPT
+            </section>
+        </div>
+        <section class="powerby">
+            使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br>
+            主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        </section>
+    </div>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="data-kkpt-dependency
+                crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="data-kkpt-dependency
+                crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"data-kkpt-dependency
+                crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"data-kkpt-dependency
+                crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script src="/js/vendor/vibrant.min.6b0711da39e8e242395f4ccbf1ec74be2db3f8a324176e21516f1678f480f473.js" defer></script><script type="text/javascript" src="/ts/main.00af1c6a0da0e1e5342734409bed3eb677422ba75a77824cde7b0d5e2fd29abe.js" defer></script>
+
+
+<style>
+
+
+   
+  body:not(.template-reading) #TableOfContents > :is(ul, ol) {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide(signal) {
+    
+    let toc = document.querySelector("body:not(.template-reading) .widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    }, { signal, passive: true });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop(signal) {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.addEventListener('scroll', function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    }, { signal, passive: true });
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  let pageControls;
+  function mountPageControls() {
+    pageControls?.abort();
+    pageControls = new AbortController();
+    initScrollTop(pageControls.signal);
+    initCodeMoreBox();
+    initTocHide(pageControls.signal);
+  }
+  mountPageControls();
+  document.addEventListener('kkpt:page', mountPageControls);
+
+  function renderArticleMath() {
+    const article = document.querySelector('.main-article:has([data-kkpt-math])');
+    if (!article || !window.renderMathInElement) return;
+    window.renderMathInElement(article, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+      ignoredClasses: ["gist"]
+    });
+  }
+  document.addEventListener('DOMContentLoaded', renderArticleMath, { once: true });
+  document.addEventListener('kkpt:page-ready', renderArticleMath);
+
+  function syncCommentTheme(event) {
+    const comments = document.querySelector('[data-kkpt-theme-light]');
+    const frame = comments?.querySelector('iframe.giscus-frame')?.contentWindow;
+    if (!frame || (event.type === 'message' && (event.origin !== 'https://giscus.app' || event.source !== frame))) return;
+    const theme = document.documentElement.dataset.scheme === 'dark' ? comments.dataset.kkptThemeDark : comments.dataset.kkptThemeLight;
+    frame.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+  }
+  window.addEventListener('message', syncCommentTheme);
+  window.addEventListener('onColorSchemeChange', syncCommentTheme);
+</script>
+
+
+
+<div hidden data-blog-effects data-sakura="/background/sakura.min.e327b62f543e10a47d9bd7ac5277eef497f1a5d60f0e5cded9f4f37c00150595.js" data-click="/click-effect/click.min.2b7fecd58b7888210bd2bbbab7a7a25af0f4717ffd558b247144833e75f31d09.js"></div>
+
+    <button class="blog-chat-launcher" type="button" data-blog-chat="X5h3L-_D2Lr-E1Xjxu8cd" aria-label="打开博客助手" title="打开博客助手">💬</button>
+
+<script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
+<script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
+<script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
+<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+
+
+
+    </body>
+</html>

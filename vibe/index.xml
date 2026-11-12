@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>时间线 on KKPT的个人博客</title>
+        <link>https://axppk.github.io/vibe/</link>
+        <description>Recent content in 时间线 on KKPT的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/vibe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>重拾博客</title>
+        <link>https://axppk.github.io/vibe/2026-11-12-%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</link>
+        <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/vibe/2026-11-12-%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</guid>
+        <description>&lt;p&gt;AI正在暴打所有人，写一下这段时间的AI感悟&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>联动箱子的打光练习</title>
+        <link>https://axppk.github.io/vibe/2025-10-11/</link>
+        <pubDate>Sat, 11 Oct 2025 16:29:16 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/vibe/2025-10-11/</guid>
+        <description>&lt;p&gt;这次用明日方舟联动箱子练布光。摆件、镜头畸变和失焦光斑都试了几轮，最后留了一版直出图。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>复刻方糖喵咖馆</title>
+        <link>https://axppk.github.io/vibe/2025-08-20/</link>
+        <pubDate>Wed, 20 Aug 2025 20:58:22 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/vibe/2025-08-20/</guid>
+        <description>&lt;p&gt;先在 Unity 里把咖啡馆的底座、柜台和食物摆好，再试着复刻游戏里的描边与点击效果。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>博客搭起来了</title>
+        <link>https://axppk.github.io/vibe/2025-07-02/</link>
+        <pubDate>Wed, 02 Jul 2025 09:51:12 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/vibe/2025-07-02/</guid>
+        <description>&lt;p&gt;第一次用 Hugo 和 GitHub Pages 部署博客，花了大概三个小时。把整个过程记了下来，方便以后回来查。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

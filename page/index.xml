@@ -6,83 +6,23 @@
         <description>Recent content in Pages on KKPT的个人博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>KKPT</copyright>
-        <lastBuildDate>Wed, 20 Aug 2025 21:15:07 +0800</lastBuildDate><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>归档 | Archives</title>
-        <link>https://axppk.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://axppk.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
+        <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>规划 | Planning</title>
         <link>https://axppk.github.io/%E8%A7%84%E5%88%92-planning/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://axppk.github.io/%E8%A7%84%E5%88%92-planning/</guid>
-        <description>&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;目标&lt;/th&gt;
-          &lt;th&gt;完成日期&lt;/th&gt;
-          &lt;th&gt;备注&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;&lt;del&gt;实现启动的动画的仿制&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/10&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;完成度 50%左右&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;添加 live2d 小人&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;添加 TTS 语音&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;&lt;del&gt;添加评论区功能&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/25&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;很简单，有现成插件，用 github 自带的评论功能&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;&lt;del&gt;或许可以引入 AI&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/12&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;直接调别人的 api，希望后期可以用免费服务器部署&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;&lt;del&gt;完善赛璐璐风人物模型&lt;/del&gt;&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;2025/07/13&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;缺点是眉毛没有调整到最前面，原因不明&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;建一个阿罗娜的人物模型&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;实现模型的 NPR 渲染并记录&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;实现模型的 BPR 渲染并记录&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;em&gt;Flip Fluids 流体模拟场景训练&lt;/em&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;strong&gt;暂无&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;暂无&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+        <description>&lt;p&gt;这里是 KKPT。平时用 Blender 做建模和渲染，也用 Unity 复刻一些喜欢的游戏画面。&lt;/p&gt;
+&lt;p&gt;这里记下想做的事，以及每次做到哪一步。&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>年份</title>
+        <link>https://axppk.github.io/years/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/years/</guid>
+        <description></description>
         </item>
         <item>
         <title>搜索 | Search</title>

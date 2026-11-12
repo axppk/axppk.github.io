@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="KKPT个人博客">
+<title>PBR - KKPT的个人博客</title>
+
+<link rel='canonical' href='https://axppk.github.io/tags/pbr/'>
+
+<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="PBR - KKPT的个人博客">
+<meta property='og:description' content="KKPT个人博客">
+<meta property='og:url' content='https://axppk.github.io/tags/pbr/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-11-12T19:12:13&#43;08:00 '/>
+<meta name="twitter:title" content="PBR - KKPT的个人博客">
+<meta name="twitter:description" content="KKPT个人博客"><link rel="alternate" type="application/rss&#43;xml" href="https://axppk.github.io/tags/pbr/index.xml">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<style>
+    @font-face {
+        font-family: "KKPT Rounded";
+        src: url(/font/KKPTRounded.6e1e615348b0f33fc00bb91e89d7a4904f12ee7c145b133641ca0113942e4a6a.woff2) format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
+    :root {
+        --base-font-family: "KKPT Rounded", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+        --code-font-family: "Cascadia Mono", Consolas, "SFMono-Regular", "PingFang SC", "Microsoft YaHei", monospace;
+    }
+</style>
+
+    </head>
+    <body class="template-notebook">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <picture>
+                        <source media="(prefers-reduced-motion: reduce)" srcset="/img/muzimi-still.webp">
+                        <img src="/img/muzimi.webp" width="152" height="152" class="site-logo" decoding="async" alt="Avatar">
+                    </picture>
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/axppk'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.aplaybox.com/u/342878629'
+                        target="_blank"
+                        title="模之屋"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 7 4.5 3.5A1 1 0 0 0 3 4.3V11m14-4 2.5-3.5a1 1 0 0 1 1.5.8V11"/>
+  <rect x="3" y="7" width="18" height="13" rx="4"/>
+  <path d="M7.5 13h.01m9 0h.01M10.5 15.5l1.5 1 1.5-1"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.zhihu.com/people/bilan-40-49'
+                        target="_blank"
+                        title="知乎"
+                        rel="me"
+                    >
+                        
+                        
+                            <!-- Tabler Icons · https://tabler.io/icons/icon/brand-zhihu -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M14 6h6v12h-2l-2 2l-1 -2h-1l0 -12M4 12h6.5M10.5 6h-5M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5M8 6v7c0 4.5 -2 5.5 -4 7M11 18l-3 -5"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/vibe/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                
+                <span>时间线 | Timeline</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+    
+    
+    
+        <li class="site-music">
+            <button class="site-music-button" type="button" popovertarget="site-music-player">
+                <span class="site-music-icon" aria-hidden="true">♫</span><span>听歌</span>
+            </button>
+            <div id="site-music-player" class="site-music-panel" popover="auto"
+                data-player-url="https://music.163.com/outchain/player?type=0&amp;id=2130626378&amp;auto=0&amp;height=328">
+                <header class="site-music-heading">
+                    <strong>网易云歌单</strong>
+                    <button type="button" popovertarget="site-music-player" popovertargetaction="hide" aria-label="收起播放器">×</button>
+                </header>
+                
+                    <div class="site-music-frame" data-loading>
+                        <div class="site-music-loading" role="status">
+                            <span class="site-music-spinner" aria-hidden="true"></span>
+                            <span>正在加载网易云歌单…</span>
+                        </div>
+                    </div>
+                
+                <a href="https://music.163.com/playlist?id=2130626378" target="_blank" rel="noopener noreferrer">在网易云音乐打开 ↗</a>
+            </div>
+        </li>
+    
+
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+
+
+    
+    
+
+
+
+<header class="notebook-heading">
+    <h1>#PBR</h1>
+    <nav class="notebook-nav" aria-label="浏览文章">
+        
+            <div class="notebook-filters">
+                
+                    
+                    
+                    
+                    
+                    <a class="notebook-filter" href="/tags/">全部标签</a>
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/%E6%A8%A1%E5%9E%8B/">模型 <span>6</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/%E8%AE%B0%E5%BD%95/">记录 <span>6</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/blender/">Blender <span>5</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/css/">Css <span>1</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/emoji/">Emoji <span>1</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/javascript/">JavaScript <span>1</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/npr/">NPR <span>1</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter is-current" href="/tags/pbr/" aria-current="page">PBR <span>1</span></a>
+                        
+                    
+                        
+                        
+                            
+                            <a class="notebook-filter" href="/tags/unity/">Unity <span>1</span></a>
+                        
+                    
+                
+                
+            </div>
+        
+        <div class="notebook-tools">
+            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+文章</a>
+            <a href="/tags/" class="is-current"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+标签</a>
+            <a href="/years/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>年份</a>
+        </div>
+    </nav>
+</header>
+
+<div class="notebook-list">
+    
+        
+<article class="notebook-post has-cover">
+    <div class="notebook-post-copy">
+        <h2><a href="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/"><span>NPR渲染尝试</span></a></h2>
+        <div class="notebook-meta">
+            
+                <time datetime="2025-07-08"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>2025-07-08</time>
+            
+            
+    <time class="article-updated" datetime="2026-11-12T18:48:51&#43;08:00" title="最后更新于 2026-11-12 18:48"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+更新 2026-11-12</time>
+
+
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+<a href="/categories/%E5%B0%9D%E8%AF%95/">尝试</a></span>
+            
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+<a href="/tags/unity/">#Unity</a><a href="/tags/pbr/">#PBR</a><a href="/tags/npr/">#NPR</a></span>
+            
+        </div>
+        
+        
+            <p class="notebook-summary">尝试接触Unity相关的PBR和NPR渲染。</p>
+        
+    </div>
+    
+        <a class="notebook-cover" href="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/" aria-label="NPR渲染尝试" tabindex="-1">
+            
+                
+                
+                <img src="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/img/1-b99514c3_hu_60dca443f7739ae0.webp" srcset="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/img/1-b99514c3_hu_60dca443f7739ae0.webp 480w, /p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/img/1-b99514c3_hu_ceb35b4550c358f7.webp 800w" sizes="(max-width: 600px) 95vw, 400px" width="480" height="240" alt="" loading="lazy" decoding="async">
+            
+        </a>
+    
+</article>
+
+    
+</div>
+
+
+
+<footer class="site-footer">
+    <div class="blog-footer-content">
+        <div>
+            
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<div class="blog-stats">
+    
+        
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+    
+    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+</div>
+
+            <section class="copyright">
+                &copy;
+                
+                    2020 -
+                
+                2026 KKPT
+            </section>
+        </div>
+        <section class="powerby">
+            使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br>
+            主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        </section>
+    </div>
+</footer>
+
+
+
+            </main>
+        </div>
+        <script src="/js/vendor/vibrant.min.6b0711da39e8e242395f4ccbf1ec74be2db3f8a324176e21516f1678f480f473.js" defer></script><script type="text/javascript" src="/ts/main.00af1c6a0da0e1e5342734409bed3eb677422ba75a77824cde7b0d5e2fd29abe.js" defer></script>
+
+
+<style>
+
+
+   
+  body:not(.template-reading) #TableOfContents > :is(ul, ol) {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide(signal) {
+    
+    let toc = document.querySelector("body:not(.template-reading) .widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    }, { signal, passive: true });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop(signal) {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.addEventListener('scroll', function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    }, { signal, passive: true });
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  let pageControls;
+  function mountPageControls() {
+    pageControls?.abort();
+    pageControls = new AbortController();
+    initScrollTop(pageControls.signal);
+    initCodeMoreBox();
+    initTocHide(pageControls.signal);
+  }
+  mountPageControls();
+  document.addEventListener('kkpt:page', mountPageControls);
+
+  function renderArticleMath() {
+    const article = document.querySelector('.main-article:has([data-kkpt-math])');
+    if (!article || !window.renderMathInElement) return;
+    window.renderMathInElement(article, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+      ignoredClasses: ["gist"]
+    });
+  }
+  document.addEventListener('DOMContentLoaded', renderArticleMath, { once: true });
+  document.addEventListener('kkpt:page-ready', renderArticleMath);
+
+  function syncCommentTheme(event) {
+    const comments = document.querySelector('[data-kkpt-theme-light]');
+    const frame = comments?.querySelector('iframe.giscus-frame')?.contentWindow;
+    if (!frame || (event.type === 'message' && (event.origin !== 'https://giscus.app' || event.source !== frame))) return;
+    const theme = document.documentElement.dataset.scheme === 'dark' ? comments.dataset.kkptThemeDark : comments.dataset.kkptThemeLight;
+    frame.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+  }
+  window.addEventListener('message', syncCommentTheme);
+  window.addEventListener('onColorSchemeChange', syncCommentTheme);
+</script>
+
+
+
+<div hidden data-blog-effects data-sakura="/background/sakura.min.e327b62f543e10a47d9bd7ac5277eef497f1a5d60f0e5cded9f4f37c00150595.js" data-click="/click-effect/click.min.2b7fecd58b7888210bd2bbbab7a7a25af0f4717ffd558b247144833e75f31d09.js"></div>
+
+    <button class="blog-chat-launcher" type="button" data-blog-chat="X5h3L-_D2Lr-E1Xjxu8cd" aria-label="打开博客助手" title="打开博客助手">💬</button>
+
+<script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
+<script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
+<script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
+<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+
+
+
+    </body>
+</html>

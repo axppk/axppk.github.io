@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Wed, 20 Aug 2025 21:35:06 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Jul 2025 12:02:23 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>仿Nikki联动尼尔的启动动画</title>
         <link>https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/</link>
         <pubDate>Sat, 05 Jul 2025 12:02:23 +0800</pubDate>
@@ -39,9 +39,9 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;效果预览&#34;&gt;效果预览
 &lt;/h2&gt;&lt;figure&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/%E6%BC%94%E7%A4%BA.gif&#34;
-    alt=&#34;效果预览&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;效果预览&lt;/p&gt;
-    &lt;/figcaption&gt;
+			alt=&#34;效果预览&#34;&gt;&lt;figcaption&gt;
+			&lt;p&gt;效果预览&lt;/p&gt;
+		&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;代码&#34;&gt;代码
@@ -1310,7 +1310,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu1.png&#34;
 	width=&#34;633&#34;
 	height=&#34;537&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu1_hu_6323d218ac001bfd.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu1_hu_90e7e08ddaa46cdb.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu1_hu_28b9832ccca48727.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu1_hu_8557752c4b9d8ca0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1329,7 +1329,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu2.png&#34;
 	width=&#34;925&#34;
 	height=&#34;450&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu2_hu_2485a8beca54afb.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu2_hu_68cecb52ab0f53d2.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu2_hu_3ebee1e7d7c9e6ce.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu2_hu_567d132d20a4484a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1343,7 +1343,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu3.png&#34;
 	width=&#34;896&#34;
 	height=&#34;226&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu3_hu_ae1dfcd79fac4c44.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu3_hu_ef20e8d92ce4b6be.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu3_hu_26f3d59e40a3ae7d.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu3_hu_b96044baa00dee13.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1361,7 +1361,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu4.png&#34;
 	width=&#34;698&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu4_hu_f95ec3b78e219c9d.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu4_hu_c0ad31a3b6281773.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu4_hu_79dcb48ca01a65b0.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu4_hu_2da40a5037712568.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1378,7 +1378,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5%E8%A1%A5.png&#34;
 	width=&#34;702&#34;
 	height=&#34;18&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5%E8%A1%A5_hu_95ad40a8e62d2888.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5%E8%A1%A5_hu_8064205553ac0bd1.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5%E8%A1%A5_hu_167b9de8fde1cd89.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5%E8%A1%A5_hu_50b0848ff4e45e69.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1390,7 +1390,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5.png&#34;
 	width=&#34;637&#34;
 	height=&#34;218&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5_hu_4bc69b1ee252498a.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5_hu_b88b51a075573af0.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5_hu_2623efa2bc63451f.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu5_hu_2d02894d86f71280.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1407,7 +1407,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6%E8%A1%A5.png&#34;
 	width=&#34;448&#34;
 	height=&#34;48&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6%E8%A1%A5_hu_7e1bdfb843c4d405.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6%E8%A1%A5_hu_7b2266647b62192c.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6%E8%A1%A5_hu_1fb1c433c3e44f1c.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6%E8%A1%A5_hu_d4184003ed7eec14.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1419,7 +1419,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6.png&#34;
 	width=&#34;721&#34;
 	height=&#34;412&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6_hu_71b05220df47c772.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6_hu_e4d3f7e3d0527531.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6_hu_a7d7433182a527fe.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu6_hu_6249f25895e521c6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1436,7 +1436,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7%E8%A1%A5.png&#34;
 	width=&#34;702&#34;
 	height=&#34;101&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7%E8%A1%A5_hu_afdd6b196ad52ad5.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7%E8%A1%A5_hu_ea00bb5e2d77a46b.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7%E8%A1%A5_hu_4def98150b1c3a4d.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7%E8%A1%A5_hu_24584715f260129b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1448,7 +1448,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7.png&#34;
 	width=&#34;612&#34;
 	height=&#34;467&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7_hu_a6c1933628e688fe.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7_hu_c43decf8027f205c.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7_hu_7685b42dad6d2c36.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu7_hu_f0bd483c7883446e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1465,7 +1465,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu8.png&#34;
 	width=&#34;658&#34;
 	height=&#34;528&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu8_hu_5e5534d9d4ddbbba.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu8_hu_442967d98088c62c.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu8_hu_552aa4dc83f0179d.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu8_hu_ea682bccab871b99.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
@@ -1482,7 +1482,7 @@
 &lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu9.png&#34;
 	width=&#34;656&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu9_hu_b1704a43afe86bbf.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu9_hu_f7dfd05ae76fb75f.png 1024w&#34;
+	srcset=&#34;https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu9_hu_8422ad5243a4bcaa.png 480w, https://axppk.github.io/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/tu9_hu_46be63dd5bf950d4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如图所示&#34;
