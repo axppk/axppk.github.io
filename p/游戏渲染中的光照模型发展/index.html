@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="从 Lambert 到 PBR，再到 NPR">
+<title>游戏渲染中的光照模型发展</title>
+
+<link rel='canonical' href='https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.bac30a5a918d07c1eb6d1887a97549c29e8bef720f5808184cf44ae80f0652e5.css"><meta property='og:title' content="游戏渲染中的光照模型发展">
+<meta property='og:description' content="从 Lambert 到 PBR，再到 NPR">
+<meta property='og:url' content='https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/'>
+<meta property='og:site_name' content='KKPT的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Rendering' /><meta property='article:tag' content='Shader' /><meta property='article:published_time' content='2026-11-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-11-27T00:14:04&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/screenshot_20261126-181904-b1659494.png' />
+<meta name="twitter:title" content="游戏渲染中的光照模型发展">
+<meta name="twitter:description" content="从 Lambert 到 PBR，再到 NPR"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/screenshot_20261126-181904-b1659494.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+<style>
+    @font-face {
+        font-family: "KKPT Rounded";
+        src: url(/font/KKPTRounded.6e1e615348b0f33fc00bb91e89d7a4904f12ee7c145b133641ca0113942e4a6a.woff2) format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
+    :root {
+        --base-font-family: "KKPT Rounded", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+        --code-font-family: "Cascadia Mono", Consolas, "SFMono-Regular", "PingFang SC", "Microsoft YaHei", monospace;
+    }
+</style>
+
+    </head>
+    <body class="article-page template-reading">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <picture>
+                        <source media="(prefers-reduced-motion: reduce)" srcset="/img/muzimi-still.webp">
+                        <img src="/img/muzimi.webp" width="152" height="152" class="site-logo" decoding="async" alt="Avatar">
+                    </picture>
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">KKPT的个人博客</a></h1>
+            <h2 class="site-description">KKPT个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/axppk'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.aplaybox.com/u/342878629'
+                        target="_blank"
+                        title="模之屋"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 7 4.5 3.5A1 1 0 0 0 3 4.3V11m14-4 2.5-3.5a1 1 0 0 1 1.5.8V11"/>
+  <rect x="3" y="7" width="18" height="13" rx="4"/>
+  <path d="M7.5 13h.01m9 0h.01M10.5 15.5l1.5 1 1.5-1"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.zhihu.com/people/bilan-40-49'
+                        target="_blank"
+                        title="知乎"
+                        rel="me"
+                    >
+                        
+                        
+                            <!-- Tabler Icons · https://tabler.io/icons/icon/brand-zhihu -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M14 6h6v12h-2l-2 2l-1 -2h-1l0 -12M4 12h6.5M10.5 6h-5M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5M8 6v7c0 4.5 -2 5.5 -4 7M11 18l-3 -5"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页 | Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E8%A7%84%E5%88%92-planning/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>规划 | Planning</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/vibe/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                
+                <span>时间线 | Timeline</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索 | Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接 | Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+    
+    
+    
+        <li class="site-music">
+            <button class="site-music-button" type="button" popovertarget="site-music-player">
+                <span class="site-music-icon" aria-hidden="true">♫</span><span>听歌</span>
+            </button>
+            <div id="site-music-player" class="site-music-panel" popover="auto"
+                data-player-url="https://music.163.com/outchain/player?type=0&amp;id=2130626378&amp;auto=0&amp;height=328">
+                <header class="site-music-heading">
+                    <strong>网易云歌单</strong>
+                    <button type="button" popovertarget="site-music-player" popovertargetaction="hide" aria-label="收起播放器">×</button>
+                </header>
+                
+                    <div class="site-music-frame" data-loading>
+                        <div class="site-music-loading" role="status">
+                            <span class="site-music-spinner" aria-hidden="true"></span>
+                            <span>正在加载网易云歌单…</span>
+                        </div>
+                    </div>
+                
+                <a href="https://music.163.com/playlist?id=2130626378" target="_blank" rel="noopener noreferrer">在网易云音乐打开 ↗</a>
+            </div>
+        </li>
+    
+
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+    
+        <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#一古典经验派先让物体看起来有光">一、古典经验派：先让物体看起来有光</a>
+      <ol>
+        <li><a href="#lambert最简单的漫反射">Lambert：最简单的漫反射</a></li>
+        <li><a href="#half-lambert别让暗部死掉">Half-Lambert：别让暗部死掉</a></li>
+        <li><a href="#phong终于有了高光">Phong：终于有了高光</a></li>
+        <li><a href="#blinn-phong让高光计算更方便">Blinn-Phong：让高光计算更方便</a></li>
+      </ol>
+    </li>
+    <li><a href="#二物理写实派让光照更接近现实">二、物理写实派：让光照更接近现实</a>
+      <ol>
+        <li><a href="#从光滑表面到微观结构cook-torrance">从光滑表面到微观结构：Cook-Torrance</a></li>
+        <li><a href="#能量守恒光不能凭空产生">能量守恒：光不能凭空产生</a></li>
+        <li><a href="#fresnel为什么边缘反而更亮">Fresnel：为什么边缘反而更亮？</a></li>
+        <li><a href="#metallic--roughness把复杂材质变成可用的工作流">Metallic / Roughness：把复杂材质变成可用的工作流</a></li>
+        <li><a href="#法线贴图不增加模型细节也能改变光照">法线贴图：不增加模型细节，也能改变光照</a></li>
+      </ol>
+    </li>
+    <li><a href="#三物理深潜派pbr-之外还有更复杂的材质">三、物理深潜派：PBR 之外，还有更复杂的材质</a>
+      <ol>
+        <li><a href="#皮肤蜡和玉石次表面散射">皮肤、蜡和玉石：次表面散射</a></li>
+        <li><a href="#拉丝金属和丝绸各向异性-brdf">拉丝金属和丝绸：各向异性 BRDF</a></li>
+        <li><a href="#头发和毛发kajiya-kay-与-marschner">头发和毛发：Kajiya-Kay 与 Marschner</a></li>
+        <li><a href="#汽车漆clear-coat-与分层-brdf">汽车漆：Clear Coat 与分层 BRDF</a></li>
+        <li><a href="#薄膜干涉颜色来自光的干涉">薄膜干涉：颜色来自光的干涉</a></li>
+      </ol>
+    </li>
+    <li><a href="#四反叛派为什么一定要追求真实">四、反叛派：为什么一定要追求真实？</a></li>
+    <li><a href="#五结尾渲染技术究竟在追求什么">五、结尾：渲染技术究竟在追求什么？</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+        <section class="reading-lyrics reading-lyrics--desktop" data-reading-lyrics hidden aria-label="歌词">
+    <label class="reading-lyrics-toggle">
+        <span>歌词</span>
+        <input type="checkbox" aria-label="显示同步歌词" data-lyrics-toggle>
+    </label>
+    <div class="reading-lyrics-content" data-lyrics-content hidden>
+        <p class="reading-lyrics-status" data-lyrics-status></p>
+        <div class="reading-lyrics-lines" data-lyrics-lines></div>
+    </div>
+</section>
+
+    </aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article reading-frame">
+        
+
+
+
+
+<header class="reading-header">
+    <h1>游戏渲染中的光照模型发展</h1>
+    
+        <div class="reading-meta notebook-meta">
+            
+                <time datetime="2026-11-26"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>2026-11-26</time>
+            
+            
+    <time class="article-updated" datetime="2026-11-27T00:14:04&#43;08:00" title="最后更新于 2026-11-27 00:14"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+更新 2026-11-27</time>
+
+
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  
+  <!-- 纸张背景 -->
+  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+  <path d="M8 8h8" />
+  <path d="M8 12h8" />
+  <path d="M8 16h8" />
+</svg>本文共 5798 字</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+阅读时长: 12 分钟</span>
+            
+            
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+<a href="/tags/rendering/">#Rendering</a><a href="/tags/shader/">#Shader</a></span>
+            
+        </div>
+    
+
+    
+        <div class="reading-categories">
+            
+                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+技术研究</a>
+            
+        </div>
+    
+
+    <p class="reading-description">从 Lambert 到 PBR，再到 NPR</p>
+
+    
+
+    
+        <div class="reading-cover">
+            
+                
+                
+                    
+                
+                <img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/screenshot_20261126-181904-b1659494_hu_821383ee8a078fed.png" width="1120" height="700" decoding="async" alt="">
+            
+        </div>
+    
+</header>
+
+
+        
+            <details class="reading-mobile-toc">
+                <summary>目录</summary>
+                <nav id="MobileTableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#一古典经验派先让物体看起来有光">一、古典经验派：先让物体看起来有光</a>
+      <ol>
+        <li><a href="#lambert最简单的漫反射">Lambert：最简单的漫反射</a></li>
+        <li><a href="#half-lambert别让暗部死掉">Half-Lambert：别让暗部死掉</a></li>
+        <li><a href="#phong终于有了高光">Phong：终于有了高光</a></li>
+        <li><a href="#blinn-phong让高光计算更方便">Blinn-Phong：让高光计算更方便</a></li>
+      </ol>
+    </li>
+    <li><a href="#二物理写实派让光照更接近现实">二、物理写实派：让光照更接近现实</a>
+      <ol>
+        <li><a href="#从光滑表面到微观结构cook-torrance">从光滑表面到微观结构：Cook-Torrance</a></li>
+        <li><a href="#能量守恒光不能凭空产生">能量守恒：光不能凭空产生</a></li>
+        <li><a href="#fresnel为什么边缘反而更亮">Fresnel：为什么边缘反而更亮？</a></li>
+        <li><a href="#metallic--roughness把复杂材质变成可用的工作流">Metallic / Roughness：把复杂材质变成可用的工作流</a></li>
+        <li><a href="#法线贴图不增加模型细节也能改变光照">法线贴图：不增加模型细节，也能改变光照</a></li>
+      </ol>
+    </li>
+    <li><a href="#三物理深潜派pbr-之外还有更复杂的材质">三、物理深潜派：PBR 之外，还有更复杂的材质</a>
+      <ol>
+        <li><a href="#皮肤蜡和玉石次表面散射">皮肤、蜡和玉石：次表面散射</a></li>
+        <li><a href="#拉丝金属和丝绸各向异性-brdf">拉丝金属和丝绸：各向异性 BRDF</a></li>
+        <li><a href="#头发和毛发kajiya-kay-与-marschner">头发和毛发：Kajiya-Kay 与 Marschner</a></li>
+        <li><a href="#汽车漆clear-coat-与分层-brdf">汽车漆：Clear Coat 与分层 BRDF</a></li>
+        <li><a href="#薄膜干涉颜色来自光的干涉">薄膜干涉：颜色来自光的干涉</a></li>
+      </ol>
+    </li>
+    <li><a href="#四反叛派为什么一定要追求真实">四、反叛派：为什么一定要追求真实？</a></li>
+    <li><a href="#五结尾渲染技术究竟在追求什么">五、结尾：渲染技术究竟在追求什么？</a></li>
+  </ol>
+</nav>
+            </details>
+        
+
+        <section class="reading-lyrics reading-lyrics--mobile" data-reading-lyrics hidden aria-label="歌词">
+    <label class="reading-lyrics-toggle">
+        <span>歌词</span>
+        <input type="checkbox" aria-label="显示同步歌词" data-lyrics-toggle>
+    </label>
+    <div class="reading-lyrics-content" data-lyrics-content hidden>
+        <p class="reading-lyrics-status" data-lyrics-status></p>
+        <div class="reading-lyrics-lines" data-lyrics-lines></div>
+    </div>
+</section>
+
+        <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>做游戏开发这些日子，我一直觉得，渲染最有意思的地方，并不只是学会某个 Shader 怎么写，而是弄清楚：为什么有这个效果？这个效果是怎么实现的？</p>
+<p><strong><em>如果你看不懂以下内容，可以点击我的知乎跳转查看《Shader入门精要读后感》文章了解大概。</em></strong></p>
+<p>刚接触光照模型时，我们经常会看到 Lambert、Phong、Blinn-Phong 这些名字。再往后学习，又会遇到 Cook-Torrance、微表面理论、Fresnel，以及现在游戏引擎里很常见的 PBR 工作流。</p>
+<p>如果只是把它们当作一串知识点来记，很容易学完就忘。但如果把它们放回当时的技术环境里，就会发现它们之间其实有一条挺有意思的发展脉络。</p>
+<p>我试着把这段发展过程分成四个阶段。</p>
+<h2 id="一古典经验派先让物体看起来有光">一、古典经验派：先让物体看起来有光
+</h2><p>早期实时渲染面临的一个现实问题是：硬件性能有限，而我们又希望三维物体能够呈现出立体感。</p>
+<p>最直接的办法，就是用数学公式去近似现实中的光照。</p>
+<h3 id="lambert最简单的漫反射">Lambert：最简单的漫反射
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5.jpg"
+	width="1024"
+	height="768"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5_hu_3531b6200fde12ab.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5_hu_23c21a724b444465.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>Lambert 漫反射模型的思路很直观：一个表面朝向光源的程度，决定了它接收到多少光。</p>
+<p>表面越正对光源，看起来越亮；越偏离光源，接收到的光就越少。</p>
+<p>它很好理解，也很容易计算，因此成为了非常经典的基础光照模型。</p>
+<p>但它有一个很明显的视觉问题：背光面可能会暗得非常厉害。</p>
+<p>尤其是在只计算直接光照、没有环境光或间接光补充的情况下，背光区域很容易直接掉进黑暗里。</p>
+<p>现实世界却不是这样的。即使一个物体背对太阳，它也会受到天空、周围墙壁、地面等其他物体反射光的影响。</p>
+<p>当然，这并不意味着 Lambert 本身有什么错误。它只是没有负责描述这些额外的光照来源。</p>
+<h3 id="half-lambert别让暗部死掉">Half-Lambert：别让暗部死掉
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21.jpg"
+	width="745"
+	height="558"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21_hu_1a3fc60ea225aa2.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21_hu_524045398aa60060.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>后来 Valve 在《半条命》角色渲染中使用了 Half-Lambert。</p>
+<p>它并不是重新建立了一套复杂的光照理论，而是对原本的漫反射计算进行了简单调整：通过偏移和重映射，让背光面也能保留一定亮度。</p>
+<p>这确实改善了角色暗部过黑的问题。</p>
+<p>但它也带来了新的视觉感受：整个物体看起来会比较平，明暗过渡虽然柔和，却缺少足够明确的光泽变化。</p>
+<p>如果让我形容，Half-Lambert 有时就像一面土墙。你能看出它有明暗关系，但很难从中感受到材质表面的光泽。</p>
+<p>它解决了暗部的问题，却没有解决物体表面应该如何表现高光的问题。</p>
+<h3 id="phong终于有了高光">Phong：终于有了高光
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030.jpg"
+	width="1024"
+	height="768"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030_hu_afd0ddb48f2d42fd.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030_hu_b6082711be932801.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>1975 年，Bui Tuong Phong 提出了 Phong 光照模型。</p>
+<p>与单纯计算漫反射不同，Phong 在此基础上加入了镜面反射高光。这样一来，物体表面不再只是简单地呈现明暗变化，还可以表现出光照在表面形成的亮斑。</p>
+<p>这对塑造材质非常重要。</p>
+<p>一个没有高光的物体，往往很难让人感受到它表面的光泽；而有了高光，我们就可以通过高光的大小、强度和位置，让物体看起来更光滑、更有光泽。</p>
+<p>但 Phong 依然是一个经验模型。</p>
+<p>它通过人为设定的参数控制高光，而不是从真实物体的微观结构出发。参数调整得不好，就很容易出现一种油腻的塑料感。</p>
+<p>我觉得这也是早期经验模型很有代表性的特点：它们确实能让画面变得更丰富，但很多时候，我们是在用参数去猜测现实中的材质表现。</p>
+<h3 id="blinn-phong让高光计算更方便">Blinn-Phong：让高光计算更方便
+</h3><p>1977 年，James Blinn 提出了后来广泛使用的 Blinn-Phong 模型。</p>
+<p>它把 Phong 中基于反射方向的高光计算，改成了使用光线方向与视线方向之间的半程向量来计算。</p>
+<p>这种方式在当时的实时渲染中具有计算上的优势，也让高光计算更加方便。</p>
+<p>不过需要注意，Blinn-Phong 并不是专门为了解决 Phong 的塑料感而诞生的。它依然属于经验性的高光模型，并没有从根本上解决材质表现缺乏物理依据的问题。</p>
+<p>回头看这一阶段，我觉得它们的思路其实很朴素：</p>
+<p>Lambert 先解决物体的明暗，Half-Lambert 尝试改善暗部，Phong 加入高光，Blinn-Phong 又让高光计算更加实用。</p>
+<p>每一种模型都在解决当时最明显的问题。</p>
+<p>但随着游戏画面越来越复杂，大家开始意识到：如果我们一直靠人为调整漫反射和高光参数，真的能够稳定地表现现实世界中各种各样的材质吗？</p>
+<h2 id="二物理写实派让光照更接近现实">二、物理写实派：让光照更接近现实
+</h2><p>随着硬件性能提升，以及游戏对画面真实感的要求越来越高，单纯依赖经验公式逐渐显得不够用了。</p>
+<p>问题不只是画面不够漂亮，而是这些模型对光的描述缺乏统一的物理基础。</p>
+<p>例如，同样是一个高光参数，在不同光照环境下可能产生很不一样的视觉结果。漫反射和镜面反射又是分开控制的，材质参数之间缺少明确的物理约束。</p>
+<p>于是，图形学开始越来越多地借鉴真实世界中的光学规律。</p>
+<h3 id="从光滑表面到微观结构cook-torrance">从光滑表面到微观结构：Cook-Torrance
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740.jpg"
+	width="1024"
+	height="768"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740_hu_d30cc23e530ef97d.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740_hu_1102342f70f4eb15.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>现实中的物体表面并不是绝对光滑的。</p>
+<p>即使肉眼看起来很平整的金属、塑料或者石头，在微观尺度下也存在着细小的起伏。</p>
+<p>可以把这些细小的表面理解成许多方向不同的微小镜面。光照射到这些微小表面时，会根据它们各自的朝向发生反射。</p>
+<p>这就是微表面理论的核心直觉。</p>
+<p>Cook 和 Torrance 在 1981 年发表了关于不透明表面反射的经典研究，将微表面理论应用于计算机图形学中的反射模型。它让我们能够从表面微观结构出发，描述粗糙度如何影响镜面反射。</p>
+<p>表面越光滑，微小表面的方向越集中，反射就越集中，高光也越锐利。</p>
+<p>表面越粗糙，微小表面的方向分布越分散，反射光就会扩散开来，高光也会变得更宽、更柔和。</p>
+<p>这让不同材质的表现开始有了更加统一的解释。</p>
+<h3 id="能量守恒光不能凭空产生">能量守恒：光不能凭空产生
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e.jpg"
+	width="1000"
+	height="500"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e_hu_865f2c53eb97f8de.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e_hu_8020b8607d20868d.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p><strong><em>如果你好奇为什么配图是GGX可以浏览<a class="link" href="https://learnopengl.com/PBR/Theory"  target="_blank" rel="noopener"
+    >PBR中BRDF介绍</a>，这同样有助于下文深潜派的理解。</em></strong></p>
+<p>除了微观结构，另一个重要问题就是能量。</p>
+<p>早期经验模型中，漫反射和镜面反射可以分别调整。为了让画面好看，我们甚至可能把它们都调得很亮。</p>
+<p>但现实中的物体并不会凭空制造光能。</p>
+<p>一个物体接收到多少光，就只能在这个基础上反射、吸收或者透射其中的一部分。反射出去的能量不能无缘无故超过接收到的能量。</p>
+<p>这就是能量守恒在材质渲染中的重要意义。</p>
+<p>它并不是要求所有材质都必须看起来暗淡，而是让不同反射部分之间的关系更加合理。</p>
+<p>当我们开始使用有物理约束的模型，就不再需要完全依靠肉眼去猜测漫反射和高光应该如何搭配。</p>
+<h3 id="fresnel为什么边缘反而更亮">Fresnel：为什么边缘反而更亮？
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05.jpg"
+	width="1024"
+	height="457"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05_hu_29945427df46deef.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05_hu_4e6036f315ea22d5.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="224"
+		data-flex-basis="537px"
+	
+></p>
+<p>不知道你有没有注意过这样的现象：</p>
+<p>观察一个玻璃杯、水面，或者一些光滑的物体时，从正面看过去，可能能看到物体内部或者表面本身的颜色；但当视线逐渐贴近表面时，反射周围环境的效果就会越来越明显。</p>
+<p>这就是 Fresnel 效应。</p>
+<p>简单来说，物体表面的反射比例会随着观察角度发生变化。在很多常见材质上，视线越接近掠射角，反射就越明显。</p>
+<p>它让材质不再只是一个固定的反射强度，而是能够随着观察方向产生变化。</p>
+<p>Fresnel 是现代基于物理的反射模型中的重要组成部分，并不是 PBR 后来才随意添加的一种装饰效果。</p>
+<h3 id="metallic--roughness把复杂材质变成可用的工作流">Metallic / Roughness：把复杂材质变成可用的工作流
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa.jpg"
+	width="1024"
+	height="1024"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa_hu_6c1cfa5bfa53ef8d.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa_hu_ef3087f188c4ab4d.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+></p>
+<p>现代游戏引擎中，我们经常看到 Metallic（金属度）和 Roughness（粗糙度）这两个参数。</p>
+<p>它们并不是完整的物理世界，而是为了让美术和开发者能够更方便地描述常见材质而形成的一种参数化工作流。</p>
+<p>Metallic 用来区分金属与非金属材质的反射特征。</p>
+<p>金属和非金属对光的处理方式并不一样。金属的镜面反射通常带有材质本身的颜色，而非金属通常具有不同的漫反射与镜面反射特征。</p>
+<p>Roughness 则控制表面的微观粗糙程度，影响反射光的集中或扩散。</p>
+<p>这两个参数让材质制作变得直观了很多。</p>
+<p>我们不再需要像以前那样分别去猜测漫反射颜色、高光强度和高光范围，而是可以用更接近材质本身特征的参数来控制结果。</p>
+<h3 id="法线贴图不增加模型细节也能改变光照">法线贴图：不增加模型细节，也能改变光照
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4.jpg"
+	width="650"
+	height="375"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4_hu_d74a2656e485b4ef.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4_hu_1a8acf3f806e8ec2.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="173"
+		data-flex-basis="416px"
+	
+></p>
+<p>除了材质参数，现代 PBR 工作流中还有一个非常重要的部分：法线贴图（Normal Mapping）。</p>
+<p>现实世界中的物体很少是完全规整的。表面上的划痕、凹凸、细小褶皱，往往正是让材质显得真实的重要原因。</p>
+<p>但如果我们想把这些细节全部建模出来，模型的面数和制作成本就会迅速增加。</p>
+<p>法线贴图提供了另一种思路：不直接改变模型的几何轮廓，而是把表面法线信息存储在纹理中，让 Shader 在计算光照时使用这些经过扰动的法线。</p>
+<p>这样即使模型本身很简单，也能通过光照变化表现出细小的凹凸、划痕和纹理细节。</p>
+<p>它并不会真的改变物体的轮廓，也不会让模型产生真实的几何起伏，但对于大量表面细节来说，这是一种非常高效的近似方式。</p>
+<p>即使到了 PBR 时代，法线贴图依然是材质制作和光照计算中非常重要的输入。</p>
+<p>当然，PBR 并不是某一个具体的 Shader，而是一套以物理规律为基础的材质与光照处理方法。它涉及反射模型、能量约束、材质参数、环境光照等多个方面。</p>
+<p><strong>这一阶段最大的变化是：我们开始从“怎样调出想要的高光”，转向“这个材质为什么会产生这样的反射”。</strong></p>
+<h2 id="三物理深潜派pbr-之外还有更复杂的材质">三、物理深潜派：PBR 之外，还有更复杂的材质
+</h2><p>当我们逐渐掌握了 PBR，就会发现它确实解决了很多常见材质的表现问题。</p>
+<p>不过，PBR 并不意味着所有材质都可以只靠 Metallic 和 Roughness 两个参数解决。</p>
+<p>现实中的材质有着更加复杂的结构和光学行为。光可能进入物体内部再散射出来，也可能沿着特定方向反射，甚至需要考虑多层材质之间的相互作用。</p>
+<p>这时候，我们就需要在常规 PBR 的基础上，引入更专门的光照模型。</p>
+<p>它不是一套独立于 PBR 的新体系，而是针对特殊材质和光学现象的进一步研究。</p>
+<p>下面只列出一些比较有代表性的方向。</p>
+<h3 id="皮肤蜡和玉石次表面散射">皮肤、蜡和玉石：次表面散射
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0.jpg"
+	width="800"
+	height="600"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0_hu_c2e1c86c56759272.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0_hu_b1351d3663731f2c.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>普通 BRDF 主要描述光在表面上的反射，但皮肤、蜡、玉石等半透明材质，光会进入物体内部，经过散射后再从其他位置透出来。</p>
+<p>这就是次表面散射（Subsurface Scattering，SSS）。</p>
+<p>相关的代表性模型包括 Jensen 等人在 2001 年提出的 Dipole BSSRDF 模型。它通过近似模拟光在半透明介质内部的传播和散射，表现出普通表面反射模型难以描述的柔和透光和颜色扩散效果。</p>
+<h3 id="拉丝金属和丝绸各向异性-brdf">拉丝金属和丝绸：各向异性 BRDF
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1.jpg"
+	width="1147"
+	height="860"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1_hu_6ce9a8511b02513b.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1_hu_969613b28080b32a.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>拉丝金属、丝绸和一些特殊织物的反射并不是均匀的。</p>
+<p>它们的高光会受到表面纹理方向的影响，沿着不同方向观察时，反射效果也会发生变化。</p>
+<p>这种现象称为各向异性（Anisotropy）。</p>
+<p>代表性的模型包括 Ward BRDF、Ashikhmin-Shirley BRDF，以及现代微表面模型中的各向异性 GGX 等。它们通过不同方向上的粗糙度或反射分布，表现出拉丝金属那种拉长的高光。</p>
+<h3 id="头发和毛发kajiya-kay-与-marschner">头发和毛发：Kajiya-Kay 与 Marschner
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5.jpg"
+	width="1024"
+	height="768"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5_hu_faca1e057ad2dd81.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5_hu_15e8d740a8839214.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>头发并不是普通的平面表面，而是一根根具有特殊截面结构的纤维。</p>
+<p>早期代表模型是 Kajiya-Kay，它通过简化的方式表现毛发沿纤维方向延伸的高光。</p>
+<p>后来 Marschner 等人在 2003 年提出了更加深入的毛发散射模型，考虑光线进入头发纤维后发生的反射、透射和内部反射等路径，从而解释真实头发中多层高光等现象。</p>
+<p>这类模型的出现，让头发不再只是一个带有特殊高光的普通材质，而是拥有了针对纤维结构的专门光照描述。</p>
+<h3 id="汽车漆clear-coat-与分层-brdf">汽车漆：Clear Coat 与分层 BRDF
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa.jpg"
+	width="1113"
+	height="860"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa_hu_681e1019fd1a4f5a.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa_hu_841767009b96e7e1.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="310px"
+	
+></p>
+<p>汽车漆通常不是单一材质。它可能包含底漆、色漆、金属颗粒和最外层的透明清漆。</p>
+<p>透明清漆会形成额外的表面反射，因此汽车漆的表现往往需要考虑底层材质与外层清漆之间的关系。</p>
+<p>常见做法是在基础 BRDF 上叠加 Clear Coat 高光层，或者使用分层 BRDF 来描述不同层之间的反射。</p>
+<p>例如 Disney Principled BRDF 就提供了 Clearcoat 分量，用来近似表现透明清漆带来的额外高光。</p>
+<h3 id="薄膜干涉颜色来自光的干涉">薄膜干涉：颜色来自光的干涉
+</h3><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7.jpg"
+	width="800"
+	height="486"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7_hu_c2006ec2725e5bb0.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7_hu_400065ed2fa6a56b.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="395px"
+	
+></p>
+<p>肥皂泡、油膜以及一些具有虹彩效果的表面，会随着观察角度变化呈现不同颜色。</p>
+<p>这种现象并不只是表面颜色发生变化，而是与光在薄膜上下表面反射后产生的干涉有关。</p>
+<p>对应的技术方向就是 Thin-film Interference（薄膜干涉），通常需要在微表面反射模型中进一步考虑薄膜干涉带来的波长相关反射变化。</p>
+<p>这些模型有一个共同点：它们并不是要推翻 PBR，而是在常规 PBR 无法充分描述某些材质时，进一步补充更具体的光学行为。</p>
+<p>如果说 PBR 给我们提供了一套通用的材质描述基础，那么这些专用模型就是针对特殊材质继续向下挖掘。</p>
+<p>当然，在实际游戏引擎中，并不是每一种材质都需要使用完整的学术模型。实时渲染往往会根据性能和视觉需求进行简化，保留最重要的视觉特征。</p>
+<h2 id="四反叛派为什么一定要追求真实">四、反叛派：为什么一定要追求真实？
+</h2><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971.jpg"
+	width="784"
+	height="611"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971_hu_fce35d2822800f67.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971_hu_6e32353e93ff3ef4.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="307px"
+	
+></p>
+<p>前面三个阶段，似乎都在朝着同一个方向前进：</p>
+<p>让光照更合理，让材质更接近现实，让渲染结果越来越真实。</p>
+<p>但游戏美术并不总是这样。</p>
+<p>有时候，真实反而不是我们想要的结果。</p>
+<p>比如一个卡通角色，如果完全按照现实世界中的光照规律去渲染，它可能会显得过于复杂，失去原本简洁、鲜明的视觉特征。</p>
+<p>又比如一款风格化游戏，如果我们追求真实的材质反射、复杂的阴影和细腻的光照变化，最终画面反而可能偏离它原本的艺术方向。</p>
+<p>这就是 NPR（Non-Photorealistic Rendering，非真实感渲染）所关注的方向。</p>
+<p>它并不是简单地把画面做得不真实，而是主动选择哪些视觉信息需要保留，哪些信息可以被简化，甚至哪些物理规律可以被打破。</p>
+<p>从还原现实到表达风格，NPR 包含的范围很广。</p>
+<p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439.jpg"
+	width="800"
+	height="717"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439_hu_6f3e4be6a2369b1b.jpg 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439_hu_4e765a4ee9c0f1b8.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="267px"
+	
+></p>
+<p>比如常见的卡通渲染，会将连续的明暗变化压缩成几个明确的色阶；赛璐璐风格会强调清晰的阴影边界；一些手绘风格则会通过笔触、线条和色彩控制来表现画面。</p>
+<p>还有一些风格化渲染，会故意使用不符合现实的边缘光、轮廓线，或者让物体在不同光照条件下始终保持某种特定颜色。</p>
+<p>这些做法并不是因为开发者不知道真实光照应该怎么计算，而是因为他们有意选择了另一种表达方式。</p>
+<p>我觉得这也是 NPR 最有意思的地方：</p>
+<p>它不再把物理正确当作唯一目标，而是把艺术表达放在了更重要的位置。</p>
+<p>当然，NPR 并不是 PBR 出现之后才诞生的技术路线。它有自己独立的发展历史，只是在现代游戏制作中，我们越来越常见到它与 PBR 工作流结合使用。</p>
+<p>有些项目会用 PBR 处理基础材质和光照，再通过风格化 Shader、色调控制和后处理来塑造最终画面。</p>
+<p>真实与风格并不是完全对立的。它们也可以在同一个项目中共存。</p>
+<h2 id="五结尾渲染技术究竟在追求什么">五、结尾：渲染技术究竟在追求什么？
+</h2><p><img src="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164.png"
+	width="3200"
+	height="2000"
+	srcset="/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164_hu_1c34a7a285d5df4c.png 480w, /p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164_hu_361f6694952ccc7a.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+></p>
+<p>回头看这段发展过程，我觉得可以把它理解成几种不同的追求。</p>
+<p>古典经验派希望用尽可能简单的计算，让物体看起来有明暗、有高光。</p>
+<p>物理写实派希望让这些光照和反射关系更加符合现实世界的规律。</p>
+<p>物理深潜派则发现，现实中的材质远比普通表面复杂，于是开始研究光在皮肤、头发、汽车漆等不同材质中的传播和反射。</p>
+<p>而反叛派提出了另一个问题：</p>
+<p>如果我们已经能够还原现实，为什么还要被现实限制？</p>
+<p>从 Lambert 到 PBR，再到 NPR，不是一条简单的技术替代路线，而是一场仍在进行的人们对美的探索。</p>
+<p>今天的游戏引擎仍然会使用各种经验近似，也会使用物理模型，还会在此基础上加入大量艺术化控制。不同的模型并不是出现一个就淘汰一个，而是在不同的需求下继续发挥作用。</p>
+<p>对于游戏开发者来说，理解这些技术的意义，也不只是为了知道某个 Shader 应该怎么写。</p>
+<p>更重要的是，当我们面对一个场景、一种材质，或者一种想要实现的视觉效果时，能够判断：</p>
+<p>它为什么会呈现成现在这样？是光照计算的问题，是材质本身的问题，还是我们需要主动改变它的表现方式？</p>
+<p>我想，这才是学习渲染技术最有价值的部分。</p>
+
+</section>
+
+        <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/rendering/">Rendering</a>
+        
+            <a href="/tags/shader/">Shader</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Made with ❤️ by KKPT</span>
+    </section>
+    </footer>
+
+        
+    </article>
+
+    
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/321-01cd6459.805a6179f1e0d2a2fc7a7d6ad97e7a45_hu_d785e6785eba2d49.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 灯光系统的探讨"
+                        data-key="灯光系统的探讨" 
+                        data-hash="md5-gFphefHg0qL8en1q2X56RQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">灯光系统的探讨</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/">
+        
+        
+            <div class="article-image">
+                <img src="/p/npr%E6%B8%B2%E6%9F%93%E5%B0%9D%E8%AF%95/img/1-b99514c3.3ad44539634cfefd92764d9a1a4d1af8_hu_272f1b5654b93886.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NPR渲染尝试"
+                        
+                        data-hash="md5-OtRFOWNM/v2Sdk2aGk0a&#43;A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPR渲染尝试</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.316ca04a99da783946691bf82e29bf7f_hu_e32806f9124de1f3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 3D数学与Sharder学习"
+                        
+                        data-hash="md5-MWygSpnaeDlGaRv4Lim/fw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">3D数学与Sharder学习</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+    
+    <div data-kkpt-theme-light="light" data-kkpt-theme-dark="dark_dimmed">
+<script data-kkpt-instance
+    src="https://giscus.app/client.js"
+        data-repo="axppk/axppk.github.io"
+        data-repo-id="R_kgDOPFCzDg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFCzDs4CtZcr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+></script>
+</div>
+
+    <footer class="site-footer">
+    <div class="blog-footer-content">
+        <div>
+            
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<div class="blog-stats">
+    
+        
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">512 天</strong></p>
+    
+    <p>共收录 <strong>21</strong> 篇文章 · 累计 <strong>52,500</strong> 字</p>
+</div>
+
+            <section class="copyright">
+                &copy;
+                
+                    2020 -
+                
+                2026 KKPT
+            </section>
+        </div>
+        <section class="powerby">
+            使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br>
+            主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        </section>
+    </div>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="data-kkpt-dependency
+                crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="data-kkpt-dependency
+                crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"data-kkpt-dependency
+                crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"data-kkpt-dependency
+                crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script src="/js/vendor/vibrant.min.6b0711da39e8e242395f4ccbf1ec74be2db3f8a324176e21516f1678f480f473.js" defer></script><script type="text/javascript" src="/ts/main.00af1c6a0da0e1e5342734409bed3eb677422ba75a77824cde7b0d5e2fd29abe.js" defer></script>
+
+
+<style>
+
+
+   
+  body:not(.template-reading) #TableOfContents > :is(ul, ol) {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+   
+
+   
+  .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+     
+
+     
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://axppk.github.io/icons/backTop.svg);
+    }
+     
+</style>
+
+<script>
+  
+  function initTocHide(signal) {
+    
+    let toc = document.querySelector("body:not(.template-reading) .widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    }, { signal, passive: true });
+  }
+  
+
+  
+  function initCodeMoreBox() {
+      let codeBlocks = document.querySelectorAll(".highlight");
+      if (!codeBlocks) {
+        return;
+      }
+      codeBlocks.forEach(codeBlock => {
+        
+        if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+          return;
+        }
+        
+        
+        let codeMoreBox = document.createElement('div');
+        codeMoreBox.classList.add('code-more-box');
+        
+        let codeMoreBtn = document.createElement('span');
+        codeMoreBtn.classList.add('code-more-btn');
+        codeMoreBtn.addEventListener('click', () => {
+          codeBlock.classList.add('code-show');
+          codeMoreBox.style.display = 'none';
+          
+          window.dispatchEvent(new Event('resize'))
+        });
+        
+        let img = document.createElement('img');
+        img.classList.add('code-more-img');
+        
+        img.src = 'https:\/\/axppk.github.io\/icons\/codeMore.png';
+        
+        
+        codeMoreBtn.appendChild(img);
+        codeMoreBox.appendChild(codeMoreBtn);
+        codeBlock.appendChild(codeMoreBox);
+      });
+  }
+  
+
+  
+  function initScrollTop(signal) {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.addEventListener('scroll', function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    }, { signal, passive: true });
+  }
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+
+
+  let pageControls;
+  function mountPageControls() {
+    pageControls?.abort();
+    pageControls = new AbortController();
+    initScrollTop(pageControls.signal);
+    initCodeMoreBox();
+    initTocHide(pageControls.signal);
+  }
+  mountPageControls();
+  document.addEventListener('kkpt:page', mountPageControls);
+
+  function renderArticleMath() {
+    const article = document.querySelector('.main-article:has([data-kkpt-math])');
+    if (!article || !window.renderMathInElement) return;
+    window.renderMathInElement(article, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+      ignoredClasses: ["gist"]
+    });
+  }
+  document.addEventListener('DOMContentLoaded', renderArticleMath, { once: true });
+  document.addEventListener('kkpt:page-ready', renderArticleMath);
+
+  function syncCommentTheme(event) {
+    const comments = document.querySelector('[data-kkpt-theme-light]');
+    const frame = comments?.querySelector('iframe.giscus-frame')?.contentWindow;
+    if (!frame || (event.type === 'message' && (event.origin !== 'https://giscus.app' || event.source !== frame))) return;
+    const theme = document.documentElement.dataset.scheme === 'dark' ? comments.dataset.kkptThemeDark : comments.dataset.kkptThemeLight;
+    frame.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+  }
+  window.addEventListener('message', syncCommentTheme);
+  window.addEventListener('onColorSchemeChange', syncCommentTheme);
+</script>
+
+
+
+<div hidden data-blog-effects data-sakura="/background/sakura.min.e327b62f543e10a47d9bd7ac5277eef497f1a5d60f0e5cded9f4f37c00150595.js" data-click="/click-effect/click.min.2b7fecd58b7888210bd2bbbab7a7a25af0f4717ffd558b247144833e75f31d09.js"></div>
+
+    <button class="blog-chat-launcher" type="button" data-blog-chat="X5h3L-_D2Lr-E1Xjxu8cd" aria-label="打开博客助手" title="打开博客助手">💬</button>
+
+<script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
+<script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
+<script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
+<script src="/js/site-navigation.min.f2e00147a42e175ced75e8b88dbdea0f565ac9649a5b4149049a0a49c45920f6.js" defer></script>
+
+
+
+    </body>
+</html>

@@ -7,6 +7,360 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright><atom:link href="https://axppk.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>游戏渲染中的光照模型发展</title>
+        <link>https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/</link>
+        <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/</guid>
+        <description>&lt;img src="https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/screenshot_20261126-181904-b1659494.png" alt="Featured image of post 游戏渲染中的光照模型发展" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;做游戏开发这些日子，我一直觉得，渲染最有意思的地方，并不只是学会某个 Shader 怎么写，而是弄清楚：为什么有这个效果？这个效果是怎么实现的？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;如果你看不懂以下内容，可以点击我的知乎跳转查看《Shader入门精要读后感》文章了解大概。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;刚接触光照模型时，我们经常会看到 Lambert、Phong、Blinn-Phong 这些名字。再往后学习，又会遇到 Cook-Torrance、微表面理论、Fresnel，以及现在游戏引擎里很常见的 PBR 工作流。&lt;/p&gt;
+&lt;p&gt;如果只是把它们当作一串知识点来记，很容易学完就忘。但如果把它们放回当时的技术环境里，就会发现它们之间其实有一条挺有意思的发展脉络。&lt;/p&gt;
+&lt;p&gt;我试着把这段发展过程分成四个阶段。&lt;/p&gt;
+&lt;h2 id=&#34;一古典经验派先让物体看起来有光&#34;&gt;一、古典经验派：先让物体看起来有光
+&lt;/h2&gt;&lt;p&gt;早期实时渲染面临的一个现实问题是：硬件性能有限，而我们又希望三维物体能够呈现出立体感。&lt;/p&gt;
+&lt;p&gt;最直接的办法，就是用数学公式去近似现实中的光照。&lt;/p&gt;
+&lt;h3 id=&#34;lambert最简单的漫反射&#34;&gt;Lambert：最简单的漫反射
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5_hu_3531b6200fde12ab.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/336-0cbcdcd5_hu_23c21a724b444465.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Lambert 漫反射模型的思路很直观：一个表面朝向光源的程度，决定了它接收到多少光。&lt;/p&gt;
+&lt;p&gt;表面越正对光源，看起来越亮；越偏离光源，接收到的光就越少。&lt;/p&gt;
+&lt;p&gt;它很好理解，也很容易计算，因此成为了非常经典的基础光照模型。&lt;/p&gt;
+&lt;p&gt;但它有一个很明显的视觉问题：背光面可能会暗得非常厉害。&lt;/p&gt;
+&lt;p&gt;尤其是在只计算直接光照、没有环境光或间接光补充的情况下，背光区域很容易直接掉进黑暗里。&lt;/p&gt;
+&lt;p&gt;现实世界却不是这样的。即使一个物体背对太阳，它也会受到天空、周围墙壁、地面等其他物体反射光的影响。&lt;/p&gt;
+&lt;p&gt;当然，这并不意味着 Lambert 本身有什么错误。它只是没有负责描述这些额外的光照来源。&lt;/p&gt;
+&lt;h3 id=&#34;half-lambert别让暗部死掉&#34;&gt;Half-Lambert：别让暗部死掉
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21.jpg&#34;
+	width=&#34;745&#34;
+	height=&#34;558&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21_hu_1a3fc60ea225aa2.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/338-212d2c21_hu_524045398aa60060.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;后来 Valve 在《半条命》角色渲染中使用了 Half-Lambert。&lt;/p&gt;
+&lt;p&gt;它并不是重新建立了一套复杂的光照理论，而是对原本的漫反射计算进行了简单调整：通过偏移和重映射，让背光面也能保留一定亮度。&lt;/p&gt;
+&lt;p&gt;这确实改善了角色暗部过黑的问题。&lt;/p&gt;
+&lt;p&gt;但它也带来了新的视觉感受：整个物体看起来会比较平，明暗过渡虽然柔和，却缺少足够明确的光泽变化。&lt;/p&gt;
+&lt;p&gt;如果让我形容，Half-Lambert 有时就像一面土墙。你能看出它有明暗关系，但很难从中感受到材质表面的光泽。&lt;/p&gt;
+&lt;p&gt;它解决了暗部的问题，却没有解决物体表面应该如何表现高光的问题。&lt;/p&gt;
+&lt;h3 id=&#34;phong终于有了高光&#34;&gt;Phong：终于有了高光
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030_hu_afd0ddb48f2d42fd.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/337-0350d030_hu_b6082711be932801.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1975 年，Bui Tuong Phong 提出了 Phong 光照模型。&lt;/p&gt;
+&lt;p&gt;与单纯计算漫反射不同，Phong 在此基础上加入了镜面反射高光。这样一来，物体表面不再只是简单地呈现明暗变化，还可以表现出光照在表面形成的亮斑。&lt;/p&gt;
+&lt;p&gt;这对塑造材质非常重要。&lt;/p&gt;
+&lt;p&gt;一个没有高光的物体，往往很难让人感受到它表面的光泽；而有了高光，我们就可以通过高光的大小、强度和位置，让物体看起来更光滑、更有光泽。&lt;/p&gt;
+&lt;p&gt;但 Phong 依然是一个经验模型。&lt;/p&gt;
+&lt;p&gt;它通过人为设定的参数控制高光，而不是从真实物体的微观结构出发。参数调整得不好，就很容易出现一种油腻的塑料感。&lt;/p&gt;
+&lt;p&gt;我觉得这也是早期经验模型很有代表性的特点：它们确实能让画面变得更丰富，但很多时候，我们是在用参数去猜测现实中的材质表现。&lt;/p&gt;
+&lt;h3 id=&#34;blinn-phong让高光计算更方便&#34;&gt;Blinn-Phong：让高光计算更方便
+&lt;/h3&gt;&lt;p&gt;1977 年，James Blinn 提出了后来广泛使用的 Blinn-Phong 模型。&lt;/p&gt;
+&lt;p&gt;它把 Phong 中基于反射方向的高光计算，改成了使用光线方向与视线方向之间的半程向量来计算。&lt;/p&gt;
+&lt;p&gt;这种方式在当时的实时渲染中具有计算上的优势，也让高光计算更加方便。&lt;/p&gt;
+&lt;p&gt;不过需要注意，Blinn-Phong 并不是专门为了解决 Phong 的塑料感而诞生的。它依然属于经验性的高光模型，并没有从根本上解决材质表现缺乏物理依据的问题。&lt;/p&gt;
+&lt;p&gt;回头看这一阶段，我觉得它们的思路其实很朴素：&lt;/p&gt;
+&lt;p&gt;Lambert 先解决物体的明暗，Half-Lambert 尝试改善暗部，Phong 加入高光，Blinn-Phong 又让高光计算更加实用。&lt;/p&gt;
+&lt;p&gt;每一种模型都在解决当时最明显的问题。&lt;/p&gt;
+&lt;p&gt;但随着游戏画面越来越复杂，大家开始意识到：如果我们一直靠人为调整漫反射和高光参数，真的能够稳定地表现现实世界中各种各样的材质吗？&lt;/p&gt;
+&lt;h2 id=&#34;二物理写实派让光照更接近现实&#34;&gt;二、物理写实派：让光照更接近现实
+&lt;/h2&gt;&lt;p&gt;随着硬件性能提升，以及游戏对画面真实感的要求越来越高，单纯依赖经验公式逐渐显得不够用了。&lt;/p&gt;
+&lt;p&gt;问题不只是画面不够漂亮，而是这些模型对光的描述缺乏统一的物理基础。&lt;/p&gt;
+&lt;p&gt;例如，同样是一个高光参数，在不同光照环境下可能产生很不一样的视觉结果。漫反射和镜面反射又是分开控制的，材质参数之间缺少明确的物理约束。&lt;/p&gt;
+&lt;p&gt;于是，图形学开始越来越多地借鉴真实世界中的光学规律。&lt;/p&gt;
+&lt;h3 id=&#34;从光滑表面到微观结构cook-torrance&#34;&gt;从光滑表面到微观结构：Cook-Torrance
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740_hu_d30cc23e530ef97d.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/339-ba220740_hu_1102342f70f4eb15.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现实中的物体表面并不是绝对光滑的。&lt;/p&gt;
+&lt;p&gt;即使肉眼看起来很平整的金属、塑料或者石头，在微观尺度下也存在着细小的起伏。&lt;/p&gt;
+&lt;p&gt;可以把这些细小的表面理解成许多方向不同的微小镜面。光照射到这些微小表面时，会根据它们各自的朝向发生反射。&lt;/p&gt;
+&lt;p&gt;这就是微表面理论的核心直觉。&lt;/p&gt;
+&lt;p&gt;Cook 和 Torrance 在 1981 年发表了关于不透明表面反射的经典研究，将微表面理论应用于计算机图形学中的反射模型。它让我们能够从表面微观结构出发，描述粗糙度如何影响镜面反射。&lt;/p&gt;
+&lt;p&gt;表面越光滑，微小表面的方向越集中，反射就越集中，高光也越锐利。&lt;/p&gt;
+&lt;p&gt;表面越粗糙，微小表面的方向分布越分散，反射光就会扩散开来，高光也会变得更宽、更柔和。&lt;/p&gt;
+&lt;p&gt;这让不同材质的表现开始有了更加统一的解释。&lt;/p&gt;
+&lt;h3 id=&#34;能量守恒光不能凭空产生&#34;&gt;能量守恒：光不能凭空产生
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;500&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e_hu_865f2c53eb97f8de.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/342-433bbc2e_hu_8020b8607d20868d.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;如果你好奇为什么配图是GGX可以浏览&lt;a class=&#34;link&#34; href=&#34;https://learnopengl.com/PBR/Theory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PBR中BRDF介绍&lt;/a&gt;，这同样有助于下文深潜派的理解。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;除了微观结构，另一个重要问题就是能量。&lt;/p&gt;
+&lt;p&gt;早期经验模型中，漫反射和镜面反射可以分别调整。为了让画面好看，我们甚至可能把它们都调得很亮。&lt;/p&gt;
+&lt;p&gt;但现实中的物体并不会凭空制造光能。&lt;/p&gt;
+&lt;p&gt;一个物体接收到多少光，就只能在这个基础上反射、吸收或者透射其中的一部分。反射出去的能量不能无缘无故超过接收到的能量。&lt;/p&gt;
+&lt;p&gt;这就是能量守恒在材质渲染中的重要意义。&lt;/p&gt;
+&lt;p&gt;它并不是要求所有材质都必须看起来暗淡，而是让不同反射部分之间的关系更加合理。&lt;/p&gt;
+&lt;p&gt;当我们开始使用有物理约束的模型，就不再需要完全依靠肉眼去猜测漫反射和高光应该如何搭配。&lt;/p&gt;
+&lt;h3 id=&#34;fresnel为什么边缘反而更亮&#34;&gt;Fresnel：为什么边缘反而更亮？
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;457&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05_hu_29945427df46deef.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/343-2b74fc05_hu_4e6036f315ea22d5.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;537px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不知道你有没有注意过这样的现象：&lt;/p&gt;
+&lt;p&gt;观察一个玻璃杯、水面，或者一些光滑的物体时，从正面看过去，可能能看到物体内部或者表面本身的颜色；但当视线逐渐贴近表面时，反射周围环境的效果就会越来越明显。&lt;/p&gt;
+&lt;p&gt;这就是 Fresnel 效应。&lt;/p&gt;
+&lt;p&gt;简单来说，物体表面的反射比例会随着观察角度发生变化。在很多常见材质上，视线越接近掠射角，反射就越明显。&lt;/p&gt;
+&lt;p&gt;它让材质不再只是一个固定的反射强度，而是能够随着观察方向产生变化。&lt;/p&gt;
+&lt;p&gt;Fresnel 是现代基于物理的反射模型中的重要组成部分，并不是 PBR 后来才随意添加的一种装饰效果。&lt;/p&gt;
+&lt;h3 id=&#34;metallic--roughness把复杂材质变成可用的工作流&#34;&gt;Metallic / Roughness：把复杂材质变成可用的工作流
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa_hu_6c1cfa5bfa53ef8d.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/340-fd7339fa_hu_ef3087f188c4ab4d.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现代游戏引擎中，我们经常看到 Metallic（金属度）和 Roughness（粗糙度）这两个参数。&lt;/p&gt;
+&lt;p&gt;它们并不是完整的物理世界，而是为了让美术和开发者能够更方便地描述常见材质而形成的一种参数化工作流。&lt;/p&gt;
+&lt;p&gt;Metallic 用来区分金属与非金属材质的反射特征。&lt;/p&gt;
+&lt;p&gt;金属和非金属对光的处理方式并不一样。金属的镜面反射通常带有材质本身的颜色，而非金属通常具有不同的漫反射与镜面反射特征。&lt;/p&gt;
+&lt;p&gt;Roughness 则控制表面的微观粗糙程度，影响反射光的集中或扩散。&lt;/p&gt;
+&lt;p&gt;这两个参数让材质制作变得直观了很多。&lt;/p&gt;
+&lt;p&gt;我们不再需要像以前那样分别去猜测漫反射颜色、高光强度和高光范围，而是可以用更接近材质本身特征的参数来控制结果。&lt;/p&gt;
+&lt;h3 id=&#34;法线贴图不增加模型细节也能改变光照&#34;&gt;法线贴图：不增加模型细节，也能改变光照
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4.jpg&#34;
+	width=&#34;650&#34;
+	height=&#34;375&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4_hu_d74a2656e485b4ef.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/341-242c7ff4_hu_1a8acf3f806e8ec2.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;416px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;除了材质参数，现代 PBR 工作流中还有一个非常重要的部分：法线贴图（Normal Mapping）。&lt;/p&gt;
+&lt;p&gt;现实世界中的物体很少是完全规整的。表面上的划痕、凹凸、细小褶皱，往往正是让材质显得真实的重要原因。&lt;/p&gt;
+&lt;p&gt;但如果我们想把这些细节全部建模出来，模型的面数和制作成本就会迅速增加。&lt;/p&gt;
+&lt;p&gt;法线贴图提供了另一种思路：不直接改变模型的几何轮廓，而是把表面法线信息存储在纹理中，让 Shader 在计算光照时使用这些经过扰动的法线。&lt;/p&gt;
+&lt;p&gt;这样即使模型本身很简单，也能通过光照变化表现出细小的凹凸、划痕和纹理细节。&lt;/p&gt;
+&lt;p&gt;它并不会真的改变物体的轮廓，也不会让模型产生真实的几何起伏，但对于大量表面细节来说，这是一种非常高效的近似方式。&lt;/p&gt;
+&lt;p&gt;即使到了 PBR 时代，法线贴图依然是材质制作和光照计算中非常重要的输入。&lt;/p&gt;
+&lt;p&gt;当然，PBR 并不是某一个具体的 Shader，而是一套以物理规律为基础的材质与光照处理方法。它涉及反射模型、能量约束、材质参数、环境光照等多个方面。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这一阶段最大的变化是：我们开始从“怎样调出想要的高光”，转向“这个材质为什么会产生这样的反射”。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三物理深潜派pbr-之外还有更复杂的材质&#34;&gt;三、物理深潜派：PBR 之外，还有更复杂的材质
+&lt;/h2&gt;&lt;p&gt;当我们逐渐掌握了 PBR，就会发现它确实解决了很多常见材质的表现问题。&lt;/p&gt;
+&lt;p&gt;不过，PBR 并不意味着所有材质都可以只靠 Metallic 和 Roughness 两个参数解决。&lt;/p&gt;
+&lt;p&gt;现实中的材质有着更加复杂的结构和光学行为。光可能进入物体内部再散射出来，也可能沿着特定方向反射，甚至需要考虑多层材质之间的相互作用。&lt;/p&gt;
+&lt;p&gt;这时候，我们就需要在常规 PBR 的基础上，引入更专门的光照模型。&lt;/p&gt;
+&lt;p&gt;它不是一套独立于 PBR 的新体系，而是针对特殊材质和光学现象的进一步研究。&lt;/p&gt;
+&lt;p&gt;下面只列出一些比较有代表性的方向。&lt;/p&gt;
+&lt;h3 id=&#34;皮肤蜡和玉石次表面散射&#34;&gt;皮肤、蜡和玉石：次表面散射
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0.jpg&#34;
+	width=&#34;800&#34;
+	height=&#34;600&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0_hu_c2e1c86c56759272.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/344-a3b9a2e0_hu_b1351d3663731f2c.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;普通 BRDF 主要描述光在表面上的反射，但皮肤、蜡、玉石等半透明材质，光会进入物体内部，经过散射后再从其他位置透出来。&lt;/p&gt;
+&lt;p&gt;这就是次表面散射（Subsurface Scattering，SSS）。&lt;/p&gt;
+&lt;p&gt;相关的代表性模型包括 Jensen 等人在 2001 年提出的 Dipole BSSRDF 模型。它通过近似模拟光在半透明介质内部的传播和散射，表现出普通表面反射模型难以描述的柔和透光和颜色扩散效果。&lt;/p&gt;
+&lt;h3 id=&#34;拉丝金属和丝绸各向异性-brdf&#34;&gt;拉丝金属和丝绸：各向异性 BRDF
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1.jpg&#34;
+	width=&#34;1147&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1_hu_6ce9a8511b02513b.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/345-c73f02b1_hu_969613b28080b32a.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;拉丝金属、丝绸和一些特殊织物的反射并不是均匀的。&lt;/p&gt;
+&lt;p&gt;它们的高光会受到表面纹理方向的影响，沿着不同方向观察时，反射效果也会发生变化。&lt;/p&gt;
+&lt;p&gt;这种现象称为各向异性（Anisotropy）。&lt;/p&gt;
+&lt;p&gt;代表性的模型包括 Ward BRDF、Ashikhmin-Shirley BRDF，以及现代微表面模型中的各向异性 GGX 等。它们通过不同方向上的粗糙度或反射分布，表现出拉丝金属那种拉长的高光。&lt;/p&gt;
+&lt;h3 id=&#34;头发和毛发kajiya-kay-与-marschner&#34;&gt;头发和毛发：Kajiya-Kay 与 Marschner
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5.jpg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5_hu_faca1e057ad2dd81.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/346-f4e82ea5_hu_15e8d740a8839214.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;头发并不是普通的平面表面，而是一根根具有特殊截面结构的纤维。&lt;/p&gt;
+&lt;p&gt;早期代表模型是 Kajiya-Kay，它通过简化的方式表现毛发沿纤维方向延伸的高光。&lt;/p&gt;
+&lt;p&gt;后来 Marschner 等人在 2003 年提出了更加深入的毛发散射模型，考虑光线进入头发纤维后发生的反射、透射和内部反射等路径，从而解释真实头发中多层高光等现象。&lt;/p&gt;
+&lt;p&gt;这类模型的出现，让头发不再只是一个带有特殊高光的普通材质，而是拥有了针对纤维结构的专门光照描述。&lt;/p&gt;
+&lt;h3 id=&#34;汽车漆clear-coat-与分层-brdf&#34;&gt;汽车漆：Clear Coat 与分层 BRDF
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa.jpg&#34;
+	width=&#34;1113&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa_hu_681e1019fd1a4f5a.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/347-29b752aa_hu_841767009b96e7e1.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;310px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;汽车漆通常不是单一材质。它可能包含底漆、色漆、金属颗粒和最外层的透明清漆。&lt;/p&gt;
+&lt;p&gt;透明清漆会形成额外的表面反射，因此汽车漆的表现往往需要考虑底层材质与外层清漆之间的关系。&lt;/p&gt;
+&lt;p&gt;常见做法是在基础 BRDF 上叠加 Clear Coat 高光层，或者使用分层 BRDF 来描述不同层之间的反射。&lt;/p&gt;
+&lt;p&gt;例如 Disney Principled BRDF 就提供了 Clearcoat 分量，用来近似表现透明清漆带来的额外高光。&lt;/p&gt;
+&lt;h3 id=&#34;薄膜干涉颜色来自光的干涉&#34;&gt;薄膜干涉：颜色来自光的干涉
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7.jpg&#34;
+	width=&#34;800&#34;
+	height=&#34;486&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7_hu_c2006ec2725e5bb0.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/348-c5ca48b7_hu_400065ed2fa6a56b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;肥皂泡、油膜以及一些具有虹彩效果的表面，会随着观察角度变化呈现不同颜色。&lt;/p&gt;
+&lt;p&gt;这种现象并不只是表面颜色发生变化，而是与光在薄膜上下表面反射后产生的干涉有关。&lt;/p&gt;
+&lt;p&gt;对应的技术方向就是 Thin-film Interference（薄膜干涉），通常需要在微表面反射模型中进一步考虑薄膜干涉带来的波长相关反射变化。&lt;/p&gt;
+&lt;p&gt;这些模型有一个共同点：它们并不是要推翻 PBR，而是在常规 PBR 无法充分描述某些材质时，进一步补充更具体的光学行为。&lt;/p&gt;
+&lt;p&gt;如果说 PBR 给我们提供了一套通用的材质描述基础，那么这些专用模型就是针对特殊材质继续向下挖掘。&lt;/p&gt;
+&lt;p&gt;当然，在实际游戏引擎中，并不是每一种材质都需要使用完整的学术模型。实时渲染往往会根据性能和视觉需求进行简化，保留最重要的视觉特征。&lt;/p&gt;
+&lt;h2 id=&#34;四反叛派为什么一定要追求真实&#34;&gt;四、反叛派：为什么一定要追求真实？
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971.jpg&#34;
+	width=&#34;784&#34;
+	height=&#34;611&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971_hu_fce35d2822800f67.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/349-c9d92971_hu_6e32353e93ff3ef4.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;307px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;前面三个阶段，似乎都在朝着同一个方向前进：&lt;/p&gt;
+&lt;p&gt;让光照更合理，让材质更接近现实，让渲染结果越来越真实。&lt;/p&gt;
+&lt;p&gt;但游戏美术并不总是这样。&lt;/p&gt;
+&lt;p&gt;有时候，真实反而不是我们想要的结果。&lt;/p&gt;
+&lt;p&gt;比如一个卡通角色，如果完全按照现实世界中的光照规律去渲染，它可能会显得过于复杂，失去原本简洁、鲜明的视觉特征。&lt;/p&gt;
+&lt;p&gt;又比如一款风格化游戏，如果我们追求真实的材质反射、复杂的阴影和细腻的光照变化，最终画面反而可能偏离它原本的艺术方向。&lt;/p&gt;
+&lt;p&gt;这就是 NPR（Non-Photorealistic Rendering，非真实感渲染）所关注的方向。&lt;/p&gt;
+&lt;p&gt;它并不是简单地把画面做得不真实，而是主动选择哪些视觉信息需要保留，哪些信息可以被简化，甚至哪些物理规律可以被打破。&lt;/p&gt;
+&lt;p&gt;从还原现实到表达风格，NPR 包含的范围很广。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439.jpg&#34;
+	width=&#34;800&#34;
+	height=&#34;717&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439_hu_6f3e4be6a2369b1b.jpg 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/350-494dd439_hu_4e765a4ee9c0f1b8.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;111&#34;
+		data-flex-basis=&#34;267px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;比如常见的卡通渲染，会将连续的明暗变化压缩成几个明确的色阶；赛璐璐风格会强调清晰的阴影边界；一些手绘风格则会通过笔触、线条和色彩控制来表现画面。&lt;/p&gt;
+&lt;p&gt;还有一些风格化渲染，会故意使用不符合现实的边缘光、轮廓线，或者让物体在不同光照条件下始终保持某种特定颜色。&lt;/p&gt;
+&lt;p&gt;这些做法并不是因为开发者不知道真实光照应该怎么计算，而是因为他们有意选择了另一种表达方式。&lt;/p&gt;
+&lt;p&gt;我觉得这也是 NPR 最有意思的地方：&lt;/p&gt;
+&lt;p&gt;它不再把物理正确当作唯一目标，而是把艺术表达放在了更重要的位置。&lt;/p&gt;
+&lt;p&gt;当然，NPR 并不是 PBR 出现之后才诞生的技术路线。它有自己独立的发展历史，只是在现代游戏制作中，我们越来越常见到它与 PBR 工作流结合使用。&lt;/p&gt;
+&lt;p&gt;有些项目会用 PBR 处理基础材质和光照，再通过风格化 Shader、色调控制和后处理来塑造最终画面。&lt;/p&gt;
+&lt;p&gt;真实与风格并不是完全对立的。它们也可以在同一个项目中共存。&lt;/p&gt;
+&lt;h2 id=&#34;五结尾渲染技术究竟在追求什么&#34;&gt;五、结尾：渲染技术究竟在追求什么？
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164.png&#34;
+	width=&#34;3200&#34;
+	height=&#34;2000&#34;
+	srcset=&#34;https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164_hu_1c34a7a285d5df4c.png 480w, https://axppk.github.io/p/%E6%B8%B8%E6%88%8F%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B1%95/img/352-67ad5164_hu_361f6694952ccc7a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;回头看这段发展过程，我觉得可以把它理解成几种不同的追求。&lt;/p&gt;
+&lt;p&gt;古典经验派希望用尽可能简单的计算，让物体看起来有明暗、有高光。&lt;/p&gt;
+&lt;p&gt;物理写实派希望让这些光照和反射关系更加符合现实世界的规律。&lt;/p&gt;
+&lt;p&gt;物理深潜派则发现，现实中的材质远比普通表面复杂，于是开始研究光在皮肤、头发、汽车漆等不同材质中的传播和反射。&lt;/p&gt;
+&lt;p&gt;而反叛派提出了另一个问题：&lt;/p&gt;
+&lt;p&gt;如果我们已经能够还原现实，为什么还要被现实限制？&lt;/p&gt;
+&lt;p&gt;从 Lambert 到 PBR，再到 NPR，不是一条简单的技术替代路线，而是一场仍在进行的人们对美的探索。&lt;/p&gt;
+&lt;p&gt;今天的游戏引擎仍然会使用各种经验近似，也会使用物理模型，还会在此基础上加入大量艺术化控制。不同的模型并不是出现一个就淘汰一个，而是在不同的需求下继续发挥作用。&lt;/p&gt;
+&lt;p&gt;对于游戏开发者来说，理解这些技术的意义，也不只是为了知道某个 Shader 应该怎么写。&lt;/p&gt;
+&lt;p&gt;更重要的是，当我们面对一个场景、一种材质，或者一种想要实现的视觉效果时，能够判断：&lt;/p&gt;
+&lt;p&gt;它为什么会呈现成现在这样？是光照计算的问题，是材质本身的问题，还是我们需要主动改变它的表现方式？&lt;/p&gt;
+&lt;p&gt;我想，这才是学习渲染技术最有价值的部分。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>灯光系统的探讨</title>
         <link>https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/</link>
         <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
@@ -7621,8 +7975,8 @@ animator.Play(&amp;ldquo;Click Animation&amp;rdquo;, -1, 0f);
 &lt;li&gt;sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。&lt;/li&gt;
 &lt;li&gt;原理貌似是通过灰度图和颜色图来控制显示。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;20260223更新&#34;&gt;2026/02/23更新
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;20260223更新&#34;&gt;2026/02/23更新
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;入门书选择的冯乐乐的《UnityShader入门精要》没想到我们这大学的图书馆居然能有，很方便就借到手了，经过暑假这一段时间的学习，对UnityShader有了一个全新的认识，以前的认识还可以，不算错误，Shader这东西是图形渲染流程中，程序员用来实现效果的工具，目前Unity使用的应该是HLSL吧。&lt;/p&gt;
 &lt;/li&gt;
@@ -7642,6 +7996,10 @@ animator.Play(&amp;ldquo;Click Animation&amp;rdquo;, -1, 0f);
 &lt;h2 id=&#34;20261112更新&#34;&gt;2026/11/12更新
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;入门精要总结发在知乎上了，怎么说呢，确实可以读一读，理清Shader的结构，后续打算做一下Unity的灯光拆解实验的总结，把渲染吃透。而且由于AI的介入，这部分的学习打算直接暂时搁置了，AI真是太好用了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;20261126更新&#34;&gt;2026/11/26更新
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这部分的学习成果已经写在技术研究的材质文章中了，时常回过头来看看自己学过的知识，总能有些新的收获&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

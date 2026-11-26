@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Thu, 26 Nov 2026 15:50:53 +0800</lastBuildDate><atom:link href="https://axppk.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Nov 2026 23:31:46 +0800</lastBuildDate><atom:link href="https://axppk.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SpringBoot学习之路</title>
         <link>https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</link>
         <pubDate>Thu, 30 Oct 2025 17:15:19 +0800</pubDate>
@@ -1412,8 +1412,8 @@
 &lt;li&gt;sharder 是实现渲染效果的一种编程语言，可以实现各种各样的效果，比如 PBR，NPR，卡通渲染，甚至还可以实现一些游戏特效。&lt;/li&gt;
 &lt;li&gt;原理貌似是通过灰度图和颜色图来控制显示。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;20260223更新&#34;&gt;2026/02/23更新
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;20260223更新&#34;&gt;2026/02/23更新
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;入门书选择的冯乐乐的《UnityShader入门精要》没想到我们这大学的图书馆居然能有，很方便就借到手了，经过暑假这一段时间的学习，对UnityShader有了一个全新的认识，以前的认识还可以，不算错误，Shader这东西是图形渲染流程中，程序员用来实现效果的工具，目前Unity使用的应该是HLSL吧。&lt;/p&gt;
 &lt;/li&gt;
@@ -1433,6 +1433,10 @@
 &lt;h2 id=&#34;20261112更新&#34;&gt;2026/11/12更新
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;入门精要总结发在知乎上了，怎么说呢，确实可以读一读，理清Shader的结构，后续打算做一下Unity的灯光拆解实验的总结，把渲染吃透。而且由于AI的介入，这部分的学习打算直接暂时搁置了，AI真是太好用了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;20261126更新&#34;&gt;2026/11/26更新
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这部分的学习成果已经写在技术研究的材质文章中了，时常回过头来看看自己学过的知识，总能有些新的收获&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
