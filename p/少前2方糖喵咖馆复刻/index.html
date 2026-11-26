@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n先写大致思路，全部实现后填充细节。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n">
 <title>少前2方糖喵咖馆复刻</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/'>
 
-<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="少前2方糖喵咖馆复刻">
-<meta property='og:description' content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n先写大致思路，全部实现后填充细节。\n">
+<link rel="stylesheet" href="/scss/style.min.bac30a5a918d07c1eb6d1887a97549c29e8bef720f5808184cf44ae80f0652e5.css"><meta property='og:title' content="少前2方糖喵咖馆复刻">
+<meta property='og:description' content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n">
 <meta property='og:url' content='https://axppk.github.io/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2025-08-20T20:58:22&#43;08:00'/><meta property='article:modified_time' content='2026-11-12T18:36:08&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Unity' /><meta property='article:published_time' content='2025-08-20T20:58:22&#43;08:00'/><meta property='article:modified_time' content='2026-11-26T15:57:18&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3.png' />
 <meta name="twitter:title" content="少前2方糖喵咖馆复刻">
-<meta name="twitter:description" content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n先写大致思路，全部实现后填充细节。\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="前言 记录一下复刻过程，有机会后续做个 3d 的出来。\n素材都是直接扒的游戏的，网上有人做出来解密脚本了，直接解密用 AssetStudio 导出就行了。\n少扒了几个素材，后期用 ps 抠一下。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://axppk.github.io/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -386,14 +386,14 @@
 </svg>2025-08-20</time>
             
             
-    <time class="article-updated" datetime="2026-11-12T18:36:08&#43;08:00" title="最后更新于 2026-11-12 18:36"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <time class="article-updated" datetime="2026-11-26T15:57:18&#43;08:00" title="最后更新于 2026-11-26 15:57"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
 </svg>
 
 
-更新 2026-11-12</time>
+更新 2026-11-26</time>
 
 
             
@@ -423,7 +423,7 @@
 </svg>
 
 
-<a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a></span>
+<a href="/tags/unity/">#Unity</a></span>
             
         </div>
     
@@ -431,7 +431,7 @@
     
         <div class="reading-categories">
             
-                <a href="/categories/%E5%B0%9D%E8%AF%95/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -440,7 +440,7 @@
 </svg>
 
 
-尝试</a>
+游戏开发</a>
             
         </div>
     
@@ -456,7 +456,7 @@
                 
                     
                 
-                <img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_6338f0cdb59cc4f5.png" width="1120" height="630" decoding="async" alt="">
+                <img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_73944ca768ad5f6c.png" width="1120" height="630" decoding="async" alt="">
             
         </div>
     
@@ -528,7 +528,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/1.png"
 	width="1920"
 	height="1080"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/1_hu_54991cd133fdb5ad.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/1_hu_fc62be24758fc183.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/1_hu_e96d9f629e17c94a.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/1_hu_5e2230c7fb0f797d.png 1024w"
 	loading="lazy"
 	
 	
@@ -543,7 +543,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/2.png"
 	width="1920"
 	height="1080"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/2_hu_bce559051ba10947.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/2_hu_4f21fdfcc0da0f10.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/2_hu_9eed45306e345967.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/2_hu_b980cdd894f82c09.png 1024w"
 	loading="lazy"
 	
 	
@@ -558,7 +558,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3.png"
 	width="1920"
 	height="1080"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_c0393320e4bb6120.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_87357ff4f84422ae.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_701d7d762348a87f.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3_hu_a9d1ab341e9cf9a1.png 1024w"
 	loading="lazy"
 	
 	
@@ -582,7 +582,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/4.png"
 	width="307"
 	height="222"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/4_hu_d3f7d8bc18f4c3da.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/4_hu_cc70d34abcbf1334.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/4_hu_1b84a98dc0fce7ff.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/4_hu_33d68db9fd04a0e7.png 1024w"
 	loading="lazy"
 	
 	
@@ -597,7 +597,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/5.png"
 	width="1503"
 	height="760"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/5_hu_cc380a331f9ea274.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/5_hu_b87545549f0efbe8.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/5_hu_7cc732647298bb9a.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/5_hu_7d6bf67c7dd7fad1.png 1024w"
 	loading="lazy"
 	
 	
@@ -624,7 +624,7 @@
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/6.png"
 	width="1238"
 	height="519"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/6_hu_5673405ebf682f0c.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/6_hu_fd07a57f53360f41.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/6_hu_9462a49d63c96af8.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/6_hu_a75cd5f7841026f4.png 1024w"
 	loading="lazy"
 	
 	
@@ -642,7 +642,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/7.png"
 	width="1144"
 	height="483"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/7_hu_5ff62391be824484.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/7_hu_8c3c75ec3557b56b.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/7_hu_c74425822bacbeab.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/7_hu_37cb545f5563e29a.png 1024w"
 	loading="lazy"
 	
 	
@@ -657,7 +657,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/8.png"
 	width="831"
 	height="270"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/8_hu_680da53052121809.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/8_hu_13bafad50d32974d.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/8_hu_fcdeacc017cc432a.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/8_hu_2dc5a8c910a8aad2.png 1024w"
 	loading="lazy"
 	
 	
@@ -672,7 +672,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/9.png"
 	width="1920"
 	height="1080"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/9_hu_1ffee7c482f914e3.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/9_hu_a9b316a31f0af690.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/9_hu_2e2ba096869398d3.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/9_hu_ffbf4581992e26c4.png 1024w"
 	loading="lazy"
 	
 	
@@ -687,7 +687,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/10.png"
 	width="306"
 	height="987"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/10_hu_13c7877a7f2b55dd.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/10_hu_a612e74651376c56.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/10_hu_43e68274a2f30f50.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/10_hu_50b1083e4b524f54.png 1024w"
 	loading="lazy"
 	
 	
@@ -702,7 +702,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB2.gif"
 	width="953"
 	height="454"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB2_hu_5c16c8a5e0201281.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB2_hu_f6683eb1f8436e56.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB2_hu_b3342c82a929e2d.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB2_hu_1219580d423f5a6e.gif 1024w"
 	loading="lazy"
 	
 	
@@ -718,7 +718,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/11.png"
 	width="1920"
 	height="1080"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/11_hu_5306360b325a756f.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/11_hu_4861efda5a949864.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/11_hu_1e17b25f8ee1e558.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/11_hu_96bc4ae55d702fce.png 1024w"
 	loading="lazy"
 	
 	
@@ -733,7 +733,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/12.png"
 	width="1503"
 	height="760"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/12_hu_bfc363d2acd12275.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/12_hu_f2fc567fc21eb711.png 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/12_hu_24d9c4a8e9ae2ee0.png 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/12_hu_9bfbc25e68a893c3.png 1024w"
 	loading="lazy"
 	
 	
@@ -749,7 +749,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 </h2><p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB3.gif"
 	width="936"
 	height="514"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB3_hu_fa115a9b54007981.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB3_hu_d2605c70109d811a.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB3_hu_55b13d1b2d08d20c.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB3_hu_d1fcea47aaf8c095.gif 1024w"
 	loading="lazy"
 	
 	
@@ -761,7 +761,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB4.gif"
 	width="936"
 	height="514"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB4_hu_6a6074db3109318e.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB4_hu_ea0897b18ed55a9d.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB4_hu_2ce857bf06d550b7.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB4_hu_6dbb53c53e28edf8.gif 1024w"
 	loading="lazy"
 	
 	
@@ -773,7 +773,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB5.gif"
 	width="948"
 	height="491"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB5_hu_9e3d379ef138c11c.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB5_hu_be16def3f7bf9434.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB5_hu_443315bff52362ee.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB5_hu_be6cf5a21e1c933d.gif 1024w"
 	loading="lazy"
 	
 	
@@ -785,7 +785,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB6.gif"
 	width="948"
 	height="491"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB6_hu_b182e27f0f92f2f5.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB6_hu_80a469d40b4c7784.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB6_hu_77e3bac2614a6d1a.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB6_hu_1d8d9aac1d9e3464.gif 1024w"
 	loading="lazy"
 	
 	
@@ -797,7 +797,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB7.gif"
 	width="948"
 	height="389"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB7_hu_80b1412fb7cd813e.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB7_hu_1165de1415dbe244.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB7_hu_b6a3065cff78dbb4.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E5%8A%A8%E7%94%BB7_hu_46ec9c18ce31e7dd.gif 1024w"
 	loading="lazy"
 	
 	
@@ -1290,7 +1290,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <p><img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E6%95%99%E5%AD%A61.gif"
 	width="235"
 	height="109"
-	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E6%95%99%E5%AD%A61_hu_142d8ec0908c9072.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E6%95%99%E5%AD%A61_hu_9de6dc3dfa9eaf5.gif 1024w"
+	srcset="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E6%95%99%E5%AD%A61_hu_e005489862fcd869.gif 480w, /p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/gif/%E6%95%99%E5%AD%A61_hu_af347bd2bd863d9b.gif 1024w"
 	loading="lazy"
 	
 	
@@ -5705,7 +5705,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
     
     <section class="article-tags">
         
-            <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+            <a href="/tags/unity/">Unity</a>
         
     </section>
 
@@ -5729,135 +5729,6 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 
     
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">
-        
-        
-            <div class="article-image">
-                <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.a6f4771414629efded98edfb833fbfec_hu_5e2d50e4c1ca93ef.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post SpringBoot学习之路"
-                        
-                        data-hash="md5-pvR3FBRinv3tmO37gz&#43;/7A==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SpringBoot学习之路</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/">
-        
-        
-            <div class="article-image">
-                <img src="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.316ca04a99da783946691bf82e29bf7f_hu_71e5b072d9d4e502.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 3D数学与Sharder学习"
-                        
-                        data-hash="md5-MWygSpnaeDlGaRv4Lim/fw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">3D数学与Sharder学习</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.35829f79bcc987eec59f8e45efaabb2c_hu_ae5aca9adc217143.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 浅黄睦月三模型制作"
-                        
-                        data-hash="md5-NYKfebzJh&#43;7Fn45F76q7LA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">浅黄睦月三模型制作</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/back.9c16b4147ed921e4ec9dcbd2afaa94be_hu_2d9022caa6181ccc.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 长风玩偶建模"
-                        
-                        data-hash="md5-nBa0FH7ZIeTsncvSr6qUvg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">长风玩偶建模</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/back.e0567dba92ed9249063151b121677fb4_hu_727060dc0b11f9f3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 碧蓝档案场景仿制"
-                        
-                        data-hash="md5-4FZ9upLtkkkGMVGxIWd/tA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">碧蓝档案场景仿制</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
     
     <div data-kkpt-theme-light="light" data-kkpt-theme-dark="dark_dimmed">
@@ -5924,12 +5795,14 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 
     
 
+    
+
 <div class="blog-stats">
     
         
-        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">512 天</strong></p>
     
-    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+    <p>共收录 <strong>20</strong> 篇文章 · 累计 <strong>46,642</strong> 字</p>
 </div>
 
             <section class="copyright">
@@ -6257,7 +6130,7 @@ animator.Play(&ldquo;Click Animation&rdquo;, -1, 0f);
 <script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
 <script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
 <script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
-<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+<script src="/js/site-navigation.min.f2e00147a42e175ced75e8b88dbdea0f565ac9649a5b4149049a0a49c45920f6.js" defer></script>
 
 
 

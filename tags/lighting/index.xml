@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Lighting on KKPT的个人博客</title>
+        <link>https://axppk.github.io/tags/lighting/</link>
+        <description>Recent content in Lighting on KKPT的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>KKPT</copyright>
+        <lastBuildDate>Wed, 25 Nov 2026 17:49:38 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/lighting/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>灯光系统的探讨</title>
+        <link>https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/</link>
+        <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/</guid>
+        <description>&lt;img src="https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/321-01cd6459.jpg" alt="Featured image of post 灯光系统的探讨" /&gt;&lt;h2 id=&#34;为什么想做这个实验&#34;&gt;为什么想做这个实验？
+&lt;/h2&gt;&lt;p&gt;最近在学习写实场景制作的过程中，我逐渐意识到，自己对灯光系统的理解还比较零散。&lt;/p&gt;
+&lt;p&gt;平时制作场景时，虽然知道天空盒、环境光、直接光照、全局光照（GI）、烘焙光照、光照贴图、反射探针和后处理等技术，也知道它们大致能解决什么问题，但对于它们各自究竟给最终画面带来了什么变化，以及不同技术之间是如何相互影响的，其实并没有形成一个完整的认识。&lt;/p&gt;
+&lt;p&gt;很多时候，我只是根据最终画面调整参数，直到效果看起来比较满意，却很难准确判断：一个场景的真实感究竟来自哪里？如果关闭某个光照功能，画面又会损失什么？&lt;/p&gt;
+&lt;p&gt;因此，我想尝试做一次比较系统的光照实验。&lt;/p&gt;
+&lt;h2 id=&#34;我想要的实验方式&#34;&gt;我想要的实验方式
+&lt;/h2&gt;&lt;p&gt;我希望使用同一个场景、同一个摄像机视角和相同的材质，逐步增加不同的光照技术。&lt;/p&gt;
+&lt;p&gt;从最基础的状态开始，每增加一个新的系统，就保存一次截图，与上一个阶段进行对比。&lt;/p&gt;
+&lt;p&gt;这样可以尽可能排除其他变量的干扰，直观地观察每种技术的实际作用。&lt;/p&gt;
+&lt;h2 id=&#34;初步计划的实验内容如下&#34;&gt;初步计划的实验内容如下：
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;01. 基础模型与无光照状态&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;首先关闭场景中的光照影响，使用 Unshaded 材质观察模型本身的颜色和纹理。&lt;/p&gt;
+&lt;p&gt;这一阶段主要作为基准，用来区分模型、材质本身的表现与光照带来的变化。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;02. 天空盒与环境光&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;加入 Sky 和 WorldEnvironment，研究天空环境如何影响场景的整体亮度，以及环境光如何照亮没有被直接光源照射的区域。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;03. 直接光照&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;加入 Directional Light、Omni Light 和 Spot Light，观察不同类型光源的照明范围、衰减方式、明暗关系和投影效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;04. 全局光照（GI）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;研究间接光照和光线反弹带来的变化，重点观察墙壁、地面和物体之间的颜色反弹，以及阴影区域的亮度变化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/322-0d19b7b7.jpg&#34;
+	width=&#34;1528&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/322-0d19b7b7_hu_e00d9e9832f8537d.jpg 480w, https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/322-0d19b7b7_hu_27c8acdcb936ab1b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;05. 烘焙光照与光照贴图&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;研究 LightmapGI 的工作原理，比较实时光照和预计算光照的区别。&lt;/p&gt;
+&lt;p&gt;同时观察只烘焙间接光照与同时烘焙直接光照时的效果差异。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/323-aef1b1a3.jpg&#34;
+	width=&#34;1285&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/323-aef1b1a3_hu_36cb192a8836b8e8.jpg 480w, https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/323-aef1b1a3_hu_413eb5e2a51ea02b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/324-3954bdb0.jpg&#34;
+	width=&#34;1175&#34;
+	height=&#34;860&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/324-3954bdb0_hu_b93ff649117b71ee.jpg 480w, https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/324-3954bdb0_hu_3c86f1f1ecd39d.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;327px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;06. 光照探针与反射探针&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;研究 Light Probe 和 Reflection Probe 的作用。&lt;/p&gt;
+&lt;p&gt;重点观察动态物体如何接收环境光，以及金属、玻璃等材质在反射探针参与前后的表现变化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/325-338075ad.jpg&#34;
+	width=&#34;900&#34;
+	height=&#34;445&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/325-338075ad_hu_304a159eb57d145f.jpg 480w, https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/325-338075ad_hu_44acdd7cd0ce5d27.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;07. 环境光遮蔽（AO）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;观察物体接触位置、墙角、缝隙等区域的遮蔽效果，理解 AO 对空间层次和接触感的影响。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;08. 后处理&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后加入曝光、色调映射、Bloom、色彩分级等后处理效果，观察它们如何改变最终画面的视觉表现。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/326-da2a0214.jpg&#34;
+	width=&#34;1320&#34;
+	height=&#34;743&#34;
+	srcset=&#34;https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/326-da2a0214_hu_5883b9418f2fe671.jpg 480w, https://axppk.github.io/p/%E7%81%AF%E5%85%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E8%AE%A8/img/326-da2a0214_hu_ab83b6ca185154d9.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;实验场景的选择&#34;&gt;实验场景的选择
+&lt;/h2&gt;&lt;p&gt;在寻找实验场景时，我首先想到了 Unity 以前 HDRP 模板中的一个小型施工现场：&lt;strong&gt;Tiny Construction Site&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这个场景由一个未完成装修的室内空间组成，里面有蓝白色墙面、木质工作台、切割工具、安全帽、油漆桶、梯子和门窗框架。&lt;/p&gt;
+&lt;p&gt;我很喜欢这个场景的原因是，它的规模不大，但包含了比较丰富的光照观察对象：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;- 水泥地面和墙壁，可以观察漫反射和间接光。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;- 门窗框架，可以观察自然光进入室内后的明暗变化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;- 金属梯子，可以观察金属表面的反射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;- 木质工作台，可以观察粗糙材质的受光表现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;- 安全帽和油漆桶，可以观察不同颜色和材质的光照响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更重要的是，它既有室内空间的遮挡关系，又有室外自然光照射进来的环境，非常适合作为一个固定的光照测试场景。&lt;/p&gt;
+&lt;p&gt;因此，我希望尽可能还原这个场景，而不是随便找一个不同风格的测试房间代替。&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择-godot&#34;&gt;为什么选择 Godot？
+&lt;/h2&gt;&lt;p&gt;虽然最初参考的是 Unity 的 Tiny Construction Site，但我希望这次实验能够在 Godot 中完成。&lt;/p&gt;
+&lt;p&gt;之前也看过 Godot 官方提供的 Global Illumination Demo，其中展示了 VoxelGI、SDFGI 和 LightmapGI 等不同的全局光照技术。&lt;/p&gt;
+&lt;p&gt;这些示例对于理解技术原理很有帮助，但官方示例的场景相对简单，并不是我理想中的完整测试环境。&lt;/p&gt;
+&lt;h2 id=&#34;所以目前的方向是&#34;&gt;所以目前的方向是：
+&lt;/h2&gt;&lt;p&gt;尝试寻找或还原 Unity Tiny Construction Site 的场景资源，将模型、纹理和基础材质迁移到 Godot，再在 Godot 中重新配置灯光系统。&lt;/p&gt;
+&lt;p&gt;需要注意的是，这次迁移只保留场景资产，不直接沿用 Unity 的 HDRP 光照结果。所有光照效果都将在 Godot 中重新建立。&lt;/p&gt;
+&lt;h2 id=&#34;最终希望得到什么&#34;&gt;最终希望得到什么？
+&lt;/h2&gt;&lt;p&gt;这次实验不只是为了得到一张更好看的图片。&lt;/p&gt;
+&lt;p&gt;我希望最终能够形成一套完整的光照对照记录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1. 每个阶段都有相同视角的截图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2. 每种技术都有独立的原理说明。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3. 记录开启和关闭功能后的实际差异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4. 记录不同技术的优缺点和适用场景。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5. 尽可能了解不同光照方案对性能的影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过这样的方式，逐渐建立起对实时渲染光照系统的完整认识。&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结
+&lt;/h2&gt;&lt;p&gt;以后再制作写实工业场景时，我希望自己能够明确知道某种光照技术为什么需要使用、它解决了什么问题，而不是单纯依赖反复调整参数来获得想要的画面。&lt;/p&gt;
+&lt;p&gt;这会是一次从观察、对比到理解的光照系统研究。&lt;/p&gt;
+&lt;p&gt;目前还处于实验准备阶段，后续会随着场景还原和测试的推进，持续补充实验截图、参数记录和研究结论。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

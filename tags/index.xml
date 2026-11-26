@@ -5,30 +5,86 @@
         <link>https://axppk.github.io/tags/</link>
         <description>Recent content in Tags on KKPT的个人博客</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+        <language>zh-cn</language>
         <copyright>KKPT</copyright>
-        <lastBuildDate>Thu, 12 Nov 2026 19:12:13 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>记录</title>
-        <link>https://axppk.github.io/tags/%E8%AE%B0%E5%BD%95/</link>
-        <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+        <lastBuildDate>Thu, 26 Nov 2026 16:55:39 +0800</lastBuildDate><atom:link href="https://axppk.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Godot</title>
+        <link>https://axppk.github.io/tags/godot/</link>
+        <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://axppk.github.io/tags/%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://axppk.github.io/tags/godot/</guid>
         <description></description>
         </item>
         <item>
-        <title>模型</title>
-        <link>https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/</link>
-        <pubDate>Sat, 11 Oct 2025 16:29:16 +0800</pubDate>
+        <title>Lighting</title>
+        <link>https://axppk.github.io/tags/lighting/</link>
+        <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://axppk.github.io/tags/%E6%A8%A1%E5%9E%8B/</guid>
+        <guid>https://axppk.github.io/tags/lighting/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Rendering</title>
+        <link>https://axppk.github.io/tags/rendering/</link>
+        <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/tags/rendering/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Unity</title>
+        <link>https://axppk.github.io/tags/unity/</link>
+        <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/tags/unity/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Agent</title>
+        <link>https://axppk.github.io/tags/agent/</link>
+        <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://axppk.github.io/tags/agent/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://axppk.github.io/tags/java/</link>
+        <pubDate>Thu, 30 Oct 2025 17:15:19 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Website</title>
+        <link>https://axppk.github.io/tags/website/</link>
+        <pubDate>Thu, 30 Oct 2025 17:15:19 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/tags/website/</guid>
         <description></description>
         </item>
         <item>
         <title>Blender</title>
         <link>https://axppk.github.io/tags/blender/</link>
-        <pubDate>Mon, 04 Aug 2025 14:10:45 +0800</pubDate>
+        <pubDate>Sat, 11 Oct 2025 16:29:16 +0800</pubDate>
         
         <guid>https://axppk.github.io/tags/blender/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Model</title>
+        <link>https://axppk.github.io/tags/model/</link>
+        <pubDate>Sat, 11 Oct 2025 16:29:16 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/tags/model/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Shader</title>
+        <link>https://axppk.github.io/tags/shader/</link>
+        <pubDate>Thu, 24 Jul 2025 22:54:54 +0800</pubDate>
+        
+        <guid>https://axppk.github.io/tags/shader/</guid>
         <description></description>
         </item>
         <item>
@@ -37,14 +93,6 @@
         <pubDate>Tue, 08 Jul 2025 19:40:43 +0800</pubDate>
         
         <guid>https://axppk.github.io/tags/npr/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Unity</title>
-        <link>https://axppk.github.io/tags/unity/</link>
-        <pubDate>Tue, 08 Jul 2025 19:40:43 +0800</pubDate>
-        
-        <guid>https://axppk.github.io/tags/unity/</guid>
         <description></description>
         </item>
         <item>
@@ -64,43 +112,11 @@
         <description></description>
         </item>
         <item>
-        <title>Emoji</title>
-        <link>https://axppk.github.io/tags/emoji/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://axppk.github.io/tags/emoji/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>PBR</title>
         <link>https://axppk.github.io/tags/pbr/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://axppk.github.io/tags/pbr/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>ماركداون</title>
-        <link>https://axppk.github.io/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://axppk.github.io/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>نص</title>
-        <link>https://axppk.github.io/tags/%D9%86%D8%B5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://axppk.github.io/tags/%D9%86%D8%B5/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>وسم مع فراغات</title>
-        <link>https://axppk.github.io/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://axppk.github.io/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</guid>
         <description></description>
         </item>
         

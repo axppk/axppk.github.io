@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\n本篇用来记录我接触到的AI相关内容，但是有些有点久远或者保密，所以一笔带过或者干脆不写了。\n">
 <title>Agent时代对技术开发的革新</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="Agent时代对技术开发的革新">
-<meta property='og:description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n">
+<link rel="stylesheet" href="/scss/style.min.bac30a5a918d07c1eb6d1887a97549c29e8bef720f5808184cf44ae80f0652e5.css"><meta property='og:title' content="Agent时代对技术开发的革新">
+<meta property='og:description' content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\n本篇用来记录我接触到的AI相关内容，但是有些有点久远或者保密，所以一笔带过或者干脆不写了。\n">
 <meta property='og:url' content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2026-11-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-11-12T19:07:26&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Agent' /><meta property='article:published_time' content='2026-11-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-11-26T16:54:19&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg' />
 <meta name="twitter:title" content="Agent时代对技术开发的革新">
-<meta name="twitter:description" content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\nAI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="前言 时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。\n本篇用来记录我接触到的AI相关内容，但是有些有点久远或者保密，所以一笔带过或者干脆不写了。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://axppk.github.io/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -327,6 +327,11 @@
     <li><a href="#web网站开发影响">Web网站开发影响</a></li>
     <li><a href="#3d资源制作">3D资源制作</a></li>
     <li><a href="#3d动画制作">3D动画制作</a></li>
+    <li><a href="#量化模型应用">量化模型应用</a>
+      <ol>
+        <li><a href="#拉扯防倒的模型也就是具身智能">拉扯防倒的模型，也就是具身智能。</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -372,14 +377,14 @@
 </svg>2026-11-12</time>
             
             
-    <time class="article-updated" datetime="2026-11-12T19:07:26&#43;08:00" title="最后更新于 2026-11-12 19:07"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <time class="article-updated" datetime="2026-11-26T16:54:19&#43;08:00" title="最后更新于 2026-11-26 16:54"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
 </svg>
 
 
-更新 2026-11-12</time>
+更新 2026-11-26</time>
 
 
             
@@ -391,7 +396,7 @@
   <path d="M8 8h8" />
   <path d="M8 12h8" />
   <path d="M8 16h8" />
-</svg>本文共 853 字</span>
+</svg>本文共 1037 字</span>
                 <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
@@ -399,7 +404,7 @@
 </svg>
 
 
-阅读时长: 2 分钟</span>
+阅读时长: 3 分钟</span>
             
             
                 <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -409,7 +414,7 @@
 </svg>
 
 
-<a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a></span>
+<a href="/tags/agent/">#Agent</a></span>
             
         </div>
     
@@ -417,7 +422,7 @@
     
         <div class="reading-categories">
             
-                <a href="/categories/ai/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <a href="/categories/%E6%9C%89%E6%84%9F%E8%80%8C%E5%8F%91/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -426,7 +431,7 @@
 </svg>
 
 
-Ai</a>
+有感而发</a>
             
         </div>
     
@@ -442,7 +447,7 @@ Ai</a>
                 
                     
                 
-                <img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239_hu_8547e0e71c175aa8.jpg" width="1120" height="840" decoding="async" alt="">
+                <img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/22df8dbfe4d2796513f9f383eefb91541552042226-05bdd239_hu_d76c9eec00e5c90c.jpg" width="1120" height="840" decoding="async" alt="">
             
         </div>
     
@@ -458,6 +463,11 @@ Ai</a>
     <li><a href="#web网站开发影响">Web网站开发影响</a></li>
     <li><a href="#3d资源制作">3D资源制作</a></li>
     <li><a href="#3d动画制作">3D动画制作</a></li>
+    <li><a href="#量化模型应用">量化模型应用</a>
+      <ol>
+        <li><a href="#拉扯防倒的模型也就是具身智能">拉扯防倒的模型，也就是具身智能。</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
             </details>
@@ -479,6 +489,7 @@ Ai</a>
     
     <h2 id="前言">前言
 </h2><p>时隔一年，重新开始写博客，一方面是最近工作轻松了些，有时间摸鱼了，一方面是长期一个人住，表达欲无处喧放。</p>
+<p>本篇用来记录我接触到的AI相关内容，但是有些有点久远或者保密，所以一笔带过或者干脆不写了。</p>
 <p>AI的发展真的是日新月异，很多人在互联网上自嘲，“只要我学的够慢，就不用学”。</p>
 <p>截至文章写下的日期，本人已连续四个月高强度使用Cdoex（GPT）开发，涉及Web网站开发，3D资源制作和优化，3D动画制作和优化，AI生图，AI动作，Unity游戏开发，引擎渲染技术逆向等。</p>
 <p>强烈建议没有接触过Claude，Codex，DeepseekHarness的去了解下这些Agent的发展，已经日新月异了。截至2026/11/12日，当前实际体验下的AI排行（由于小版本更新迅速，以商家代称）如下：</p>
@@ -515,7 +526,7 @@ Ai</a>
 <p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c.png"
 	width="1052"
 	height="566"
-	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_5f1a2dfbc862b7b.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_eefb3b4b89c055af.png 1024w"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_fa0ef449f0bc4218.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-29-26-2db0bd4c_hu_b2db3a67f897ddeb.png 1024w"
 	loading="lazy"
 	
 	
@@ -536,7 +547,7 @@ Ai</a>
 <p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b.png"
 	width="2560"
 	height="1417"
-	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_cc5daf4f3f345692.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_8bf33aed642e518d.png 1024w"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_171bbbea52588642.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/snipaste_2026-11-12_17-47-47-d3f4297b_hu_9576c0b297e50521.png 1024w"
 	loading="lazy"
 	
 	
@@ -556,13 +567,35 @@ Ai</a>
 <p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553.png"
 	width="548"
 	height="304"
-	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_9052793e55e8d095.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_6390275721be0c09.png 1024w"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_3479bbac6853596d.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20261112181704_34_1-1fd6f553_hu_653a273268cc46a5.png 1024w"
 	loading="lazy"
 	
 	
 		class="gallery-image" 
 		data-flex-grow="180"
 		data-flex-basis="432px"
+	
+></p>
+<h2 id="量化模型应用">量化模型应用
+</h2><p>前面提到的属于Agent方向，我们再盘点一些令人<strong>震惊瘫坐</strong>在轮椅上的量化模型</p>
+<h3 id="拉扯防倒的模型也就是具身智能">拉扯防倒的模型，也就是具身智能。
+</h3><ul>
+<li>作者指向：<a class="link" href="https://b23.tv/0nUkZRC"  target="_blank" rel="noopener"
+    >【开源】震撼首推：高拟真动作控制模型发布！</a></li>
+<li>效果还是蛮不错的，作者提供了<a class="link" href="https://github.com/sola1039/HAST-SEC"  target="_blank" rel="noopener"
+    >GitHub</a>，可以直接自己去训练更人性化的效果，当前他的<a class="link" href="https://sola1039.github.io/HAST-SEC/ReflexBody/"  target="_blank" rel="noopener"
+    >演示Demo</a>太机器人了。</li>
+</ul>
+<p><img src="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/329-77a8062e.png"
+	width="3200"
+	height="2000"
+	srcset="/p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/329-77a8062e_hu_9c9ee2b47f68e2fb.png 480w, /p/agent%E6%97%B6%E4%BB%A3%E5%AF%B9%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91%E7%9A%84%E9%9D%A9%E6%96%B0/img/329-77a8062e_hu_1eafa2767a853b8d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
 	
 ></p>
 
@@ -572,7 +605,7 @@ Ai</a>
     
     <section class="article-tags">
         
-            <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+            <a href="/tags/agent/">Agent</a>
         
     </section>
 
@@ -662,12 +695,14 @@ Ai</a>
 
     
 
+    
+
 <div class="blog-stats">
     
         
-        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">512 天</strong></p>
     
-    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+    <p>共收录 <strong>20</strong> 篇文章 · 累计 <strong>46,642</strong> 字</p>
 </div>
 
             <section class="copyright">
@@ -995,7 +1030,7 @@ Ai</a>
 <script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
 <script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
 <script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
-<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+<script src="/js/site-navigation.min.f2e00147a42e175ced75e8b88dbdea0f565ac9649a5b4149049a0a49c45920f6.js" defer></script>
 
 
 

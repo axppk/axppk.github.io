@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n另一种是 Hibernate + JPA + Spring Data JPA\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n">
 <title>SpringBoot学习之路</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
 
-<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="SpringBoot学习之路">
-<meta property='og:description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n另一种是 Hibernate + JPA + Spring Data JPA\n">
+<link rel="stylesheet" href="/scss/style.min.bac30a5a918d07c1eb6d1887a97549c29e8bef720f5808184cf44ae80f0652e5.css"><meta property='og:title' content="SpringBoot学习之路">
+<meta property='og:description' content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n">
 <meta property='og:url' content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='记录' /><meta property='article:published_time' content='2025-10-30T17:15:19&#43;08:00'/><meta property='article:modified_time' content='2026-11-12T15:55:53&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='Website' /><meta property='article:published_time' content='2025-10-30T17:15:19&#43;08:00'/><meta property='article:modified_time' content='2026-11-25T17:55:33&#43;08:00'/><meta property='og:image' content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png' />
 <meta name="twitter:title" content="SpringBoot学习之路">
-<meta name="twitter:description" content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n另一种是 Hibernate + JPA + Spring Data JPA\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="前期准备 安装 JDK 17 以上 安装 Idea 2021.3 以上 创建项目 Idea 直接创建 springboot 或通过 Spring 官网在线 创建出来导入 Idea 项目结构 基本知识 前提了解 ORM 前提了解 mybatis 与 springboot data jpa 的区别 JPA + Hibernate + springboot data jpa JPA 和 springboot data jpa 的区别 Mynatis-plus 介绍 目前在用 一种是 Mybatis\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://axppk.github.io/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -419,14 +419,14 @@
 </svg>2025-10-30</time>
             
             
-    <time class="article-updated" datetime="2026-11-12T15:55:53&#43;08:00" title="最后更新于 2026-11-12 15:55"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <time class="article-updated" datetime="2026-11-25T17:55:33&#43;08:00" title="最后更新于 2026-11-25 17:55"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
 </svg>
 
 
-更新 2026-11-12</time>
+更新 2026-11-25</time>
 
 
             
@@ -456,7 +456,7 @@
 </svg>
 
 
-<a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a></span>
+<a href="/tags/java/">#Java</a><a href="/tags/website/">#Website</a></span>
             
         </div>
     
@@ -464,7 +464,7 @@
     
         <div class="reading-categories">
             
-                <a href="/categories/%E5%B0%9D%E8%AF%95/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -473,7 +473,7 @@
 </svg>
 
 
-尝试</a>
+学习记录</a>
             
         </div>
     
@@ -584,7 +584,7 @@
 </h3><p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8.png"
 	width="814"
 	height="860"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_584ee89aa1b92f5e.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_ce8522f94ef292d3.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_376c332da98c3d5.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/8_hu_c732e73275452236.png 1024w"
 	loading="lazy"
 	
 	
@@ -626,7 +626,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1.png"
 	width="450"
 	height="737"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_75a4d313528d128f.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_bfb210b51cc529b2.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_ad85665028196917.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/1_hu_3749421901e8f499.png 1024w"
 	loading="lazy"
 	
 	
@@ -657,7 +657,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_61961cacc2f934f5.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_987fdf4f719d5bc6.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_feffbc55c27d227d.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/2_hu_4fde843eec5742cd.png 1024w"
 	loading="lazy"
 	
 	
@@ -701,7 +701,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_7f99aea2ea5a0279.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_2c35ac07f2bba8df.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_93a0d385ba45ec2f.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/5_hu_3fcd1352cb15b994.png 1024w"
 	loading="lazy"
 	
 	
@@ -728,7 +728,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_43928d8e3f0b6896.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_fdb95703aa2482e4.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_3577aa0bff6bb778.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/3_hu_6482cac04a5ca5fe.png 1024w"
 	loading="lazy"
 	
 	
@@ -755,7 +755,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_7299c253aa18b737.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_4e32dfb7ad3665cd.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_8eca80911837279f.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/4_hu_920db0a65efa4750.png 1024w"
 	loading="lazy"
 	
 	
@@ -771,7 +771,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_42037b83fa5a9614.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_eabe2aea2dd208eb.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_31f0fd83c7fa886b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/6_hu_d8d0e77e0d0f59bf.png 1024w"
 	loading="lazy"
 	
 	
@@ -787,7 +787,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_a51ba8b2d0635af1.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_300f0456e20d0b2c.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_bf829081876352ac.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/7_hu_dcf6a1d0a95fd00b.png 1024w"
 	loading="lazy"
 	
 	
@@ -861,7 +861,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14.png"
 	width="339"
 	height="636"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_278fd1c89fd4cde8.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_4090733d0e2485a7.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_c7691e093e7d5ffc.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/14_hu_56d6b930851cf805.png 1024w"
 	loading="lazy"
 	
 	
@@ -877,7 +877,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_b6cd106a3ff62d6.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_8123a9130c1b3a72.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_1350b2fe31a92083.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/15_hu_dc0344b9a881ecb8.png 1024w"
 	loading="lazy"
 	
 	
@@ -889,7 +889,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_73ace8e88f084149.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_857f365572ebfa5d.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_ff3a60c94ac642fd.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/16_hu_f060e13b2511d0c1.png 1024w"
 	loading="lazy"
 	
 	
@@ -905,7 +905,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_fdf4a83bf9deda18.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_869e276f83c42c5a.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_b72bc28a309d45f9.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/18_hu_f852d78dc8e6fdfe.png 1024w"
 	loading="lazy"
 	
 	
@@ -918,7 +918,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_7c095cc13e0778fe.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_91c89be5b6bc176.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_ea5cf0ed6f390f6e.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/19_hu_852022aedc8f5e3f.png 1024w"
 	loading="lazy"
 	
 	
@@ -933,7 +933,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17.png"
 	width="2560"
 	height="1439"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_f8eea80fa0c4c96c.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_3865886c487935de.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_e4ea2d50b9aa8d00.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/17_hu_f16400740718a8be.png 1024w"
 	loading="lazy"
 	
 	
@@ -1043,7 +1043,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20.png"
 	width="731"
 	height="507"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_e2723ef3df4847c6.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_32c1069916adda54.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_2118ffcc0898a68a.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/20_hu_84368d7be1636156.png 1024w"
 	loading="lazy"
 	
 	
@@ -1055,7 +1055,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21.png"
 	width="483"
 	height="284"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_8806a1b283c321dc.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_bde7b515cd75369.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_a171c62c0a080374.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/21_hu_9278ab55c326ee1.png 1024w"
 	loading="lazy"
 	
 	
@@ -1070,7 +1070,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22.png"
 	width="984"
 	height="561"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_6cf01e8887bfd7f3.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_398ed00947e7f137.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_8aa672bf584a4b82.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/22_hu_c77d14456db410ec.png 1024w"
 	loading="lazy"
 	
 	
@@ -1094,7 +1094,7 @@
 </div><p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23.png"
 	width="945"
 	height="307"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_436781da88e34ee0.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_913dd82dd62647b2.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_f09fb752a14a124b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/23_hu_fbea2e5e4cd8aaee.png 1024w"
 	loading="lazy"
 	
 	
@@ -1114,7 +1114,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9.png"
 	width="692"
 	height="896"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_e6e425bf7fc0bc84.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_7ae787ecec36f70.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_781462f7bdcf55e7.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/9_hu_641eea053e1365b6.png 1024w"
 	loading="lazy"
 	
 	
@@ -1130,7 +1130,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10.png"
 	width="800"
 	height="692"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_96853ef83569cd1b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_211b950504438369.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_86aa8bfc0e980b94.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/10_hu_158689e9507a35e9.png 1024w"
 	loading="lazy"
 	
 	
@@ -1145,7 +1145,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13.png"
 	width="308"
 	height="594"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_88464868fc7b278a.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_aef1120b574f25d.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_51b924886afbfba.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/13_hu_5cb7e773fa11aebb.png 1024w"
 	loading="lazy"
 	
 	
@@ -1157,7 +1157,7 @@
 <img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12.png"
 	width="1307"
 	height="860"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_96bc385e16598554.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_f32c34e370238905.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_3bdfdfe3ad02b0b.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/12_hu_78bc30a7b1eb9105.png 1024w"
 	loading="lazy"
 	
 	
@@ -1169,7 +1169,7 @@
 <p><img src="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11.png"
 	width="375"
 	height="798"
-	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_137199bac7990db1.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_52ac59edeace2510.png 1024w"
+	srcset="/p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_7f2527f8076438a1.png 480w, /p/springboot%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/img/11_hu_993e8f180c8eb654.png 1024w"
 	loading="lazy"
 	
 	
@@ -1271,42 +1271,42 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">entity</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableName</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">IdType</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableId</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">Serializable</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">EqualsAndHashCode</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">experimental</span><span class="p">.</span><span class="nx">Accessors</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="cm">/**
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">entity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">IdType</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">baomidou</span><span class="p">.</span><span class="nx">mybatisplus</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">TableId</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">io</span><span class="p">.</span><span class="nx">Serializable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">lombok</span><span class="p">.</span><span class="nx">EqualsAndHashCode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">lombok</span><span class="p">.</span><span class="nx">experimental</span><span class="p">.</span><span class="nx">Accessors</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * &lt;p&gt;
 </span></span></span><span class="line"><span class="cl"><span class="cm"> *
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * &lt;/p&gt;
 </span></span></span><span class="line"><span class="cl"><span class="cm"> *
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * @author author
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * @since 2025-10-31
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Data</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">EqualsAndHashCode</span><span class="p">(</span><span class="nx">callSuper</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">Accessors</span><span class="p">(</span><span class="nx">chain</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">TableName</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="nx">implements</span><span class="w"> </span><span class="nx">Serializable</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">static</span><span class="w"> </span><span class="nx">final</span><span class="w"> </span><span class="nx">long</span><span class="w"> </span><span class="nx">serialVersionUID</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="nx">L</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">TableId</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="p">,</span><span class="w"> </span><span class="kd">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">IdType</span><span class="p">.</span><span class="nx">AUTO</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uName</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uPassword</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Data</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">EqualsAndHashCode</span><span class="p">(</span><span class="nx">callSuper</span> <span class="p">=</span> <span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">Accessors</span><span class="p">(</span><span class="nx">chain</span> <span class="p">=</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">TableName</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">public</span> <span class="nx">class</span> <span class="nx">User</span> <span class="nx">implements</span> <span class="nx">Serializable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">static</span> <span class="nx">final</span> <span class="nx">long</span> <span class="nx">serialVersionUID</span> <span class="p">=</span> <span class="mi">1</span><span class="nx">L</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nf">TableId</span><span class="p">(</span><span class="nx">value</span> <span class="p">=</span> <span class="s">&#34;id&#34;</span><span class="p">,</span> <span class="kd">type</span> <span class="p">=</span> <span class="nx">IdType</span><span class="p">.</span><span class="nx">AUTO</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">Integer</span> <span class="nx">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">String</span> <span class="nx">uName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">String</span> <span class="nx">uPassword</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="dto-1">DTO
 </h3><div class="highlight"><div class="chroma">
@@ -1324,18 +1324,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/dto/UserDTO.java</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Data</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">UserDTO</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">String</span><span class="w"> </span><span class="nx">uName</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 注意：这里不包含 uPassword，保护敏感信息</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/dto/UserDTO.java</span>
+</span></span><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">lombok</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Data</span>
+</span></span><span class="line"><span class="cl"><span class="nx">public</span> <span class="nx">class</span> <span class="nx">UserDTO</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">Integer</span> <span class="nx">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">String</span> <span class="nx">uName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 注意：这里不包含 uPassword，保护敏感信息</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1736,76 +1736,76 @@
 </span><span class="lnt">69
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/controller/UserController.java</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">controller</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserCreateDTO</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserDTO</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">service</span><span class="p">.</span><span class="nx">UserService</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">beans</span><span class="p">.</span><span class="nx">factory</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Autowired</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">HttpStatus</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseEntity</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Validated</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">bind</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="o">*</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">jakarta</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">Valid</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">List</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">RestController</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">RequestMapping</span><span class="p">(</span><span class="s">&#34;/api/users&#34;</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Validated</span><span class="w"> </span><span class="c1">// 开启参数校验</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nx">public</span><span class="w"> </span><span class="nx">class</span><span class="w"> </span><span class="nx">UserController</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">Autowired</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">private</span><span class="w"> </span><span class="nx">UserService</span><span class="w"> </span><span class="nx">userService</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 创建用户</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">PostMapping</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="err">@</span><span class="nx">Valid</span><span class="w"> </span><span class="err">@</span><span class="nx">RequestBody</span><span class="w"> </span><span class="nx">UserCreateDTO</span><span class="w"> </span><span class="nx">userCreateDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">userCreateDTO</span><span class="p">.</span><span class="nf">printFields</span><span class="p">();</span><span class="w"> </span><span class="c1">// 打印参数</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">createdUser</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">createUser</span><span class="p">(</span><span class="nx">userCreateDTO</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;&gt;(</span><span class="nx">createdUser</span><span class="p">,</span><span class="w"> </span><span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">CREATED</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 根据 ID 获取用户</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">GetMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">getUserById</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">getUserById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 获取所有用户</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nx">GetMapping</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">getAllUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">listAllUsers</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 更新用户</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">PutMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">updateUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="err">@</span><span class="nx">Valid</span><span class="w"> </span><span class="err">@</span><span class="nx">RequestBody</span><span class="w"> </span><span class="nx">UserCreateDTO</span><span class="w"> </span><span class="nx">userUpdateDTO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">UserDTO</span><span class="w"> </span><span class="nx">updatedUser</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">updateUser</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">userUpdateDTO</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">updatedUser</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">updatedUser</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 删除用户</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">@</span><span class="nf">DeleteMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">public</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">Void</span><span class="p">&gt;</span><span class="w"> </span><span class="nf">deleteUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">boolean</span><span class="w"> </span><span class="nx">deleted</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">userService</span><span class="p">.</span><span class="nf">deleteUser</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">deleted</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">noContent</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// src/main/java/com/example/springboottest2/controller/UserController.java</span>
+</span></span><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">controller</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserCreateDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">dto</span><span class="p">.</span><span class="nx">UserDTO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">com</span><span class="p">.</span><span class="nx">example</span><span class="p">.</span><span class="nx">springboottest3</span><span class="p">.</span><span class="nx">service</span><span class="p">.</span><span class="nx">UserService</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">beans</span><span class="p">.</span><span class="nx">factory</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Autowired</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">HttpStatus</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseEntity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="nx">Validated</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">springframework</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">bind</span><span class="p">.</span><span class="nx">annotation</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">jakarta</span><span class="p">.</span><span class="nx">validation</span><span class="p">.</span><span class="nx">Valid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">List</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">RestController</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nf">RequestMapping</span><span class="p">(</span><span class="s">&#34;/api/users&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Validated</span> <span class="c1">// 开启参数校验</span>
+</span></span><span class="line"><span class="cl"><span class="nx">public</span> <span class="nx">class</span> <span class="nx">UserController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nx">Autowired</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">private</span> <span class="nx">UserService</span> <span class="nx">userService</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 创建用户</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nx">PostMapping</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">public</span> <span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span> <span class="nf">createUser</span><span class="p">(</span><span class="err">@</span><span class="nx">Valid</span> <span class="err">@</span><span class="nx">RequestBody</span> <span class="nx">UserCreateDTO</span> <span class="nx">userCreateDTO</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">userCreateDTO</span><span class="p">.</span><span class="nf">printFields</span><span class="p">();</span> <span class="c1">// 打印参数</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">UserDTO</span> <span class="nx">createdUser</span> <span class="p">=</span> <span class="nx">userService</span><span class="p">.</span><span class="nf">createUser</span><span class="p">(</span><span class="nx">userCreateDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">new</span> <span class="nx">ResponseEntity</span><span class="p">&lt;&gt;(</span><span class="nx">createdUser</span><span class="p">,</span> <span class="nx">HttpStatus</span><span class="p">.</span><span class="nx">CREATED</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 根据 ID 获取用户</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nf">GetMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">public</span> <span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span> <span class="nf">getUserById</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span> <span class="nx">Integer</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">UserDTO</span> <span class="nx">user</span> <span class="p">=</span> <span class="nx">userService</span><span class="p">.</span><span class="nf">getUserById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">user</span> <span class="o">!=</span> <span class="nx">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 获取所有用户</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nx">GetMapping</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">public</span> <span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="o">&gt;&gt;</span> <span class="nf">getAllUsers</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">List</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span> <span class="nx">users</span> <span class="p">=</span> <span class="nx">userService</span><span class="p">.</span><span class="nf">listAllUsers</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 更新用户</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nf">PutMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">public</span> <span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">UserDTO</span><span class="p">&gt;</span> <span class="nf">updateUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span> <span class="nx">Integer</span> <span class="nx">id</span><span class="p">,</span> <span class="err">@</span><span class="nx">Valid</span> <span class="err">@</span><span class="nx">RequestBody</span> <span class="nx">UserCreateDTO</span> <span class="nx">userUpdateDTO</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">UserDTO</span> <span class="nx">updatedUser</span> <span class="p">=</span> <span class="nx">userService</span><span class="p">.</span><span class="nf">updateUser</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">userUpdateDTO</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">updatedUser</span> <span class="o">!=</span> <span class="nx">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">ok</span><span class="p">(</span><span class="nx">updatedUser</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 删除用户</span>
+</span></span><span class="line"><span class="cl">    <span class="err">@</span><span class="nf">DeleteMapping</span><span class="p">(</span><span class="s">&#34;/{id}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">public</span> <span class="nx">ResponseEntity</span><span class="p">&lt;</span><span class="nx">Void</span><span class="p">&gt;</span> <span class="nf">deleteUser</span><span class="p">(</span><span class="err">@</span><span class="nx">PathVariable</span> <span class="nx">Integer</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">boolean</span> <span class="nx">deleted</span> <span class="p">=</span> <span class="nx">userService</span><span class="p">.</span><span class="nf">deleteUser</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">deleted</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">noContent</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">ResponseEntity</span><span class="p">.</span><span class="nf">notFound</span><span class="p">().</span><span class="nf">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="问题汇总">问题汇总
 </h2><ol>
@@ -1819,7 +1819,9 @@
     
     <section class="article-tags">
         
-            <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/website/">Website</a>
         
     </section>
 
@@ -1851,35 +1853,11 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%B0%91%E5%89%8D2%E6%96%B9%E7%B3%96%E5%96%B5%E5%92%96%E9%A6%86%E5%A4%8D%E5%88%BB/img/3.9eccc98f5957d0ed47854ea79c0d70df_hu_c40dde65ddefaf42.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 少前2方糖喵咖馆复刻"
-                        
-                        data-hash="md5-nszJj1lX0O1HhU6nnA1w3w==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">少前2方糖喵咖馆复刻</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/">
         
         
             <div class="article-image">
-                <img src="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.316ca04a99da783946691bf82e29bf7f_hu_71e5b072d9d4e502.png" 
+                <img src="/p/3d%E6%95%B0%E5%AD%A6%E4%B8%8Esharder%E5%AD%A6%E4%B9%A0/img/1.316ca04a99da783946691bf82e29bf7f_hu_e32806f9124de1f3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1892,78 +1870,6 @@
 
         <div class="article-details">
             <h2 class="article-title">3D数学与Sharder学习</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%B5%85%E9%BB%84%E7%9D%A6%E6%9C%88%E4%B8%89%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C/back.35829f79bcc987eec59f8e45efaabb2c_hu_ae5aca9adc217143.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 浅黄睦月三模型制作"
-                        
-                        data-hash="md5-NYKfebzJh&#43;7Fn45F76q7LA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">浅黄睦月三模型制作</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E9%95%BF%E9%A3%8E%E7%8E%A9%E5%81%B6%E5%BB%BA%E6%A8%A1/back.9c16b4147ed921e4ec9dcbd2afaa94be_hu_2d9022caa6181ccc.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 长风玩偶建模"
-                        
-                        data-hash="md5-nBa0FH7ZIeTsncvSr6qUvg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">长风玩偶建模</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88%E5%9C%BA%E6%99%AF%E4%BB%BF%E5%88%B6/back.e0567dba92ed9249063151b121677fb4_hu_727060dc0b11f9f3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 碧蓝档案场景仿制"
-                        
-                        data-hash="md5-4FZ9upLtkkkGMVGxIWd/tA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">碧蓝档案场景仿制</h2>
         </div>
     </a>
 </article>
@@ -2038,12 +1944,14 @@
 
     
 
+    
+
 <div class="blog-stats">
     
         
-        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">512 天</strong></p>
     
-    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+    <p>共收录 <strong>20</strong> 篇文章 · 累计 <strong>46,642</strong> 字</p>
 </div>
 
             <section class="copyright">
@@ -2371,7 +2279,7 @@
 <script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
 <script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
 <script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
-<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+<script src="/js/site-navigation.min.f2e00147a42e175ced75e8b88dbdea0f565ac9649a5b4149049a0a49c45920f6.js" defer></script>
 
 
 

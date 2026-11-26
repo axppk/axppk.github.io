@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\nDeepSeek 接入 Unity 制作一个二次元 AI 老婆\n前端如何接入 ai\n如何在 GitHub 上安装和配置 GPT\nGithub 的 AI 部署：如何在 GitHub 上管理和部署人工智能项目————疑似胡扯\nFree-GPT4-WEB-API：自托管的免费 GPT-4 Web API 解决方案\n免费 GPT4-WEB-API\nfastai\nfastgpt\nchatbase\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\n">
 <title>网站接入AI助手的尝试</title>
 
 <link rel='canonical' href='https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.f84309330ff83f3962181cbd0b8d3812e1a348f1ef351c8b72dcf1bd44432fcd.css"><meta property='og:title' content="网站接入AI助手的尝试">
-<meta property='og:description' content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\nDeepSeek 接入 Unity 制作一个二次元 AI 老婆\n前端如何接入 ai\n如何在 GitHub 上安装和配置 GPT\nGithub 的 AI 部署：如何在 GitHub 上管理和部署人工智能项目————疑似胡扯\nFree-GPT4-WEB-API：自托管的免费 GPT-4 Web API 解决方案\n免费 GPT4-WEB-API\nfastai\nfastgpt\nchatbase\n">
+<link rel="stylesheet" href="/scss/style.min.bac30a5a918d07c1eb6d1887a97549c29e8bef720f5808184cf44ae80f0652e5.css"><meta property='og:title' content="网站接入AI助手的尝试">
+<meta property='og:description' content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\n">
 <meta property='og:url' content='https://axppk.github.io/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/'>
 <meta property='og:site_name' content='KKPT的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-07-12T18:29:42&#43;08:00'/><meta property='article:modified_time' content='2025-07-12T18:29:42&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Website' /><meta property='article:published_time' content='2025-07-12T18:29:42&#43;08:00'/><meta property='article:modified_time' content='2026-11-26T15:42:36&#43;08:00'/>
 <meta name="twitter:title" content="网站接入AI助手的尝试">
-<meta name="twitter:description" content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\nDeepSeek 接入 Unity 制作一个二次元 AI 老婆\n前端如何接入 ai\n如何在 GitHub 上安装和配置 GPT\nGithub 的 AI 部署：如何在 GitHub 上管理和部署人工智能项目————疑似胡扯\nFree-GPT4-WEB-API：自托管的免费 GPT-4 Web API 解决方案\n免费 GPT4-WEB-API\nfastai\nfastgpt\nchatbase\n">
+<meta name="twitter:description" content="前言 根据查询资料，直接调用各大搜索引擎的 API 接口，引入下展示的形式就可以了？大部分需要收费，不太具有研究意义。\n参考链接：\n五分钟为你的项目添加 ai 小助手\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <style>
@@ -369,6 +369,15 @@
 </svg>2025-07-12</time>
             
             
+    <time class="article-updated" datetime="2026-11-26T15:42:36&#43;08:00" title="最后更新于 2026-11-26 15:42"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+更新 2026-11-26</time>
+
 
             
                 <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-count" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -390,9 +399,33 @@
 阅读时长: 1 分钟</span>
             
             
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+<a href="/tags/website/">#Website</a></span>
+            
         </div>
     
 
+    
+        <div class="reading-categories">
+            
+                <a href="/categories/%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+改造记录</a>
+            
+        </div>
     
 
     
@@ -468,7 +501,7 @@
 <p><img src="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1.png"
 	width="838"
 	height="437"
-	srcset="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_f6bb6abb27f21048.png 480w, /p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_3227ac9003c53e34.png 1024w"
+	srcset="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_405e782706aa0ccb.png 480w, /p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/1_hu_c2839fa3ffa96c42.png 1024w"
 	loading="lazy"
 	
 	
@@ -483,7 +516,7 @@
 <p><img src="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2.png"
 	width="983"
 	height="734"
-	srcset="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_e0c7ee75b0281b69.png 480w, /p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_c16742e0c4b589de.png 1024w"
+	srcset="/p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_4cdf0a539e52c211.png 480w, /p/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5ai%E5%8A%A9%E6%89%8B%E7%9A%84%E5%B0%9D%E8%AF%95/img/2_hu_22ffaedd3efc698.png 1024w"
 	loading="lazy"
 	
 	
@@ -497,6 +530,12 @@
 
         <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/website/">Website</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -517,6 +556,54 @@
 
     
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%B0%E5%BD%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客改造记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E9%A6%96%E6%AC%A1%E5%B0%9D%E8%AF%95%E9%83%A8%E7%BD%B2hugo%E5%88%B0github/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">首次尝试部署Hugo到Github</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BB%BFnikki%E8%81%94%E5%8A%A8%E5%B0%BC%E5%B0%94%E7%9A%84%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">仿Nikki联动尼尔的启动动画</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
     
     <div data-kkpt-theme-light="light" data-kkpt-theme-dark="dark_dimmed">
@@ -583,12 +670,14 @@
 
     
 
+    
+
 <div class="blog-stats">
     
         
-        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">498 天</strong></p>
+        <p>博客已运行 <strong data-blog-since="2025-07-02" title="起算于 2025-07-02">512 天</strong></p>
     
-    <p>共收录 <strong>19</strong> 篇文章 · 累计 <strong>44,693</strong> 字</p>
+    <p>共收录 <strong>20</strong> 篇文章 · 累计 <strong>46,642</strong> 字</p>
 </div>
 
             <section class="copyright">
@@ -916,7 +1005,7 @@
 <script src="/js/site-extras.min.f43e32440b65d4dbff9a1628efe0e7fb65e272cc113cafef5ba5a7eac5c5a09c.js" defer></script>
 <script src="/js/site-music.min.aed9e6d07fee1c72e8c7c33722e2d6eea0eb1478401ddd4e896997205e759f73.js" defer></script>
 <script src="/js/blog-uptime.min.a8c9f9e98d7a48094cfa57696f7cf48fa09f1195f2a8a3020451d6765b50d8e6.js" defer></script>
-<script src="/js/site-navigation.min.6860e3b3e6a2eccd9198be6c40ef5315c64f69d59c255d1eef749b874e220b82.js" defer></script>
+<script src="/js/site-navigation.min.f2e00147a42e175ced75e8b88dbdea0f565ac9649a5b4149049a0a49c45920f6.js" defer></script>
 
 
 
